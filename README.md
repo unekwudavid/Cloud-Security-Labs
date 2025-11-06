@@ -1,6 +1,5 @@
 # Cloud-Security-Labs
 A collection of cloud security labs demonstrating my cloud security journey
-# ☁️ Cloud Security Labs Repository  
 
 > **Hands-on Cloud Security Projects | Identity • Compliance • Threat Protection**
 
