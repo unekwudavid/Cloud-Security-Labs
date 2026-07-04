@@ -62,6 +62,17 @@ Privileged Identity Management
 
 ---
 
+## Identity Organization Strategy
+
+Mustard Innovations organizes identities using a combination of departmental and geographic attributes.
+
+- **Departments** define business roles and determine access through Role-Based Access Control (RBAC).
+- **Geographic locations** support delegated administration, regional compliance, Conditional Access policies, and reporting.
+
+Administrative Units will be used to delegate identity management by country, while Security Groups will manage access permissions based on job function. This design provides a scalable, secure, and maintainable identity architecture that supports future organizational growth and regional expansion.
+
+---
+
 ## Automation Platform
 
 Terraform
