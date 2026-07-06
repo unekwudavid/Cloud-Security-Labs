@@ -1,14 +1,12 @@
 # Tenant Assessment
 
-> **Assessment Status:** ✅ Approved  
-> **Document Version:** 1.0  
-> **Assessment Type:** Initial Environment Assessment  
 > **Project:** Enterprise Identity & Access Management  
+> **Module:** 02 – Entra ID Administration  
+> **Document:** Tenant Assessment  
 > **Client:** Mustard Innovations  
 > **Consultant:** David Adama  
-> **Reviewed By:** Senior IAM Architect (ChatGPT)  
-> **Assessment Date:** July 6, 2026
-
+> **Version:** 1.0  
+> **Status:** Approved
 ---
 
 # Assessment Summary
