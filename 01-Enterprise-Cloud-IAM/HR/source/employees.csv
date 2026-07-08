@@ -1,0 +1,3 @@
+EmployeeID,FirstName,LastName,UPN,Title,Department,StartDate,Status
+MI-0001,John,Doe,john.doe@daveshub.onmicrosoft.com,Engineer,IT,2026-07-01,Active
+MI-0002,Jane,Smith,jane.smith@daveshub.onmicrosoft.com,Analyst,Finance,2026-07-01,Active

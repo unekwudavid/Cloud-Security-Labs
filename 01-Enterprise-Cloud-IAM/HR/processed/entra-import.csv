@@ -1,0 +1,3 @@
+userPrincipalName,displayName,givenName,surname,employeeId,department,jobTitle,accountEnabled
+john.doe@daveshub.onmicrosoft.com,John Doe,John,Doe,MI-0001,IT,Engineer,True
+jane.smith@daveshub.onmicrosoft.com,Jane Smith,Jane,Smith,MI-0002,Finance,Analyst,True
