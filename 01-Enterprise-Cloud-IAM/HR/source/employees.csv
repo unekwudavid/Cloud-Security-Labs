@@ -1,3 +1,11 @@
-EmployeeID,FirstName,LastName,UPN,Title,Department,StartDate,Status
-MI-0001,John,Doe,john.doe@daveshub.onmicrosoft.com,Engineer,IT,2026-07-01,Active
-MI-0002,Jane,Smith,jane.smith@daveshub.onmicrosoft.com,Analyst,Finance,2026-07-01,Active
+EmployeeID,FirstName,LastName,DisplayName,UserPrincipalName,Department,JobTitle,Country,Office,ManagerEmployeeID,AdministrativeUnit,GlobalSecurityGroup,RegionalSecurityGroup,AccountStatus,HireDate
+MI-1001,Olivia,Carter,Olivia Carter,olivia.carter@daveshub.onmicrosoft.com,Executive,Chief Executive Officer,United Kingdom,London,,MI-UnitedKingdom,SG-Executive,,Active,2026-07-01
+MI-1002,Adewale,Adebayo,Adewale Adebayo,adewale.adebayo@daveshub.onmicrosoft.com,Executive,Country Manager,Nigeria,Lagos,MI-1001,MI-Nigeria,SG-Executive,,Active,2026-07-01
+MI-1003,Sophie,Williams,Sophie Williams,sophie.williams@daveshub.onmicrosoft.com,Executive,Country Manager,United Kingdom,London,MI-1001,MI-UnitedKingdom,SG-Executive,,Active,2026-07-01
+MI-1004,Michael,Thompson,Michael Thompson,michael.thompson@daveshub.onmicrosoft.com,Executive,Country Manager,Canada,Toronto,MI-1001,MI-Canada,SG-Executive,,Active,2026-07-01
+MI-1005,Chinedu,Okafor,Chinedu Okafor,chinedu.okafor@daveshub.onmicrosoft.com,Engineering,Engineering Manager,Nigeria,Lagos,MI-1002,MI-Nigeria,SG-Engineering,SG-NG-Engineering,Active,2026-07-01
+MI-1006,Amara,Eze,Amara Eze,amara.eze@daveshub.onmicrosoft.com,Engineering,Software Engineer,Nigeria,Lagos,MI-1005,MI-Nigeria,SG-Engineering,SG-NG-Engineering,Active,2026-07-01
+MI-1007,Emma,Wilson,Emma Wilson,emma.wilson@daveshub.onmicrosoft.com,Human Resources,HR Manager,United Kingdom,London,MI-1003,MI-UnitedKingdom,SG-HR,,Active,2026-07-01
+MI-1008,James,Foster,James Foster,james.foster@daveshub.onmicrosoft.com,Human Resources,HR Specialist,United Kingdom,London,MI-1007,MI-UnitedKingdom,SG-HR,,Active,2026-07-01
+MI-1009,Daniel,Chen,Daniel Chen,daniel.chen@daveshub.onmicrosoft.com,IT,IT Manager,Canada,Toronto,MI-1004,MI-Canada,SG-IT,,Active,2026-07-01
+MI-1010,Sarah,Patel,Sarah Patel,sarah.patel@daveshub.onmicrosoft.com,IT,Systems Administrator,Canada,Toronto,MI-1009,MI-Canada,SG-IT,,Active,2026-07-01

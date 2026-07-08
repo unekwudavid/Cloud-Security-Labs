@@ -1,53 +1,252 @@
 # Pilot User Provisioning Plan
 
-## Purpose
-Plan to provision the initial pilot cohort of user accounts into Microsoft Entra ID using CSV bulk import and validate the end-to-end process.
+**Project:** Enterprise Identity & Access Management Implementation
 
-## Scope
-- Pilot cohort: up to 54 employees from HR master register
-- Systems impacted: Microsoft Entra ID (users, groups, administrative units)
-- Import method: CSV bulk import (pilot)
+**Client:** Mustard Innovations
 
-## Timeline
-- Preparation and CSV generation: Day 0
-- Test import to a staging tenant (if available): Day 1
-- Pilot import to production tenant: Day 2
-- Validation and reconciliation: Day 3
+**Consultant:** David Adama
 
-## Pre-Flight Checks
-- Confirm HR source data completeness and EmployeeID uniqueness
-- Validate UPNs conform to naming standard
-- Ensure required Administrative Units and Security Groups exist
-- Backup current tenant user state (export) and capture audit baseline
+**Document Version:** 1.0
 
-## Provisioning Steps
-1. Generate `entra-import.csv` from HR source `employees.csv` following mapping rules.
-2. Run CSV bulk import in pilot mode (dry-run) and review errors.
-3. Execute final import and monitor job status.
-4. Assign licenses, Administrative Units, and Security Groups as defined.
+**Status:** Approved for Pilot Deployment
 
-## Validation
-- Reconcile imported accounts with HR master register (employeeId, UPN, displayName)
-- Confirm group and administrative unit assignments for a sample set
-- Verify sign-in success for a small subset (test accounts)
-- Record import logs and job outputs for audit
+**Date:** 08 July 2026
 
-## Rollback / Remediation
-- Disable or delete incorrectly created accounts per rollback procedure
-- Re-run corrected CSV import for failed records
-- Notify HR and stakeholders of remediation outcomes
+---
 
-## Roles & Responsibilities
-- HR: Provide and approve source CSV
-- IAM Team: Prepare CSV, run import, assign groups/units
-- IT Ops: License assignment and post-import operational support
+# Purpose
 
-## Acceptance Criteria
-- 100% of pilot cohort accounts provisioned with correct EmployeeID and UPN
-- No critical import errors remaining
-- Validation checklist signed-off by IAM and HR leads
+This document defines the pilot user provisioning strategy for the initial deployment of Microsoft Entra ID identities within Mustard Innovations.
 
-## References
-- `identity-provisioning-standard.md`
-- `employee-naming-standard.md`
-- Change Request: `CHG-0001-Initial-User-Provisioning.md`
+The objective is to validate the identity provisioning process, security group assignments, administrative unit assignments, and organizational standards before onboarding the entire workforce.
+
+---
+
+# Pilot Objectives
+
+The pilot deployment will validate that:
+
+- User accounts are provisioned successfully.
+- User Principal Names (UPNs) follow organizational standards.
+- Administrative Units are assigned correctly.
+- Security Groups are assigned according to department and region.
+- Managers are assigned correctly.
+- User attributes synchronize correctly across Microsoft Entra ID.
+- Provisioning logs are generated successfully.
+- The provisioning process is repeatable and fully automated.
+
+---
+
+# Pilot Scope
+
+The pilot will provision **10 users** representing multiple departments and geographic locations.
+
+### Countries
+
+- Nigeria
+- Canada
+- United Kingdom
+
+### Departments
+
+- Engineering
+- Human Resources
+- Finance
+- Sales
+- Security Operations
+
+---
+
+# Pilot Users
+
+| Employee ID | Name | Department | Country | Administrative Unit |
+|-------------|------|------------|----------|---------------------|
+| MI-0001 | Sarah Johnson | HR | Nigeria | MI-Nigeria |
+| MI-0002 | David Wilson | Engineering | Nigeria | MI-Nigeria |
+| MI-0003 | Emily Brown | Finance | Canada | MI-Canada |
+| MI-0004 | Michael Scott | Sales | United Kingdom | MI-UnitedKingdom |
+| MI-0005 | Olivia Smith | Security Operations | Canada | MI-Canada |
+| MI-0006 | Daniel Moore | Engineering | United Kingdom | MI-UnitedKingdom |
+| MI-0007 | Grace Taylor | HR | Canada | MI-Canada |
+| MI-0008 | John Davis | Finance | Nigeria | MI-Nigeria |
+| MI-0009 | Sophia Clark | Sales | Canada | MI-Canada |
+| MI-0010 | James White | Engineering | Nigeria | MI-Nigeria |
+
+---
+
+# Provisioning Workflow
+
+The pilot provisioning process will follow the sequence below.
+
+1. Validate HR data.
+2. Verify required attributes.
+3. Generate User Principal Names.
+4. Create Microsoft Entra ID users.
+5. Assign Administrative Units.
+6. Assign Security Groups.
+7. Assign Managers.
+8. Generate validation report.
+9. Generate provisioning log.
+10. Obtain business approval.
+
+---
+
+# Naming Standards
+
+## Employee ID
+
+```
+MI-XXXX
+```
+
+Example
+
+```
+MI-0001
+```
+
+---
+
+## User Principal Name
+
+```
+firstname.lastname@daveshub.onmicrosoft.com
+```
+
+Example
+
+```
+sarah.johnson@daveshub.onmicrosoft.com
+```
+
+---
+
+## Administrative Units
+
+```
+MI-Nigeria
+
+MI-Canada
+
+MI-UnitedKingdom
+```
+
+---
+
+## Security Groups
+
+Department Groups
+
+```
+SG-Engineering
+
+SG-Finance
+
+SG-HR
+
+SG-Sales
+
+SG-SecurityOps
+```
+
+Regional Department Groups
+
+```
+SG-NG-Engineering
+
+SG-NG-HR
+
+SG-CA-Finance
+
+SG-UK-Sales
+```
+
+---
+
+# Validation Checklist
+
+Each pilot account must be verified for:
+
+- Correct Display Name
+- Correct User Principal Name
+- Correct Employee ID
+- Correct Department
+- Correct Country
+- Correct Job Title
+- Correct Administrative Unit
+- Correct Security Group Membership
+- Correct Manager Assignment
+- Successful Sign-in
+- MFA Readiness
+- Audit Log Generation
+
+---
+
+# Success Criteria
+
+The pilot deployment will be considered successful if:
+
+- 100% of users are provisioned successfully.
+- No duplicate accounts are created.
+- No provisioning errors occur.
+- All Administrative Units are assigned correctly.
+- All Security Groups are assigned correctly.
+- Microsoft Entra audit logs record all provisioning activities.
+- User attributes match HR records.
+
+---
+
+# Risks
+
+| Risk | Mitigation |
+|------|------------|
+| Incorrect HR data | Validate HR records before provisioning |
+| Duplicate identities | Verify Employee ID uniqueness |
+| Incorrect group assignments | Automate group mapping |
+| Naming conflicts | Enforce organizational naming standards |
+| Manual provisioning errors | Use PowerShell automation |
+
+---
+
+# Rollback Plan
+
+If the pilot deployment fails:
+
+1. Disable newly created user accounts.
+2. Remove incorrect group memberships.
+3. Remove Administrative Unit assignments.
+4. Correct HR source data.
+5. Re-run provisioning automation.
+6. Revalidate all pilot accounts.
+
+---
+
+# Deliverables
+
+Upon completion, the following artifacts will be produced:
+
+- HR Validation Report
+- Provisioning Log
+- User Creation Report
+- Security Group Assignment Report
+- Administrative Unit Assignment Report
+- Pilot Validation Report
+
+---
+
+# Approval
+
+| Role | Name | Status |
+|------|------|--------|
+| IAM Consultant | David Adama | Approved |
+| Project Sponsor | Mustard Innovations | Pending |
+| IT Operations | Mustard Innovations | Pending |
+| Security Team | Mustard Innovations | Pending |
+
+---
+
+# Version History
+
+| Version | Date | Author | Description |
+|----------|------|--------|-------------|
+| 1.0 | 08 July 2026 | David Adama | Initial pilot provisioning plan |
