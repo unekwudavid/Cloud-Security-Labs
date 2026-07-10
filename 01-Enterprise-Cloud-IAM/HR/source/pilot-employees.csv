@@ -1,0 +1,11 @@
+EmployeeID,FirstName,LastName,Department,Country,JobTitle,Office,ManagerEmployeeID,EmployeeType,StartDate
+MI-0001,Sarah,Johnson,HR,Nigeria,HR Manager,Lagos,,Full-Time,2026-07-15
+MI-0002,David,Wilson,Engineering,Nigeria,Cloud Engineer,Lagos,MI-0006,Full-Time,2026-07-15
+MI-0003,Emily,Brown,Finance,Canada,Financial Analyst,Toronto,MI-0008,Full-Time,2026-07-15
+MI-0004,Michael,Scott,Sales,United Kingdom,Sales Executive,London,MI-0009,Full-Time,2026-07-15
+MI-0005,Olivia,Smith,Security Operations,Canada,Security Analyst,Toronto,MI-0010,Full-Time,2026-07-15
+MI-0006,Daniel,Moore,Engineering,United Kingdom,Engineering Manager,London,,Full-Time,2026-07-15
+MI-0007,Grace,Taylor,HR,Canada,HR Specialist,Toronto,MI-0001,Full-Time,2026-07-15
+MI-0008,John,Davis,Finance,Nigeria,Finance Manager,Lagos,,Full-Time,2026-07-15
+MI-0009,Sophia,Clark,Sales,Canada,Sales Manager,Toronto,,Full-Time,2026-07-15
+MI-0010,James,White,Security Operations,Nigeria,SOC Manager,Lagos,,Full-Time,2026-07-15
