@@ -17,6 +17,14 @@
         @{ Name = "SG-Finance"; Description = "Finance Department" }
         @{ Name = "SG-HR"; Description = "Human Resources Department" }
     )
+
+    # Country Usage Location Mapping
+    Countries         = @{
+        "Nigeria"         = "NG"
+        "Canada"          = "CA"
+        "United Kingdom"  = "GB"
+        "United States"   = "US"
+    }
     
     # Licensing
     Licenses          = @(
