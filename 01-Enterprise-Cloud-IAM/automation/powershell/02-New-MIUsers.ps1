@@ -17,11 +17,21 @@ VERSION
 # Load Configuration
 # ============================================
 
+#Execution mode.
+param(
+
+    [switch]$Live,
+
+    [int]$Limit = 1
+
+)
+
 $ScriptDir = Split-Path -Parent $PSCommandPath
 $RepoRoot = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $ScriptDir))
 $ConfigPath = Join-Path $RepoRoot "01-Enterprise-Cloud-IAM\automation\config\tenant-config.psd1"
 $AlternateConfigPath = Join-Path $RepoRoot "01-Enterprise-Cloud-IAM\automation\configuration\tenant-config.psd1"
 $CsvPath = Join-Path $RepoRoot "01-Enterprise-Cloud-IAM\HR\source\pilot-employees.csv"
+
 
 if (-not (Test-Path $ConfigPath) -and (Test-Path $AlternateConfigPath)) {
     $ConfigPath = $AlternateConfigPath
@@ -55,84 +65,32 @@ if (-not $Config.Countries) {
     exit 1
 }
 
-#generate display name for each employee
-function Get-DisplayName {
+# Load shared automation helpers
+Import-Module "$PSScriptRoot\..\modules\MI.Automation.psm1" -Force
+. "$PSScriptRoot\..\constants\ProvisioningStatus.ps1"
 
-    param($Employee)
-
-    return "$($Employee.FirstName) $($Employee.LastName)"
-
-}
-
-#generate UPN for each employee
-function Get-UPN {
-
-    param(
-        $Employee,
-        $TenantDomain
-    )
-
-    return (
-        "$($Employee.FirstName).$($Employee.LastName)".ToLower() +
-        "@$TenantDomain"
-    )
-
-}
-
-#generate mail nickname for each employee
-function Get-MailNickname {
-
-    param($Employee)
-
-    return (
-        "$($Employee.FirstName).$($Employee.LastName)"
-    ).ToLower()
-
-}
-
-#generate usage location for each employee based on country mapping in configuration
-function Get-UsageLocation {
-
-    param(
-        $Employee,
-        $Config
-    )
-
-    if (-not $Config.Countries) {
-        Write-Warning "Countries mapping is not defined in configuration."
-        return ""
-    }
-
-    if (-not $Config.Countries.ContainsKey($Employee.Country)) {
-        Write-Warning "No usage location mapping found for country '$($Employee.Country)'."
-        return ""
-    }
-
-    return $Config.Countries[$Employee.Country]
-
-}
-
-Write-Host ""
-Write-Host "=============================================="
-Write-Host " Mustard Innovations User Provisioning Preview"
-Write-Host "=============================================="
-Write-Host ""
+# Create a list to store provisioning results
+$Results = [System.Collections.Generic.List[object]]::new()
 
 foreach ($Employee in $Employees) {
 
-    $DisplayName = Get-DisplayName $Employee
-    $UPN = Get-UPN $Employee $Config.TenantDomain
-    $MailNickname = Get-MailNickname $Employee
-    $UsageLocation = Get-UsageLocation $Employee $Config
+    $Result = New-MIUser `
+        -Employee $Employee `
+        -Config $Config
 
-    Write-Host "----------------------------------------------"
-    Write-Host "Employee ID      : $($Employee.EmployeeID)"
-    Write-Host "Display Name     : $DisplayName"
-    Write-Host "User Principal   : $UPN"
-    Write-Host "Mail Nickname    : $MailNickname"
-    Write-Host "Department       : $($Employee.Department)"
-    Write-Host "Country          : $($Employee.Country)"
-    Write-Host "Usage Location   : $UsageLocation"
-    Write-Host "Status           : READY"
-    Write-Host ""
+    $Results.Add($Result)
+
 }
+
+Write-Host ""
+Write-Host "========================================="
+Write-Host " Provisioning Summary"
+Write-Host "========================================="
+
+$Results | Format-Table -AutoSize
+
+$TimeStamp = Get-Date -Format "yyyyMMdd-HHmmss"
+
+$ReportPath = ".\reports\Provisioning-$TimeStamp.csv"
+
+$Results | Export-Csv $ReportPath -NoTypeInformation
