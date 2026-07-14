@@ -15,7 +15,7 @@ A professional portfolio showcasing my journey in **Cloud Security Engineering**
 
 Hi, I'm **David Adama**, a Cloud Security Engineer in training with a software engineering background and a passion for building secure, scalable, and well-governed cloud environments.
 
-I have **4 years of experience as a Flutter Software Engineer** and hold an **ISO 27001 Certification**. I am currently transitioning into **Identity & Access Management (IAM)** and **Cloud Security Engineering**, building practical enterprise projects that demonstrate real-world implementation skills rather than just theoretical knowledge.
+I have **4 years of experience as a Mobile Software Engineer** and hold a **Comptia Security plus Certification**, **ISO 27001 lead Implementer Certification**, **NIST RMF Certification**. I am currently transitioning into **Identity & Access Management (IAM)** and **Cloud Security Engineering**, building practical enterprise projects that demonstrate real-world implementation skills rather than just theoretical knowledge.
 
 This repository serves as my professional portfolio, documenting enterprise security projects covering:
 
@@ -137,11 +137,11 @@ As the Identity & Access Management Engineer, I am responsible for designing and
 
 - [x] Microsoft 365 Tenant Configuration
 - [x] Microsoft Entra ID Fundamentals
+- [x] PowerShell Automation
+- [x] Microsoft Graph API
 - [ ] Enterprise Cloud IAM Platform
 - [ ] Identity Governance
 - [ ] Terraform for IAM
-- [ ] PowerShell Automation
-- [ ] Microsoft Graph API
 - [ ] Enterprise Identity Federation
 - [ ] AWS IAM Identity Center
 - [ ] Okta Administration

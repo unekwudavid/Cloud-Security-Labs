@@ -1,0 +1,21 @@
+[2026-07-14 13:25:16] [INFO] Processing employee MI-0001 for Sarah Johnson
+[2026-07-14 13:25:16] [INFO] Creating user: 
+[2026-07-14 13:25:16] [ERROR] Failed to create user : Cannot bind argument to parameter 'BodyParameter' because it is null.
+[2026-07-14 13:30:20] [INFO] Processing employee MI-0001 for Sarah Johnson
+[2026-07-14 13:30:24] [WARN] Unable to verify user existence for sarah.johnson@daveshub.onmicrosoft.com: [] : The query specified in the URI is not valid. The requested resource is not a collection. Query options $filter, $orderby, $count, $skip, and $top can be applied only on collections.
+[2026-07-14 13:30:24] [INFO] Creating user: sarah.johnson@daveshub.onmicrosoft.com
+[2026-07-14 13:30:25] [SUCCESS] User created successfully: sarah.johnson@daveshub.onmicrosoft.com
+[2026-07-14 13:53:01] [INFO] Processing employee MI-0001 for Sarah Johnson
+[2026-07-14 13:53:03] [WARN] User already exists: sarah.johnson@daveshub.onmicrosoft.com
+[2026-07-14 13:59:42] [INFO] Processing employee MI-0001 for Sarah Johnson
+[2026-07-14 13:59:43] [WARN] User already exists: sarah.johnson@daveshub.onmicrosoft.com
+[2026-07-14 15:01:28] [INFO] Processing employee MI-0001 for Sarah Johnson
+[2026-07-14 15:01:29] [INFO] Creating user: sarah.johnson@daveshub.onmicrosoft.com
+[2026-07-14 15:01:29] [SUCCESS] User created successfully: sarah.johnson@daveshub.onmicrosoft.com
+[2026-07-14 15:10:15] [INFO] Processing employee MI-0001 for Sarah Johnson
+[2026-07-14 15:10:16] [WARN] User already exists: sarah.johnson@daveshub.onmicrosoft.com
+[2026-07-14 15:10:37] [INFO] Processing employee MI-0001 for Sarah Johnson
+[2026-07-14 15:10:37] [WARN] User already exists: sarah.johnson@daveshub.onmicrosoft.com
+[2026-07-14 15:10:37] [INFO] Processing employee MI-0002 for David Wilson
+[2026-07-14 15:10:37] [INFO] Creating user: david.wilson@daveshub.onmicrosoft.com
+[2026-07-14 15:10:38] [SUCCESS] User created successfully: david.wilson@daveshub.onmicrosoft.com

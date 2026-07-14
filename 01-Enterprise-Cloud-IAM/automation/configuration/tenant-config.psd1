@@ -1,87 +1,33 @@
 @{
-
-    # ============================================
-    # Organization Information
-    # ============================================
-
-    CompanyName = "Mustard Innovations"
-
-    TenantDomain = "daveshub.onmicrosoft.com"
-
-    TenantShortName = "MI"
-
-    # ============================================
-    # Default Account Settings
-    # ============================================
-
-    DefaultPassword = "P@ssword123!"
-
-    ForcePasswordChange = $true
-
-    AccountEnabled = $true
-
-    # ============================================
-    # Country Mapping
-    # ============================================
-
-    Countries = @{
-
-        Nigeria = "NG"
-
-        Canada = "CA"
-
-        "United Kingdom" = "GB"
-
-    }
-
-    # ============================================
-    # Supported Departments
-    # ============================================
-
-    Departments = @(
-
-        "Engineering",
-
-        "Finance",
-
-        "HR",
-
-        "Sales",
-
-        "Security Operations"
-
+    CompanyName       = "Mustard Innovations"
+    TenantDomain      = "daveshub.onmicrosoft.com"
+    TenantShortName   = "MI"
+    EnvironmentName   = "Production"
+    
+    # Administrative Units
+    AdminUnits        = @(
+        @{ Name = "MI-UK"; Country = "United Kingdom" }
+        @{ Name = "MI-US"; Country = "United States" }
+        @{ Name = "MI-EU"; Country = "European Union" }
+    )
+    
+    # Security Groups
+    SecurityGroups    = @(
+        @{ Name = "SG-IT"; Description = "IT Department" }
+        @{ Name = "SG-Finance"; Description = "Finance Department" }
+        @{ Name = "SG-HR"; Description = "Human Resources Department" }
     )
 
-    # ============================================
-    # Administrative Units
-    # ============================================
-
-    AdministrativeUnits = @{
-
-        Nigeria = "MI-Nigeria"
-
-        Canada = "MI-Canada"
-
-        "United Kingdom" = "MI-UnitedKingdom"
-
+    # Country Usage Location Mapping
+    Countries         = @{
+        "Nigeria"         = "NG"
+        "Canada"          = "CA"
+        "United Kingdom"  = "GB"
+        "United States"   = "US"
     }
-
-    # ============================================
-    # Security Groups
-    # ============================================
-
-    SecurityGroups = @{
-
-        Engineering = "SG-Engineering"
-
-        Finance = "SG-Finance"
-
-        HR = "SG-HR"
-
-        Sales = "SG-Sales"
-
-        "Security Operations" = "SG-SecurityOps"
-
-    }
-
+    
+    # Licensing
+    Licenses          = @(
+        @{ Sku = "M365_BUSINESS_PREMIUM"; Count = 54 }
+    )
 }
