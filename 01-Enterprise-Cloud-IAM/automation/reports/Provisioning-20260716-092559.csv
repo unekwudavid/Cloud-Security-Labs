@@ -1,0 +1,2 @@
+"Timestamp","EmployeeID","DisplayName","UserPrincipalName","Department","Country","Status","DepartmentGroup","CompanyGroup","AUAssigned","ManagerAssigned","Reason","ObjectId","TemporaryPassword"
+"7/16/2026 9:25:54 AM","MI-0015","Amelia Hall","amelia.hall@daveshub.onmicrosoft.com","Engineering","United Kingdom","Created","SG-Engineering","All Company","False","False",,"307da8fa-568d-48a4-a2bc-58e4c49e2412","P@ssword123!"

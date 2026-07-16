@@ -105,6 +105,9 @@ if (-not $Live) {
     return
 
 }
+   
+$Mappings = Get-MIGroupMappings `
+    -Path (Join-Path $PSScriptRoot "..\configuration\GroupMappings.json")
 
 foreach ($Employee in ($Employees | Select-Object -First $Limit)) {
 
@@ -112,9 +115,37 @@ foreach ($Employee in ($Employees | Select-Object -First $Limit)) {
         -Employee $Employee `
         -Config $Config
 
-    $Results.Add($Result)
-}
+    if ($Result.Status -eq $ProvisioningStatus.Created) {
 
+        Write-Host ""
+        Write-Host "========================================"
+        Write-Host " GROUP ASSIGNMENT"
+        Write-Host "========================================"
+
+        $RequiredGroups = Get-MIRequiredGroups `
+            -Employee $Employee `
+            -Mappings $Mappings
+
+        Write-Host "User ObjectId : $($Result.ObjectId)"
+        Write-Host "Groups:"
+
+        foreach($Group in $RequiredGroups){
+            Write-Host " - $Group"
+        }
+
+        Add-MIUserToGroups `
+            -UserId $Result.ObjectId `
+            -Groups $RequiredGroups
+
+        # Populate report fields
+        $Result.DepartmentGroup = ($RequiredGroups | Where-Object {$_ -ne "All Company"}) -join ", "
+        $Result.CompanyGroup = "All Company"
+
+    }
+
+    $Results.Add($Result)
+
+}
 # Provisioning Summary
 $EndTime = Get-Date
 $Duration = [math]::Round(($EndTime - $StartTime).TotalSeconds, 2)
@@ -144,7 +175,18 @@ Write-Host "Duration............... $Duration sec"
 Write-Host "Success Rate........... $SuccessRate%"
 Write-Host "========================================"
 
-$Results | Format-Table -AutoSize
+
+
+$Results |
+Sort-Object EmployeeID |
+Format-Table `
+EmployeeID,
+DisplayName,
+Department,
+Status,
+DepartmentGroup,
+CompanyGroup,
+TemporaryPassword -AutoSize
 
 $TimeStamp = Get-Date -Format "yyyyMMdd-HHmmss"
 $ReportDir = Join-Path $RepoRoot "01-Enterprise-Cloud-IAM\automation\reports"
@@ -156,3 +198,10 @@ if (-not (Test-Path $ReportDir)) {
 $ReportPath = Join-Path $ReportDir "Provisioning-$TimeStamp.csv"
 
 $Results | Export-Csv $ReportPath -NoTypeInformation
+
+Write-Host ""
+Write-Host "========================================"
+Write-Host " Report Generated"
+Write-Host "========================================"
+Write-Host $ReportPath -ForegroundColor Green
+Write-Host "========================================"

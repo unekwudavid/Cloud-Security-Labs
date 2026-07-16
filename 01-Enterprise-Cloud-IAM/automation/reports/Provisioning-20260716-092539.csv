@@ -1,0 +1,2 @@
+"Timestamp","EmployeeID","DisplayName","UserPrincipalName","Department","Country","Status","DepartmentGroup","CompanyGroup","AUAssigned","ManagerAssigned","Reason","ObjectId","TemporaryPassword"
+"7/16/2026 9:25:39 AM","MI-0012","Liam Anderson","liam.anderson@daveshub.onmicrosoft.com","Engineering","United Kingdom","Skipped","","","False","False","User already exists",,"P@ssword123!"

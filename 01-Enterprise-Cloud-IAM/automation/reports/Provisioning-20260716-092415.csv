@@ -1,0 +1,3 @@
+"Timestamp","EmployeeID","DisplayName","UserPrincipalName","Department","Country","Status","DepartmentGroup","CompanyGroup","AUAssigned","ManagerAssigned","Reason","ObjectId","TemporaryPassword"
+"7/16/2026 9:24:14 AM","MI-0012","Liam Anderson","liam.anderson@daveshub.onmicrosoft.com","Engineering","United Kingdom","Skipped","","","False","False","User already exists",,"P@ssword123!"
+"7/16/2026 9:24:15 AM","MI-0011","Isabella Martinez","isabella.martinez@daveshub.onmicrosoft.com","Engineering","Canada","Skipped","","","False","False","User already exists",,"P@ssword123!"

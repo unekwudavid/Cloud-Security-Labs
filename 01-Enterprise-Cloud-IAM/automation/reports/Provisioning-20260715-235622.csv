@@ -1,0 +1,2 @@
+"Timestamp","EmployeeID","DisplayName","UserPrincipalName","Department","Country","Status","DepartmentGroup","CompanyGroup","AUAssigned","ManagerAssigned","Reason","ObjectId","TemporaryPassword"
+"7/15/2026 11:56:22 PM","MI-0011","Isabella Martinez","isabella.martinez@daveshub.onmicrosoft.com","Engineering","Canada","Created","","","False","False",,"945843f6-441a-43dc-9dbc-a2b8844103a0","P@ssword123!"

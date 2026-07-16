@@ -19,3 +19,50 @@
 [2026-07-14 15:10:37] [INFO] Processing employee MI-0002 for David Wilson
 [2026-07-14 15:10:37] [INFO] Creating user: david.wilson@daveshub.onmicrosoft.com
 [2026-07-14 15:10:38] [SUCCESS] User created successfully: david.wilson@daveshub.onmicrosoft.com
+[2026-07-15 23:24:29] [INFO] Processing employee MI-0001 for Sarah Johnson
+[2026-07-15 23:24:34] [WARN] User already exists: sarah.johnson@daveshub.onmicrosoft.com
+[2026-07-15 23:53:48] [INFO] Processing employee MI-0001 for Sarah Johnson
+[2026-07-15 23:53:56] [WARN] User already exists: sarah.johnson@daveshub.onmicrosoft.com
+[2026-07-15 23:56:20] [INFO] Processing employee MI-0011 for Isabella Martinez
+[2026-07-15 23:56:21] [INFO] Creating user: isabella.martinez@daveshub.onmicrosoft.com
+[2026-07-15 23:56:22] [SUCCESS] User created successfully: isabella.martinez@daveshub.onmicrosoft.com
+[2026-07-16 00:17:00] [INFO] Processing employee MI-0012 for Liam Anderson
+[2026-07-16 00:17:01] [INFO] Creating user: liam.anderson@daveshub.onmicrosoft.com
+[2026-07-16 00:17:02] [SUCCESS] User created successfully: liam.anderson@daveshub.onmicrosoft.com
+[2026-07-16 09:15:12] [INFO] Processing employee MI-0012 for Liam Anderson
+[2026-07-16 09:15:17] [WARN] User already exists: liam.anderson@daveshub.onmicrosoft.com
+[2026-07-16 09:15:37] [INFO] Processing employee MI-0012 for Liam Anderson
+[2026-07-16 09:15:37] [WARN] User already exists: liam.anderson@daveshub.onmicrosoft.com
+[2026-07-16 09:15:37] [INFO] Processing employee MI-0011 for Isabella Martinez
+[2026-07-16 09:15:38] [WARN] User already exists: isabella.martinez@daveshub.onmicrosoft.com
+[2026-07-16 09:15:38] [INFO] Processing employee MI-0001 for Sarah Johnson
+[2026-07-16 09:15:38] [WARN] User already exists: sarah.johnson@daveshub.onmicrosoft.com
+[2026-07-16 09:15:38] [INFO] Processing employee MI-0002 for David Wilson
+[2026-07-16 09:15:39] [WARN] User already exists: david.wilson@daveshub.onmicrosoft.com
+[2026-07-16 09:16:01] [INFO] Processing employee MI-0012 for Liam Anderson
+[2026-07-16 09:16:01] [WARN] User already exists: liam.anderson@daveshub.onmicrosoft.com
+[2026-07-16 09:16:01] [INFO] Processing employee MI-0011 for Isabella Martinez
+[2026-07-16 09:16:02] [WARN] User already exists: isabella.martinez@daveshub.onmicrosoft.com
+[2026-07-16 09:16:02] [INFO] Processing employee MI-0001 for Sarah Johnson
+[2026-07-16 09:16:02] [WARN] User already exists: sarah.johnson@daveshub.onmicrosoft.com
+[2026-07-16 09:16:02] [INFO] Processing employee MI-0002 for David Wilson
+[2026-07-16 09:16:03] [WARN] User already exists: david.wilson@daveshub.onmicrosoft.com
+[2026-07-16 09:16:03] [INFO] Processing employee MI-0003 for Emily Brown
+[2026-07-16 09:16:03] [INFO] Creating user: emily.brown@daveshub.onmicrosoft.com
+[2026-07-16 09:16:05] [SUCCESS] User created successfully: emily.brown@daveshub.onmicrosoft.com
+[2026-07-16 09:16:05] [INFO] Processing employee MI-0004 for Michael Scott
+[2026-07-16 09:16:05] [INFO] Creating user: michael.scott@daveshub.onmicrosoft.com
+[2026-07-16 09:16:06] [SUCCESS] User created successfully: michael.scott@daveshub.onmicrosoft.com
+[2026-07-16 09:24:13] [INFO] Processing employee MI-0012 for Liam Anderson
+[2026-07-16 09:24:14] [WARN] User already exists: liam.anderson@daveshub.onmicrosoft.com
+[2026-07-16 09:24:14] [INFO] Processing employee MI-0011 for Isabella Martinez
+[2026-07-16 09:24:15] [WARN] User already exists: isabella.martinez@daveshub.onmicrosoft.com
+[2026-07-16 09:25:38] [INFO] Processing employee MI-0012 for Liam Anderson
+[2026-07-16 09:25:39] [WARN] User already exists: liam.anderson@daveshub.onmicrosoft.com
+[2026-07-16 09:25:53] [INFO] Processing employee MI-0015 for Amelia Hall
+[2026-07-16 09:25:53] [INFO] Creating user: amelia.hall@daveshub.onmicrosoft.com
+[2026-07-16 09:25:54] [SUCCESS] User created successfully: amelia.hall@daveshub.onmicrosoft.com
+[2026-07-16 09:25:54] [INFO] Assigning group SG-Engineering
+[2026-07-16 09:25:58] [SUCCESS] SG-Engineering assigned successfully
+[2026-07-16 09:25:58] [INFO] Assigning group All Company
+[2026-07-16 09:25:59] [SUCCESS] All Company assigned successfully

@@ -1,4 +1,9 @@
 EmployeeID,FirstName,LastName,Department,Country,JobTitle,Office,ManagerEmployeeID,EmployeeType,StartDate
+MI-0015,Amelia,Hall,Engineering,United Kingdom,Software Engineer,London,MI-0006,Full-Time,2026-07-15
+MI-0013,Charlotte,Lee,Engineering,United Kingdom,Software Engineer,London,MI-0006,Full-Time,2026-07-15
+MI-0014,Henry,Walker,Engineering,Canada,DevOps Engineer,Toronto,MI-0006,Full-Time,2026-07-15
+MI-0012,Liam,Anderson,Engineering,United Kingdom,DevOps Engineer,London,MI-0006,Full-Time,2026-07-15
+MI-0011,Isabella,Martinez,Engineering,Canada,Software Engineer,Toronto,MI-0006,Full-Time,2026-07-15
 MI-0001,Sarah,Johnson,HR,Nigeria,HR Manager,Lagos,,Full-Time,2026-07-15
 MI-0002,David,Wilson,Engineering,Nigeria,Cloud Engineer,Lagos,MI-0006,Full-Time,2026-07-15
 MI-0003,Emily,Brown,Finance,Canada,Financial Analyst,Toronto,MI-0008,Full-Time,2026-07-15

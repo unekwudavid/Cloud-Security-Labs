@@ -1,0 +1,2 @@
+"Timestamp","EmployeeID","DisplayName","UserPrincipalName","Department","Country","Status","DepartmentGroup","CompanyGroup","AUAssigned","ManagerAssigned","Reason","ObjectId","TemporaryPassword"
+"7/15/2026 11:53:56 PM","MI-0001","Sarah Johnson","sarah.johnson@daveshub.onmicrosoft.com","HR","Nigeria","Skipped","","","False","False","User already exists",,"P@ssword123!"
