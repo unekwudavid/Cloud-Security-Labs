@@ -1,0 +1,64 @@
+flowchart TB
+
+subgraph ORG["Mustard Innovations"]
+    USERS["Employees"]
+end
+
+subgraph DEPARTMENTS["Departments"]
+    HR["HR"]
+    FIN["Finance"]
+    ENG["Engineering"]
+    SALES["Sales"]
+    IT["IT"]
+end
+
+subgraph GROUPS["Security Groups"]
+    SGHR["SG-HR"]
+    SGFIN["SG-Finance"]
+    SGENG["SG-Engineering"]
+    SGSALES["SG-Sales"]
+    SGIT["SG-IT"]
+    ALL["All Company"]
+end
+
+subgraph ROLES["Entra RBAC Roles"]
+    USERADMIN["User Administrator"]
+    GROUPADMIN["Groups Administrator"]
+    HELPDESK["Helpdesk Administrator"]
+    GLOBAL["Global Administrator"]
+end
+
+subgraph RESOURCES["Microsoft 365 Resources"]
+    EXO["Exchange Online"]
+    TEAMS["Microsoft Teams"]
+    SHAREPOINT["SharePoint"]
+    ONEDRIVE["OneDrive"]
+end
+
+USERS --> HR
+USERS --> FIN
+USERS --> ENG
+USERS --> SALES
+USERS --> IT
+
+HR --> SGHR
+FIN --> SGFIN
+ENG --> SGENG
+SALES --> SGSALES
+IT --> SGIT
+
+SGHR --> ALL
+SGFIN --> ALL
+SGENG --> ALL
+SGSALES --> ALL
+SGIT --> ALL
+
+SGHR --> USERADMIN
+SGFIN --> GROUPADMIN
+SGENG --> HELPDESK
+SGIT --> GLOBAL
+
+USERADMIN --> EXO
+GROUPADMIN --> TEAMS
+HELPDESK --> SHAREPOINT
+GLOBAL --> ONEDRIVE

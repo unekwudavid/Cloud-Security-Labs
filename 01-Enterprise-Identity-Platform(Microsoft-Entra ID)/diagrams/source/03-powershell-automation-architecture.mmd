@@ -1,0 +1,59 @@
+flowchart LR
+
+subgraph INPUT["Input Layer"]
+    HR["pilot-employees.csv"]
+    CFG["tenant-config.psd1"]
+    MAP["GroupMappings.json"]
+end
+
+subgraph SCRIPT["Provisioning Engine"]
+    MAIN["02-New-MIUsers.ps1"]
+end
+
+subgraph MODULE["Automation Module"]
+    BODY["New-MIUserBody()"]
+    EXIST["Test-MIUserExists()"]
+    CREATE["New-MIUser()"]
+    GROUP["Get-MIRequiredGroups()"]
+    ASSIGN["Add-MIUserToGroups()"]
+    RESULT["New-MIProvisioningResult()"]
+end
+
+subgraph GRAPH["Microsoft Graph SDK"]
+    GRAPHSDK["Microsoft Graph PowerShell"]
+end
+
+subgraph ENTRA["Microsoft Entra ID"]
+    USERS["Users"]
+    GROUPS["Security Groups"]
+end
+
+subgraph OUTPUT["Output"]
+    REPORT["Provisioning Reports"]
+    LOG["Automation Logs"]
+end
+
+HR --> MAIN
+CFG --> MAIN
+MAP --> MAIN
+
+MAIN --> BODY
+MAIN --> EXIST
+MAIN --> CREATE
+
+BODY --> CREATE
+EXIST --> CREATE
+
+CREATE --> GRAPHSDK
+
+GRAPHSDK --> USERS
+
+USERS --> GROUP
+GROUP --> ASSIGN
+
+ASSIGN --> GROUPS
+
+CREATE --> RESULT
+
+RESULT --> REPORT
+RESULT --> LOG

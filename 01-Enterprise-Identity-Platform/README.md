@@ -153,6 +153,27 @@ The main areas of the project are organized as follows:
 
 ---
 
+## Architecture Diagrams
+The project includes several architecture and workflow visuals under `diagrams/exports/`.
+
+![Enterprise architecture](diagrams/exports/01-enterprise-architecture.png)
+
+![User provisioning workflow](diagrams/exports/02-user-provisioning-workflow.png)
+
+![PowerShell automation architecture](diagrams/exports/03-powershell-automation-architecture.png)
+
+![Entra ID identity access architecture](diagrams/exports/04-entra-id-identity-access-architecture.png)
+
+![RBAC architecture](diagrams/exports/05-rbac-architecture.png)
+
+![Conditional Access architecture](diagrams/exports/06-conditional-access-architecture.png)
+
+![Joiner-Mover-Leaver lifecycle](diagrams/exports/07-joiner-mover-leaver-lifecycle.png)
+
+![Enterprise cloud security portfolio](diagrams/exports/08-enterprise-cloud-security-portfolio.png)
+
+---
+
 ## Recommended Review Path
 
 For a quick but meaningful review, I recommend reading in this order:

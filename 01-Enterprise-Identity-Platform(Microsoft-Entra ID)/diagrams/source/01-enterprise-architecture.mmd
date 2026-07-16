@@ -1,0 +1,69 @@
+flowchart LR
+
+%% ========= Identity Source =========
+subgraph HR["Identity Source"]
+    A["HR Master Register<br/>pilot-employees.csv"]
+end
+
+%% ========= Automation =========
+subgraph AUTO["PowerShell Automation"]
+    B["02-New-MIUsers.ps1"]
+    C["MI.Automation.psm1"]
+    D["tenant-config.psd1"]
+    E["GroupMappings.json"]
+
+    B --> C
+    C --> D
+    C --> E
+end
+
+%% ========= Graph =========
+subgraph GRAPH["Microsoft Graph"]
+    F["Microsoft Graph SDK"]
+end
+
+%% ========= Entra =========
+subgraph ENTRA["Microsoft Entra ID"]
+    G["Users"]
+    H["Security Groups"]
+    I["Administrative Units"]
+    J["RBAC Roles"]
+end
+
+%% ========= Microsoft 365 =========
+subgraph M365["Microsoft 365"]
+    K["Exchange Online"]
+    L["Microsoft Teams"]
+    M["SharePoint Online"]
+    N["OneDrive"]
+end
+
+%% ========= Governance =========
+subgraph GOV["Security & Governance"]
+    O["Conditional Access"]
+    P["Privileged Identity Management"]
+    Q["Joiner-Mover-Leaver"]
+    R["Audit Logs"]
+end
+
+A --> B
+B --> F
+F --> G
+
+G --> H
+G --> I
+G --> J
+
+H --> K
+H --> L
+H --> M
+H --> N
+
+J --> O
+J --> P
+
+G --> Q
+
+O --> R
+P --> R
+Q --> R

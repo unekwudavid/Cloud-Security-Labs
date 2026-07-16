@@ -18,3 +18,4 @@ Provide structured guidance on identity design, naming standards, lifecycle proc
 ## Notes
 - Use this folder as the single source of truth for IAM planning and controls.
 - Add new change requests or design notes alongside relevant documents.
+- Use the architecture diagrams in `../diagrams/exports/` to support documentation with visual workflows and system design.

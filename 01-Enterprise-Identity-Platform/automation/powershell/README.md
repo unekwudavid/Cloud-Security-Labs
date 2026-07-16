@@ -21,3 +21,9 @@ Make sure PowerShell respects the execution policy and the config file is availa
 - Scripts should use shared configuration and avoid hard-coded tenant values.
 - Logs should be written to the `../logs/` folder.
 - This folder may contain helper and reusable functions for automation tasks.
+
+## Visual References
+For automation and provisioning workflow diagrams, see:
+
+- `../../diagrams/exports/03-powershell-automation-architecture.png` — PowerShell automation architecture
+- `../../diagrams/exports/02-user-provisioning-workflow.png` — User provisioning workflow

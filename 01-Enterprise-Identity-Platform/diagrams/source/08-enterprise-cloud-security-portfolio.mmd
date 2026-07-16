@@ -1,0 +1,86 @@
+flowchart TB
+
+subgraph BUSINESS["Business Layer"]
+    HR["HR Department"]
+    USERS["Employees"]
+    ADMINS["IT Administrators"]
+end
+
+subgraph IAM["Identity & Access Management"]
+    ENTRA["Microsoft Entra ID"]
+    USERSOBJ["Users"]
+    GROUPS["Security Groups"]
+    AU["Administrative Units"]
+    RBAC["RBAC"]
+    CA["Conditional Access"]
+    JML["Joiner-Mover-Leaver"]
+end
+
+subgraph AUTOMATION["Automation"]
+    CSV["HR CSV"]
+    CONFIG["Tenant Config"]
+    PS["PowerShell Automation"]
+    GRAPH["Microsoft Graph"]
+    REPORTS["Reports & Logs"]
+end
+
+subgraph CLOUD["Microsoft Cloud"]
+    M365["Microsoft 365"]
+    EXO["Exchange Online"]
+    TEAMS["Microsoft Teams"]
+    SPO["SharePoint"]
+    OD["OneDrive"]
+end
+
+subgraph SECURITY["Cloud Security"]
+    PIM["Privileged Identity Management"]
+    DEFENDER["Microsoft Defender"]
+    SENTINEL["Microsoft Sentinel"]
+    INTUNE["Microsoft Intune"]
+    KEYVAULT["Azure Key Vault"]
+end
+
+subgraph DEVOPS["Infrastructure & DevOps"]
+    GITHUB["GitHub Portfolio"]
+    TF["Terraform"]
+    DOCS["Documentation"]
+end
+
+HR --> CSV
+USERS --> CSV
+
+CSV --> PS
+CONFIG --> PS
+
+PS --> GRAPH
+
+GRAPH --> ENTRA
+
+ENTRA --> USERSOBJ
+ENTRA --> GROUPS
+ENTRA --> AU
+ENTRA --> RBAC
+ENTRA --> CA
+ENTRA --> JML
+
+RBAC --> M365
+CA --> M365
+
+M365 --> EXO
+M365 --> TEAMS
+M365 --> SPO
+M365 --> OD
+
+ENTRA --> PIM
+PIM --> DEFENDER
+DEFENDER --> SENTINEL
+ENTRA --> INTUNE
+ENTRA --> KEYVAULT
+
+PS --> REPORTS
+
+REPORTS --> GITHUB
+DOCS --> GITHUB
+TF --> GITHUB
+
+ADMINS --> GITHUB

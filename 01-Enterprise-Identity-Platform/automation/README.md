@@ -188,3 +188,4 @@ Planned improvements include:
 - HR Master Register
 - Pilot User Provisioning Plan
 - Tenant Assessment Report
+- See `../diagrams/exports/03-powershell-automation-architecture.png` for the automation architecture diagram
