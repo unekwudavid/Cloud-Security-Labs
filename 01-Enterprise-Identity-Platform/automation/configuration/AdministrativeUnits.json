@@ -1,0 +1,10 @@
+{
+    "Version": "1.0",
+    "LastUpdated": "2026-07-18",
+
+    "Countries": {
+        "Nigeria": "MI-Nigeria",
+        "Canada": "MI-Canada",
+        "United Kingdom": "MI-UnitedKingdom"
+    }
+}

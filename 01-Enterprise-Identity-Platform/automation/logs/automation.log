@@ -66,3 +66,218 @@
 [2026-07-16 09:25:58] [SUCCESS] SG-Engineering assigned successfully
 [2026-07-16 09:25:58] [INFO] Assigning group All Company
 [2026-07-16 09:25:59] [SUCCESS] All Company assigned successfully
+[2026-07-18 02:20:33] [INFO] Processing employee MI-0016
+[2026-07-18 02:20:41] [INFO] Creating user olivia.johnson@daveshub.onmicrosoft.com
+[2026-07-18 02:20:41] [ERROR] [Request_BadRequest] : A password must be specified to create a new user.
+[2026-07-18 02:27:21] [INFO] Processing employee MI-0016
+[2026-07-18 02:27:22] [INFO] Creating user olivia.johnson@daveshub.onmicrosoft.com
+[2026-07-18 02:27:23] [SUCCESS] User created successfully.
+[2026-07-18 02:27:23] [INFO] Starting group assignment...
+[2026-07-18 02:27:23] [INFO] Searching for group: All Company
+[2026-07-18 02:27:29] [SUCCESS] All Company assigned successfully.
+[2026-07-18 02:27:29] [INFO] Searching for group: SG-Engineering
+[2026-07-18 02:27:31] [SUCCESS] SG-Engineering assigned successfully.
+[2026-07-18 02:27:31] [SUCCESS] Group assignment completed.
+[2026-07-18 02:27:31] [INFO] Assigning Administrative Unit AU-Canada
+[2026-07-18 02:27:31] [WARN] Administrative Unit not found: AU-Canada
+[2026-07-18 15:43:25] [INFO] Processing employee MI-0016
+[2026-07-18 15:43:26] [WARN] User already exists: olivia.johnson@daveshub.onmicrosoft.com
+[2026-07-18 15:44:34] [INFO] Processing employee MI-0016
+[2026-07-18 15:44:35] [WARN] User already exists: olivia.johnson@daveshub.onmicrosoft.com
+[2026-07-18 15:44:54] [INFO] Processing employee MI-0010
+[2026-07-18 15:44:54] [INFO] Creating user james.white@daveshub.onmicrosoft.com
+[2026-07-18 15:44:56] [SUCCESS] User created successfully.
+[2026-07-18 15:44:56] [INFO] Starting group assignment...
+[2026-07-18 15:44:57] [INFO] Searching for group: All Company
+[2026-07-18 15:44:57] [SUCCESS] All Company assigned successfully.
+[2026-07-18 15:44:57] [SUCCESS] Group assignment completed.
+[2026-07-18 15:44:58] [INFO] Assigning Administrative Unit MI-Nigeria
+[2026-07-18 15:44:59] [SUCCESS] MI-Nigeria assigned successfully
+[2026-07-20 15:02:39] [INFO] Processing employee MGR-001
+[2026-07-20 15:02:44] [INFO] Creating user james.carter@daveshub.onmicrosoft.com
+[2026-07-20 15:02:47] [SUCCESS] User created successfully.
+[2026-07-20 15:02:48] [INFO] Starting group assignment...
+[2026-07-20 15:02:49] [INFO] Searching for group: All Company
+[2026-07-20 15:03:22] [SUCCESS] All Company assigned successfully.
+[2026-07-20 15:03:24] [INFO] Searching for group: SG-Engineering
+[2026-07-20 15:03:27] [SUCCESS] SG-Engineering assigned successfully.
+[2026-07-20 15:03:27] [SUCCESS] Group assignment completed.
+[2026-07-20 15:03:27] [INFO] Assigning Administrative Unit MI-Canada
+[2026-07-20 15:03:44] [SUCCESS] MI-Canada assigned successfully
+[2026-07-20 15:03:45] [INFO] Processing employee MGR-002
+[2026-07-20 15:03:45] [INFO] Creating user rebecca.adams@daveshub.onmicrosoft.com
+[2026-07-20 15:03:46] [SUCCESS] User created successfully.
+[2026-07-20 15:03:46] [INFO] Starting group assignment...
+[2026-07-20 15:03:46] [INFO] Searching for group: All Company
+[2026-07-20 15:03:48] [SUCCESS] All Company assigned successfully.
+[2026-07-20 15:03:48] [INFO] Searching for group: SG-HR
+[2026-07-20 15:03:50] [SUCCESS] SG-HR assigned successfully.
+[2026-07-20 15:03:50] [SUCCESS] Group assignment completed.
+[2026-07-20 15:03:50] [INFO] Assigning Administrative Unit MI-Nigeria
+[2026-07-20 15:03:52] [SUCCESS] MI-Nigeria assigned successfully
+[2026-07-20 15:03:52] [INFO] Processing employee MGR-003
+[2026-07-20 15:03:52] [INFO] Creating user daniel.brooks@daveshub.onmicrosoft.com
+[2026-07-20 15:03:53] [SUCCESS] User created successfully.
+[2026-07-20 15:03:53] [INFO] Starting group assignment...
+[2026-07-20 15:03:53] [INFO] Searching for group: All Company
+[2026-07-20 15:03:54] [SUCCESS] All Company assigned successfully.
+[2026-07-20 15:03:55] [INFO] Searching for group: SG-Finance
+[2026-07-20 15:03:55] [SUCCESS] SG-Finance assigned successfully.
+[2026-07-20 15:03:56] [SUCCESS] Group assignment completed.
+[2026-07-20 15:03:56] [INFO] Assigning Administrative Unit MI-Canada
+[2026-07-20 15:03:57] [SUCCESS] MI-Canada assigned successfully
+[2026-07-20 15:03:57] [INFO] Processing employee MGR-004
+[2026-07-20 15:03:58] [INFO] Creating user olivia.turner@daveshub.onmicrosoft.com
+[2026-07-20 15:03:58] [SUCCESS] User created successfully.
+[2026-07-20 15:03:59] [INFO] Starting group assignment...
+[2026-07-20 15:03:59] [INFO] Searching for group: All Company
+[2026-07-20 15:04:00] [SUCCESS] All Company assigned successfully.
+[2026-07-20 15:04:01] [INFO] Searching for group: SG-Sales
+[2026-07-20 15:04:02] [SUCCESS] SG-Sales assigned successfully.
+[2026-07-20 15:04:02] [SUCCESS] Group assignment completed.
+[2026-07-20 15:04:02] [INFO] Assigning Administrative Unit MI-United Kingdom
+[2026-07-20 15:04:03] [WARN] Administrative Unit not found: MI-United Kingdom
+[2026-07-20 15:04:03] [INFO] Processing employee MGR-005
+[2026-07-20 15:04:04] [INFO] Creating user sophia.bennett@daveshub.onmicrosoft.com
+[2026-07-20 15:04:05] [SUCCESS] User created successfully.
+[2026-07-20 15:04:05] [INFO] Starting group assignment...
+[2026-07-20 15:04:06] [INFO] Searching for group: All Company
+[2026-07-20 15:04:07] [SUCCESS] All Company assigned successfully.
+[2026-07-20 15:04:07] [INFO] Searching for group: SG-Marketing
+[2026-07-20 15:04:10] [SUCCESS] SG-Marketing assigned successfully.
+[2026-07-20 15:04:10] [SUCCESS] Group assignment completed.
+[2026-07-20 15:04:10] [INFO] Assigning Administrative Unit MI-Canada
+[2026-07-20 15:04:12] [SUCCESS] MI-Canada assigned successfully
+[2026-07-20 15:04:13] [INFO] Processing employee MGR-006
+[2026-07-20 15:04:13] [INFO] Creating user ethan.collins@daveshub.onmicrosoft.com
+[2026-07-20 15:04:14] [SUCCESS] User created successfully.
+[2026-07-20 15:04:14] [INFO] Starting group assignment...
+[2026-07-20 15:04:14] [INFO] Searching for group: All Company
+[2026-07-20 15:04:20] [SUCCESS] All Company assigned successfully.
+[2026-07-20 15:04:21] [INFO] Searching for group: SG-Operations
+[2026-07-20 15:04:23] [SUCCESS] SG-Operations assigned successfully.
+[2026-07-20 15:04:25] [SUCCESS] Group assignment completed.
+[2026-07-20 15:04:25] [INFO] Assigning Administrative Unit MI-Nigeria
+[2026-07-20 15:04:28] [SUCCESS] MI-Nigeria assigned successfully
+[2026-07-20 15:04:28] [INFO] Processing employee MGR-007
+[2026-07-20 15:04:30] [INFO] Creating user michael.foster@daveshub.onmicrosoft.com
+[2026-07-20 15:04:34] [SUCCESS] User created successfully.
+[2026-07-20 15:04:34] [INFO] Starting group assignment...
+[2026-07-20 15:04:34] [INFO] Searching for group: All Company
+[2026-07-20 15:04:35] [SUCCESS] All Company assigned successfully.
+[2026-07-20 15:04:35] [INFO] Searching for group: SG-Security
+[2026-07-20 15:04:37] [SUCCESS] SG-Security assigned successfully.
+[2026-07-20 15:04:37] [SUCCESS] Group assignment completed.
+[2026-07-20 15:04:37] [INFO] Assigning Administrative Unit MI-Canada
+[2026-07-20 15:04:38] [SUCCESS] MI-Canada assigned successfully
+[2026-07-20 15:04:39] [INFO] Processing employee MGR-008
+[2026-07-20 15:04:39] [INFO] Creating user william.harris@daveshub.onmicrosoft.com
+[2026-07-20 15:04:40] [SUCCESS] User created successfully.
+[2026-07-20 15:04:41] [INFO] Starting group assignment...
+[2026-07-20 15:04:41] [INFO] Searching for group: All Company
+[2026-07-20 15:04:42] [SUCCESS] All Company assigned successfully.
+[2026-07-20 15:04:42] [INFO] Searching for group: SG-Executive
+[2026-07-20 15:04:44] [SUCCESS] SG-Executive assigned successfully.
+[2026-07-20 15:04:45] [SUCCESS] Group assignment completed.
+[2026-07-20 15:04:45] [INFO] Assigning Administrative Unit MI-Canada
+[2026-07-20 15:04:47] [SUCCESS] MI-Canada assigned successfully
+[2026-07-20 15:16:53] [INFO] Processing employee MI-0018
+[2026-07-20 15:18:05] [INFO] Creating user emma.wilson@daveshub.onmicrosoft.com
+[2026-07-20 15:18:10] [SUCCESS] User created successfully.
+[2026-07-20 15:18:12] [INFO] Starting group assignment...
+[2026-07-20 15:18:12] [INFO] Searching for group: All Company
+[2026-07-20 15:19:03] [SUCCESS] All Company assigned successfully.
+[2026-07-20 15:19:03] [INFO] Searching for group: SG-Engineering
+[2026-07-20 15:19:04] [SUCCESS] SG-Engineering assigned successfully.
+[2026-07-20 15:19:05] [SUCCESS] Group assignment completed.
+[2026-07-20 15:19:05] [INFO] Assigning Administrative Unit MI-UnitedKingdom
+[2026-07-20 15:20:05] [SUCCESS] MI-UnitedKingdom assigned successfully
+[2026-07-20 15:20:13] [SUCCESS] Assigned manager 'james.carter@daveshub.onmicrosoft.com' to Emma Wilson.
+[2026-07-20 20:31:05] [INFO] Processing employee MI-0019
+[2026-07-20 20:31:14] [INFO] Creating user william.smith@daveshub.onmicrosoft.com
+[2026-07-20 20:31:14] [SUCCESS] User created successfully.
+[2026-07-20 20:31:15] [INFO] Starting group assignment...
+[2026-07-20 20:31:15] [INFO] Searching for group: All Company
+[2026-07-20 20:31:49] [ERROR] Failed assigning All Company : An error occurred while sending the request.
+[2026-07-20 20:31:49] [INFO] Searching for group: SG-Engineering
+[2026-07-20 20:31:51] [SUCCESS] SG-Engineering assigned successfully.
+[2026-07-20 20:31:51] [SUCCESS] Group assignment completed.
+[2026-07-20 20:31:51] [INFO] Assigning Administrative Unit MI-Canada
+[2026-07-20 20:31:56] [SUCCESS] MI-Canada assigned successfully
+[2026-07-20 20:31:58] [SUCCESS] Assigned manager 'james.carter@daveshub.onmicrosoft.com' to William Smith.
+[2026-07-20 22:01:15] [INFO] Processing employee MI-0019
+[2026-07-20 22:01:16] [WARN] User already exists: william.smith@daveshub.onmicrosoft.com
+[2026-07-20 22:01:16] [INFO] Processing employee MI-0018
+[2026-07-20 22:01:17] [WARN] User already exists: emma.wilson@daveshub.onmicrosoft.com
+[2026-07-20 22:01:17] [INFO] Processing employee MI-0017
+[2026-07-20 22:01:18] [WARN] User already exists: james.white@daveshub.onmicrosoft.com
+[2026-07-20 22:01:18] [INFO] Processing employee MI-0016
+[2026-07-20 22:01:18] [WARN] User already exists: olivia.johnson@daveshub.onmicrosoft.com
+[2026-07-20 22:01:18] [INFO] Processing employee MI-0015
+[2026-07-20 22:01:18] [WARN] User already exists: amelia.hall@daveshub.onmicrosoft.com
+[2026-07-20 22:01:18] [INFO] Processing employee MI-0013
+[2026-07-20 22:01:19] [INFO] Creating user charlotte.lee@daveshub.onmicrosoft.com
+[2026-07-20 22:01:19] [SUCCESS] User created successfully.
+[2026-07-20 22:01:19] [INFO] Starting group assignment...
+[2026-07-20 22:01:19] [INFO] Searching for group: All Company
+[2026-07-20 22:01:21] [SUCCESS] All Company assigned successfully.
+[2026-07-20 22:01:21] [INFO] Searching for group: SG-Engineering
+[2026-07-20 22:01:21] [SUCCESS] SG-Engineering assigned successfully.
+[2026-07-20 22:01:21] [SUCCESS] Group assignment completed.
+[2026-07-20 22:01:21] [INFO] Assigning Administrative Unit MI-UnitedKingdom
+[2026-07-20 22:01:22] [SUCCESS] MI-UnitedKingdom assigned successfully
+[2026-07-20 22:01:23] [SUCCESS] Assigned manager 'james.carter@daveshub.onmicrosoft.com' to Charlotte Lee.
+[2026-07-20 22:01:23] [INFO] Processing employee MI-0014
+[2026-07-20 22:01:23] [INFO] Creating user henry.walker@daveshub.onmicrosoft.com
+[2026-07-20 22:01:24] [SUCCESS] User created successfully.
+[2026-07-20 22:01:24] [INFO] Starting group assignment...
+[2026-07-20 22:01:24] [INFO] Searching for group: All Company
+[2026-07-20 22:01:25] [SUCCESS] All Company assigned successfully.
+[2026-07-20 22:01:25] [INFO] Searching for group: SG-Engineering
+[2026-07-20 22:01:25] [SUCCESS] SG-Engineering assigned successfully.
+[2026-07-20 22:01:25] [SUCCESS] Group assignment completed.
+[2026-07-20 22:01:25] [INFO] Assigning Administrative Unit MI-Canada
+[2026-07-20 22:01:26] [SUCCESS] MI-Canada assigned successfully
+[2026-07-20 22:01:27] [SUCCESS] Assigned manager 'james.carter@daveshub.onmicrosoft.com' to Henry Walker.
+[2026-07-20 22:01:27] [INFO] Processing employee MI-0012
+[2026-07-20 22:01:27] [WARN] User already exists: liam.anderson@daveshub.onmicrosoft.com
+[2026-07-20 22:01:27] [INFO] Processing employee MI-0011
+[2026-07-20 22:01:27] [WARN] User already exists: isabella.martinez@daveshub.onmicrosoft.com
+[2026-07-20 22:01:27] [INFO] Processing employee MI-0001
+[2026-07-20 22:01:28] [WARN] User already exists: sarah.johnson@daveshub.onmicrosoft.com
+[2026-07-20 22:04:52] [INFO] Processing employee MI-0019
+[2026-07-20 22:04:54] [WARN] User already exists: william.smith@daveshub.onmicrosoft.com
+[2026-07-20 22:04:54] [INFO] Processing employee MI-0018
+[2026-07-20 22:04:54] [WARN] User already exists: emma.wilson@daveshub.onmicrosoft.com
+[2026-07-20 22:04:54] [INFO] Processing employee MI-0017
+[2026-07-20 22:04:55] [WARN] User already exists: james.white@daveshub.onmicrosoft.com
+[2026-07-20 22:04:55] [INFO] Processing employee MI-0016
+[2026-07-20 22:04:55] [WARN] User already exists: olivia.johnson@daveshub.onmicrosoft.com
+[2026-07-20 22:04:55] [INFO] Processing employee MI-0015
+[2026-07-20 22:04:56] [WARN] User already exists: amelia.hall@daveshub.onmicrosoft.com
+[2026-07-20 22:04:56] [INFO] Processing employee MI-0013
+[2026-07-20 22:04:56] [WARN] User already exists: charlotte.lee@daveshub.onmicrosoft.com
+[2026-07-20 22:04:56] [INFO] Processing employee MI-0014
+[2026-07-20 22:04:57] [WARN] User already exists: henry.walker@daveshub.onmicrosoft.com
+[2026-07-20 22:04:57] [INFO] Processing employee MI-0012
+[2026-07-20 22:04:58] [WARN] User already exists: liam.anderson@daveshub.onmicrosoft.com
+[2026-07-20 22:04:58] [INFO] Processing employee MI-0011
+[2026-07-20 22:04:58] [WARN] User already exists: isabella.martinez@daveshub.onmicrosoft.com
+[2026-07-20 22:04:58] [INFO] Processing employee MI-0001
+[2026-07-20 22:04:59] [WARN] User already exists: sarah.johnson@daveshub.onmicrosoft.com
+[2026-07-20 22:04:59] [INFO] Processing employee MI-0002
+[2026-07-20 22:04:59] [WARN] User already exists: david.wilson@daveshub.onmicrosoft.com
+[2026-07-20 22:07:02] [INFO] Processing employee MI-0020
+[2026-07-20 22:07:03] [INFO] Creating user john.doe@daveshub.onmicrosoft.com
+[2026-07-20 22:07:04] [SUCCESS] User created successfully.
+[2026-07-20 22:07:04] [INFO] Starting group assignment...
+[2026-07-20 22:07:04] [INFO] Searching for group: SG-AllCompany
+[2026-07-20 22:07:05] [SUCCESS] SG-AllCompany assigned successfully.
+[2026-07-20 22:07:05] [INFO] Searching for group: SG-Engineering
+[2026-07-20 22:07:06] [SUCCESS] SG-Engineering assigned successfully.
+[2026-07-20 22:07:06] [SUCCESS] Group assignment completed.
+[2026-07-20 22:07:08] [SUCCESS] Assigned manager 'james.carter@daveshub.onmicrosoft.com' to John Doe.
+[2026-07-20 22:07:08] [INFO] Attempting license assignment...
+[2026-07-20 22:07:08] [INFO] Discovering subscribed licenses...
+[2026-07-20 22:07:09] [WARN] No subscribed licenses found in tenant.
+[2026-07-20 22:07:09] [WARN] License assignment skipped. No subscribed SKUs available.

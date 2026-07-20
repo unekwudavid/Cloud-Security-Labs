@@ -106,6 +106,7 @@ function Test-MIUserExists {
 
 # ---------------------------------------------------------------------
 
+#this is the provisioning result object that will be returned after each user creation attempt
 function New-MIProvisioningResult {
 
     param(
@@ -142,9 +143,19 @@ function New-MIProvisioningResult {
 
         CompanyGroup=""
 
+        AdministrativeUnit  = ""
+
         AUAssigned=$false
 
         ManagerAssigned=$false
+
+        Manager = ""
+
+        License = ""
+
+        LicenseAssigned = $false
+
+        LicenseStatus = ""
 
         Reason=$Reason
 
@@ -339,11 +350,366 @@ function Add-MIUserToGroups {
 
 }
 
+# administrative unit mapping function
+function Get-MIAUMappings {
+
+    param(
+        [string]$Path
+    )
+
+    if (-not (Test-Path $Path)) {
+        throw "Administrative Unit mapping file not found: $Path"
+    }
+
+    Get-Content $Path -Raw | ConvertFrom-Json
+
+}
+
+#get the administrative unit for a given employee based on their country
+function Get-MIAdministrativeUnit {
+
+    param(
+        $Employee,
+        $Mappings
+    )
+
+    if ($Mappings.Countries.$($Employee.Country)) {
+        return $Mappings.Countries.$($Employee.Country)
+    }
+
+    return $null
+
+}
+
+#add a user to an administrative unit
+function Add-MIUserToAdministrativeUnit {
+
+    param(
+        [string]$UserId,
+
+        [string]$AdministrativeUnit
+    )
+
+    Write-MILog "Assigning Administrative Unit $AdministrativeUnit" "INFO"
+
+    try {
+
+        $AU = Get-MgDirectoryAdministrativeUnit `
+            -Filter "displayName eq '$AdministrativeUnit'"
+
+        if (-not $AU) {
+
+            Write-MILog "Administrative Unit not found: $AdministrativeUnit" "WARN"
+            return $false
+
+        }
+
+        $Body = @{
+            "@odata.id" = "https://graph.microsoft.com/v1.0/directoryObjects/$UserId"
+        }
+
+        New-MgDirectoryAdministrativeUnitMemberByRef `
+            -AdministrativeUnitId $AU.Id `
+            -BodyParameter $Body
+
+        Write-MILog "$AdministrativeUnit assigned successfully" "SUCCESS"
+
+        return $true
+
+    }
+    catch {
+
+        Write-MILog "Failed assigning Administrative Unit : $($_.Exception.Message)" "ERROR"
+
+        return $false
+
+    }
+
+}
+#get manager mappings from a JSON file
+function Get-MIManagerMappings {
+
+    param(
+        [string]$Path
+    )
+
+    if (-not (Test-Path $Path)) {
+        throw "Manager mapping file not found: $Path"
+    }
+
+    Get-Content $Path -Raw | ConvertFrom-Json
+
+}
+
+#set manager for a user based on employee data and mappings
+function Set-MIUserManager {
+
+    param(
+
+        [string]$UserId,
+
+        $Employee,
+
+        $Mappings
+
+    )
+
+    Write-Host ""
+    Write-Host "========================================"
+    Write-Host " MANAGER ASSIGNMENT"
+    Write-Host "========================================"
+
+    $ManagerUPN = $Mappings.Departments.$($Employee.Department)
+
+    if (-not $ManagerUPN) {
+
+        Write-MILog "No manager configured for department '$($Employee.Department)'" "WARN"
+
+        return [PSCustomObject]@{
+            Success = $false
+            Manager = ""
+        }
+
+    }
+
+    Write-Host "Employee   : $($Employee.FirstName) $($Employee.LastName)"
+    Write-Host "Department : $($Employee.Department)"
+    Write-Host "Manager    : $ManagerUPN"
+
+    try {
+
+        # Retrieve manager account
+        $Manager = Get-MgUser -UserId $ManagerUPN -ErrorAction Stop
+
+        # Check whether a manager is already assigned
+        try {
+
+            $ExistingManager = Get-MgUserManager -UserId $UserId -ErrorAction Stop
+
+            if ($ExistingManager) {
+
+                Write-MILog "Manager already assigned for $($Employee.FirstName) $($Employee.LastName)." "INFO"
+
+                return [PSCustomObject]@{
+                    Success = $true
+                    Manager = $ManagerUPN
+                }
+
+            }
+
+        }
+        catch {
+            # No existing manager found. Continue.
+        }
+
+        $Body = @{
+            "@odata.id" = "https://graph.microsoft.com/v1.0/users/$($Manager.Id)"
+        }
+
+        Set-MgUserManagerByRef `
+            -UserId $UserId `
+            -BodyParameter $Body `
+            -ErrorAction Stop
+
+        Write-MILog "Assigned manager '$ManagerUPN' to $($Employee.FirstName) $($Employee.LastName)." "SUCCESS"
+
+        return [PSCustomObject]@{
+            Success = $true
+            Manager = $ManagerUPN
+        }
+
+    }
+    catch {
+
+        Write-MILog "Failed assigning manager: $($_.Exception.Message)" "ERROR"
+
+        return [PSCustomObject]@{
+            Success = $false
+            Manager = ""
+        }
+
+    }
+
+}
+
+# ---------------------------------------------------------------------
+# Load License Mappings
+# ---------------------------------------------------------------------
+
+function Get-MILicenseMappings {
+
+    param(
+        [string]$Path
+    )
+
+    if (-not (Test-Path $Path)) {
+
+        throw "License mapping file not found: $Path"
+
+    }
+
+    Get-Content $Path -Raw | ConvertFrom-Json
+
+}
+
+# ---------------------------------------------------------------------
+# Discover Available Microsoft 365 Licenses
+# ---------------------------------------------------------------------
+
+function Get-MITenantLicenses {
+
+    Write-MILog "Discovering subscribed licenses..." "INFO"
+
+    try {
+
+        $Licenses = Get-MgSubscribedSku
+
+        if (-not $Licenses) {
+
+            Write-MILog "No subscribed licenses found in tenant." "WARN"
+
+            return @()
+
+        }
+
+        Write-MILog "$($Licenses.Count) subscribed SKU(s) discovered." "SUCCESS"
+
+        return $Licenses
+
+    }
+
+    catch {
+
+        Write-MILog "Failed retrieving tenant licenses: $($_.Exception.Message)" "ERROR"
+
+        return @()
+
+    }
+
+}
+
+# ---------------------------------------------------------------------
+# Determine Required License
+# ---------------------------------------------------------------------
+
+function Get-MIRequiredLicense {
+
+    param(
+
+        $Employee,
+
+        $Mappings
+
+    )
+
+    if ($Mappings.Departments.$($Employee.Department)) {
+
+        return $Mappings.Departments.$($Employee.Department)
+
+    }
+
+    return $null
+
+}
+
+# ---------------------------------------------------------------------
+# Assign Microsoft 365 License
+# ---------------------------------------------------------------------
+
+function Set-MIUserLicense {
+
+    param(
+
+        [string]$UserId,
+
+        [string]$SkuPartNumber
+
+    )
+
+    Write-MILog "Attempting license assignment..." "INFO"
+
+    $Licenses = Get-MITenantLicenses
+
+    if ($Licenses.Count -eq 0) {
+
+        Write-MILog "License assignment skipped. No subscribed SKUs available." "WARN"
+
+        return @{
+            Success = $false
+            Status  = "No subscribed licenses"
+        }
+
+    }
+
+    $License = $Licenses | Where-Object {
+
+        $_.SkuPartNumber -eq $SkuPartNumber
+
+    }
+
+    if (-not $License) {
+
+        Write-MILog "Required SKU '$SkuPartNumber' not found." "WARN"
+
+        return @{
+            Success = $false
+            Status  = "SKU not found"
+        }
+
+    }
+
+    try {
+
+        Set-MgUserLicense `
+            -UserId $UserId `
+            -AddLicenses @(
+                @{
+                    SkuId = $License.SkuId
+                }
+            ) `
+            -RemoveLicenses @()
+
+        Write-MILog "License assigned successfully." "SUCCESS"
+
+        return @{
+            Success = $true
+            Status  = "Assigned"
+        }
+
+    }
+
+    catch {
+
+        Write-MILog "License assignment failed: $($_.Exception.Message)" "ERROR"
+
+        return @{
+            Success = $false
+            Status  = $_.Exception.Message
+        }
+
+    }
+
+}
+
+#export functions to be able to use them outside of the module
 Export-ModuleMember -Function @(
 'Write-MILog',
 'New-MIUser',
 'Test-MIUserExists',
+
 'Get-MIGroupMappings',
 'Get-MIRequiredGroups',
-'Add-MIUserToGroups'
+'Add-MIUserToGroups',
+
+'Get-MIAUMappings',
+'Get-MIAdministrativeUnit',
+'Add-MIUserToAdministrativeUnit',
+
+'Get-MIManagerMappings',
+'Set-MIUserManager',
+
+'Get-MILicenseMappings',
+'Get-MITenantLicenses',
+'Get-MIRequiredLicense',
+'Set-MIUserLicense'
 )

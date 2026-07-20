@@ -31,3 +31,10 @@ Covers HR-sourced onboarding for employees during pilot and steady-state.
 
 ## References
 See `identity-provisioning-standard.md` for naming and lifecycle standards.
+
+Provisioning evidence and captured sample runs are stored in the `../screenshots/` folder.
+
+- `../screenshots/provision-miemployees-01.png`
+- `../screenshots/provision-miemployees-multiple.png`
+- `../screenshots/provision-managers-01.png`
+- `../screenshots/provision-run-terminal-01.png`

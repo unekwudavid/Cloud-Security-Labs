@@ -1,0 +1,2 @@
+"Timestamp","EmployeeID","DisplayName","UserPrincipalName","Department","Country","Status","DepartmentGroup","CompanyGroup","AdministrativeUnit","AUAssigned","ManagerAssigned","Reason","ObjectId","TemporaryPassword"
+"7/18/2026 3:44:35 PM","MI-0016","Olivia Johnson","olivia.johnson@daveshub.onmicrosoft.com","Engineering","Canada","Skipped","","","","False","False","User already exists",,"P@ssword123!"

@@ -1,0 +1,2 @@
+"Timestamp","EmployeeID","DisplayName","UserPrincipalName","Department","Country","Status","DepartmentGroup","CompanyGroup","AdministrativeUnit","AUAssigned","ManagerAssigned","Manager","Reason","ObjectId","TemporaryPassword"
+"7/20/2026 8:31:14 PM","MI-0019","William Smith","william.smith@daveshub.onmicrosoft.com","Engineering","Canada","Created","SG-Engineering","All Company","MI-Canada","True","@{Success=True; Manager=james.carter@daveshub.onmicrosoft.com}","james.carter@daveshub.onmicrosoft.com",,"d1b8d1c3-a736-46e0-9034-6aadf94ed9bc","P@ssword123!"

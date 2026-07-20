@@ -1,0 +1,2 @@
+"Timestamp","EmployeeID","DisplayName","UserPrincipalName","Department","Country","Status","DepartmentGroup","CompanyGroup","AdministrativeUnit","AUAssigned","ManagerAssigned","Reason","ObjectId","TemporaryPassword"
+"7/18/2026 2:20:41 AM","MI-0016","Olivia Johnson","olivia.johnson@daveshub.onmicrosoft.com","Engineering","Canada","Failed","","","","False","False","[Request_BadRequest] : A password must be specified to create a new user.",,

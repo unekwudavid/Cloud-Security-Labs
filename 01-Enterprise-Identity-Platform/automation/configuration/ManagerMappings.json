@@ -1,0 +1,15 @@
+{
+    "Version": "1.0",
+    "LastUpdated": "2026-07-18",
+
+    "Departments": {
+        "Engineering": "james.carter@daveshub.onmicrosoft.com",
+        "HR": "rebecca.adams@daveshub.onmicrosoft.com",
+        "Finance": "daniel.brooks@daveshub.onmicrosoft.com",
+        "Sales": "olivia.turner@daveshub.onmicrosoft.com",
+        "Marketing": "sophia.bennett@daveshub.onmicrosoft.com",
+        "Operations": "ethan.collins@daveshub.onmicrosoft.com",
+        "Security": "michael.foster@daveshub.onmicrosoft.com",
+        "Executive": "william.harris@daveshub.onmicrosoft.com"
+    }
+}

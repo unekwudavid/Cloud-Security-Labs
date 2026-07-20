@@ -1,0 +1,2 @@
+"Timestamp","EmployeeID","DisplayName","UserPrincipalName","Department","Country","Status","DepartmentGroup","CompanyGroup","AdministrativeUnit","AUAssigned","ManagerAssigned","Reason","ObjectId","TemporaryPassword"
+"7/18/2026 2:27:23 AM","MI-0016","Olivia Johnson","olivia.johnson@daveshub.onmicrosoft.com","Engineering","Canada","Created","SG-Engineering","All Company","AU-Canada","True","False",,"fc05327d-1c54-4194-9d22-f23159e9d85b","P@ssword123!"

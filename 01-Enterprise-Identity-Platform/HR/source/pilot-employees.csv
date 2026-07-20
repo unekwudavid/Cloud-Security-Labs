@@ -1,4 +1,9 @@
 EmployeeID,FirstName,LastName,Department,Country,JobTitle,Office,ManagerEmployeeID,EmployeeType,StartDate
+MI-0020,John,Doe,Engineering,United States,Software Engineer,New York,MI-0006,Full-Time,2026-07-15
+MI-0019,William,Smith,Engineering,Canada,Software Engineer,Toronto,MI-0006,Full-Time,2026-07-15
+MI-0018,Emma,Wilson,Engineering,United Kingdom,Software Engineer,London,MI-0006,Full-Time,2026-07-15
+MI-0017,James,White,Security Operations,Nigeria,SOC Manager,Lagos,,Full-Time,2026-07-15
+MI-0016,Olivia,Johnson,Engineering,Canada,Software Engineer,Toronto,MI-0006,Full-Time,2026-07-15
 MI-0015,Amelia,Hall,Engineering,United Kingdom,Software Engineer,London,MI-0006,Full-Time,2026-07-15
 MI-0013,Charlotte,Lee,Engineering,United Kingdom,Software Engineer,London,MI-0006,Full-Time,2026-07-15
 MI-0014,Henry,Walker,Engineering,Canada,DevOps Engineer,Toronto,MI-0006,Full-Time,2026-07-15

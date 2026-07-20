@@ -1,0 +1,2 @@
+"Timestamp","EmployeeID","DisplayName","UserPrincipalName","Department","Country","Status","DepartmentGroup","CompanyGroup","AdministrativeUnit","AUAssigned","ManagerAssigned","Reason","ObjectId","TemporaryPassword"
+"7/18/2026 3:44:56 PM","MI-0010","James White","james.white@daveshub.onmicrosoft.com","Security Operations","Nigeria","Created","","All Company","MI-Nigeria","True","False",,"0828d644-38a1-4afe-abe5-53e943b4688a","P@ssword123!"

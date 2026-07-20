@@ -27,3 +27,22 @@ For automation and provisioning workflow diagrams, see:
 
 - `../../diagrams/exports/03-powershell-automation-architecture.png` — PowerShell automation architecture
 - `../../diagrams/exports/02-user-provisioning-workflow.png` — User provisioning workflow
+
+Provisioning screenshots (capture outputs from sample runs) are available in the identity provisioning module screenshot folder:
+
+- `../../modules/02-Identity-Provisioning/screenshots/provision-miemployees-01.png` — Example: single user provisioning run and summary
+- `../../modules/02-Identity-Provisioning/screenshots/provision-miemployees-multiple.png` — Example: bulk provisioning run with mixed results
+- `../../modules/02-Identity-Provisioning/screenshots/provision-managers-01.png` — Example: manager provisioning and report
+- `../../modules/02-Identity-Provisioning/screenshots/provision-run-terminal-01.png` — Example: terminal output showing group & manager assignment
+
+### Sample Provisioning Evidence
+
+![Single user provisioning run](../../modules/02-Identity-Provisioning/screenshots/provision-miemployees-01.png)
+
+![Bulk provisioning run](../../modules/02-Identity-Provisioning/screenshots/provision-miemployees-multiple.png)
+
+![Manager provisioning report](../../modules/02-Identity-Provisioning/screenshots/provision-managers-01.png)
+
+![Provisioning terminal output](../../modules/02-Identity-Provisioning/screenshots/provision-run-terminal-01.png)
+
+If the image files are not present, add the screenshot PNGs to the `../../modules/02-Identity-Provisioning/screenshots/` folder using the filenames above.

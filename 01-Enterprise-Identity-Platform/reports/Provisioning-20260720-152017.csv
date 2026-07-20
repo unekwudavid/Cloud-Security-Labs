@@ -1,0 +1,2 @@
+"Timestamp","EmployeeID","DisplayName","UserPrincipalName","Department","Country","Status","DepartmentGroup","CompanyGroup","AdministrativeUnit","AUAssigned","ManagerAssigned","Manager","Reason","ObjectId","TemporaryPassword"
+"7/20/2026 3:18:12 PM","MI-0018","Emma Wilson","emma.wilson@daveshub.onmicrosoft.com","Engineering","United Kingdom","Created","SG-Engineering","All Company","MI-UnitedKingdom","True","@{Success=True; Manager=james.carter@daveshub.onmicrosoft.com}","james.carter@daveshub.onmicrosoft.com",,"8c1d6a6e-d217-4da9-a14c-79e12c6f86c1","P@ssword123!"

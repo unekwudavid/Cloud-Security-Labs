@@ -31,11 +31,13 @@ $RunId = (New-Guid).Guid
 
 $StartTime = Get-Date
 
+#Script dir
 $ScriptDir = Split-Path -Parent $PSCommandPath
-$RepoRoot = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $ScriptDir))
-$ConfigPath = Join-Path $RepoRoot "01-Enterprise-Cloud-IAM\automation\configuration\tenant-config.psd1"
-$CsvPath = Join-Path $RepoRoot "01-Enterprise-Cloud-IAM\HR\source\pilot-employees.csv"
-
+$ProjectRoot = Split-Path -Parent (Split-Path -Parent $ScriptDir)
+$RepoRoot = Split-Path -Parent $ProjectRoot
+$ConfigPath = Join-Path $ProjectRoot "automation\configuration\tenant-config.psd1"
+$CsvPath    = Join-Path $ProjectRoot "HR\source\pilot-employees.csv"
+$ReportDir  = Join-Path $ProjectRoot "automation\reports"
 if (-not (Test-Path $ConfigPath)) {
     Write-Host "ERROR: Config file not found at $ConfigPath" -ForegroundColor Red
     exit 1
@@ -105,9 +107,22 @@ if (-not $Live) {
     return
 
 }
-   
+  #get group mappings 
 $Mappings = Get-MIGroupMappings `
     -Path (Join-Path $PSScriptRoot "..\configuration\GroupMappings.json")
+
+ #get manager mappings
+ $ManagerMappings = Get-MIManagerMappings `
+    -Path (Join-Path $PSScriptRoot "..\configuration\ManagerMappings.json")
+
+  #get administrative unit mappings
+$AUMappings = Get-MIAUMappings `
+    -Path (Join-Path $PSScriptRoot "..\configuration\AdministrativeUnits.json")    
+
+#get license mappings
+$LicenseMappings = Get-MILicenseMappings `
+    -Path (Join-Path $PSScriptRoot "..\configuration\LicenseMappings.json")   
+
 
 foreach ($Employee in ($Employees | Select-Object -First $Limit)) {
 
@@ -133,9 +148,67 @@ foreach ($Employee in ($Employees | Select-Object -First $Limit)) {
             Write-Host " - $Group"
         }
 
+        #add user to required groups
         Add-MIUserToGroups `
-            -UserId $Result.ObjectId `
-            -Groups $RequiredGroups
+    -UserId $Result.ObjectId `
+    -Groups $RequiredGroups
+
+# Get the administrative unit for the employee based on the mappings
+$AdministrativeUnit = Get-MIAdministrativeUnit `
+    -Employee $Employee `
+    -Mappings $AUMappings
+
+    #if administrative unit is defined, add user to administrative unit
+if ($AdministrativeUnit) {
+ 
+    #add user to administrative unit
+    Add-MIUserToAdministrativeUnit `
+        -UserId $Result.ObjectId `
+        -AdministrativeUnit $AdministrativeUnit
+
+    $Result.AdministrativeUnit = $AdministrativeUnit
+    $Result.AUAssigned = $true
+}
+
+# Assign manager
+$ManagerAssigned = Set-MIUserManager `
+    -UserId $Result.ObjectId `
+    -Employee $Employee `
+    -Mappings $ManagerMappings
+
+$Result.ManagerAssigned = $ManagerAssigned
+
+if ($ManagerAssigned) {
+    $Result.Manager = $ManagerMappings.Departments.$($Employee.Department)
+}
+
+# ========================================
+# LICENSE ASSIGNMENT
+# ========================================
+
+$RequiredLicense = Get-MIRequiredLicense `
+    -Employee $Employee `
+    -Mappings $LicenseMappings
+
+if ($RequiredLicense) {
+
+    Write-Host ""
+    Write-Host "========================================"
+    Write-Host " LICENSE ASSIGNMENT"
+    Write-Host "========================================"
+
+    Write-Host "Employee : $($Employee.FirstName) $($Employee.LastName)"
+    Write-Host "License  : $RequiredLicense"
+
+    $LicenseResult = Set-MIUserLicense `
+        -UserId $Result.ObjectId `
+        -SkuPartNumber $RequiredLicense
+
+    $Result.License = $RequiredLicense
+    $Result.LicenseAssigned = $LicenseResult.Success
+    $Result.LicenseStatus = $LicenseResult.Status
+
+}
 
         # Populate report fields
         $Result.DepartmentGroup = ($RequiredGroups | Where-Object {$_ -ne "All Company"}) -join ", "
@@ -146,6 +219,8 @@ foreach ($Employee in ($Employees | Select-Object -First $Limit)) {
     $Results.Add($Result)
 
 }
+
+
 # Provisioning Summary
 $EndTime = Get-Date
 $Duration = [math]::Round(($EndTime - $StartTime).TotalSeconds, 2)
@@ -176,7 +251,7 @@ Write-Host "Success Rate........... $SuccessRate%"
 Write-Host "========================================"
 
 
-
+#
 $Results |
 Sort-Object EmployeeID |
 Format-Table `
@@ -186,6 +261,9 @@ Department,
 Status,
 DepartmentGroup,
 CompanyGroup,
+Manager,
+License,
+LicenseStatus,
 TemporaryPassword -AutoSize
 
 $TimeStamp = Get-Date -Format "yyyyMMdd-HHmmss"

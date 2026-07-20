@@ -1,0 +1,24 @@
+{
+    "Version": "1.0",
+
+    "Departments": {
+
+        "Engineering": "M365_BUSINESS_PREMIUM",
+
+        "HR": "M365_BUSINESS_PREMIUM",
+
+        "Finance": "M365_BUSINESS_PREMIUM",
+
+        "Marketing": "M365_BUSINESS_PREMIUM",
+
+        "Sales": "M365_BUSINESS_PREMIUM",
+
+        "Operations": "M365_BUSINESS_PREMIUM",
+
+        "Security": "M365_BUSINESS_PREMIUM",
+
+        "Executive": "M365_BUSINESS_PREMIUM",
+
+        "Customer Support": "M365_BUSINESS_PREMIUM"
+    }
+}
