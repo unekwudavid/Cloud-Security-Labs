@@ -1,0 +1,43 @@
+flowchart TB
+
+HR["HR System<br/>CSV / HRIS"]
+
+ORCH["Identity Automation Platform"]
+
+PROV["Provisioning Engine"]
+
+ENTRA["Microsoft Entra ID"]
+
+ACCESS["Enterprise Access"]
+
+M365["Microsoft 365"]
+
+AZURE["Azure Resources"]
+
+SAAS["Enterprise SaaS"]
+
+REPORT["Audit & Reporting"]
+
+HR --> ORCH
+ORCH --> PROV
+PROV --> ENTRA
+
+ENTRA --> M365
+ENTRA --> AZURE
+ENTRA --> SAAS
+
+M365 --> ACCESS
+AZURE --> ACCESS
+SAAS --> ACCESS
+
+ORCH --> REPORT
+
+style HR fill:#64748B,color:#fff,stroke:#334155,stroke-width:2px
+style ORCH fill:#2563EB,color:#fff,stroke:#1D4ED8,stroke-width:3px
+style PROV fill:#10B981,color:#fff
+style ENTRA fill:#06B6D4,color:#fff,stroke:#0891B2,stroke-width:3px
+style ACCESS fill:#8B5CF6,color:#fff
+style REPORT fill:#EC4899,color:#fff
+style M365 fill:#E0F2FE
+style AZURE fill:#E0F2FE
+style SAAS fill:#E0F2FE

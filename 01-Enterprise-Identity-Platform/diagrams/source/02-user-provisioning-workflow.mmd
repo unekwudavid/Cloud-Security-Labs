@@ -1,0 +1,45 @@
+flowchart LR
+
+HR["HR Employee Record"]
+
+VALIDATE["Identity Validation"]
+
+IDENTITY["Generate Identity"]
+
+CREATE["Create Microsoft Entra User"]
+
+GROUPS["Assign Groups"]
+
+AU["Assign Administrative Unit"]
+
+MANAGER["Assign Manager"]
+
+LICENSE["Assign License"]
+
+REPORT["Provisioning Report"]
+
+HR --> VALIDATE
+
+VALIDATE --> IDENTITY
+
+IDENTITY --> CREATE
+
+CREATE --> GROUPS
+
+GROUPS --> AU
+
+AU --> MANAGER
+
+MANAGER --> LICENSE
+
+LICENSE --> REPORT
+
+style HR fill:#64748B,color:#fff
+style VALIDATE fill:#2563EB,color:#fff
+style IDENTITY fill:#2563EB,color:#fff
+style CREATE fill:#10B981,color:#fff
+style GROUPS fill:#10B981,color:#fff
+style AU fill:#10B981,color:#fff
+style MANAGER fill:#10B981,color:#fff
+style LICENSE fill:#10B981,color:#fff
+style REPORT fill:#8B5CF6,color:#fff

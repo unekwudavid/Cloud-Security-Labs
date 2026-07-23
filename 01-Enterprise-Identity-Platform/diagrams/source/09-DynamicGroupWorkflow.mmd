@@ -1,53 +1,22 @@
-flowchart TD
+flowchart LR
 
-    A["DynamicGroups.json<br/>Membership Rules"]
-    A1["DG-Engineering<br/>user.department == Engineering"]
-    A2["DG-HR<br/>user.department == HR"]
-    A3["DG-Finance<br/>user.department == Finance"]
-    A4["DG-Marketing<br/>..."]
+EMP["Employee Attributes"]
 
-    A --> B
+RULE["Dynamic Membership Rule"]
 
-    subgraph Automation["PowerShell Automation"]
-        B["07-Create-DynamicGroups.ps1"]
-        C["Load Configuration"]
-        D["Validate JSON"]
-        E["Build Microsoft Graph Request"]
-        F["Create Dynamic Security Group"]
-        G["Apply Membership Rule"]
-        H["Write Logs & Report"]
-    end
+EVAL["Microsoft Entra<br/>Rule Evaluation"]
 
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    F --> G
-    G --> H
+GROUP["Security Group"]
 
-    H --> I["Microsoft Graph PowerShell"]
-    I --> J["Microsoft Entra ID"]
+ACCESS["Application Access"]
 
-    J --> K{"Premium P1/P2 License<br/>Available?"}
+EMP --> RULE
+RULE --> EVAL
+EVAL --> GROUP
+GROUP --> ACCESS
 
-    K -- Yes --> L["Dynamic Group Created"]
-
-    L --> M["Membership Rule Evaluated"]
-
-    M --> N["Users Automatically Added<br/>Based on Department"]
-
-    K -- No --> O["Graph API Response"]
-
-    O --> P["NoLicenseForOperation"]
-
-    P --> Q["Automation Logs Error"]
-
-    style A fill:#E3F2FD,stroke:#1565C0
-    style Automation fill:#FFF8E1,stroke:#F9A825
-    style I fill:#E8F5E9,stroke:#2E7D32
-    style J fill:#E8F5E9,stroke:#2E7D32
-    style L fill:#C8E6C9,stroke:#2E7D32
-    style N fill:#C8E6C9,stroke:#2E7D32
-    style O fill:#FFEBEE,stroke:#C62828
-    style P fill:#FFCDD2,stroke:#C62828
-    style Q fill:#FFCDD2,stroke:#C62828
+style EMP fill:#2563EB,color:#fff
+style RULE fill:#10B981,color:#fff
+style EVAL fill:#06B6D4,color:#fff
+style GROUP fill:#8B5CF6,color:#fff
+style ACCESS fill:#F59E0B,color:#fff

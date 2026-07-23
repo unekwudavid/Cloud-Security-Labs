@@ -1,86 +1,35 @@
-flowchart TB
+flowchart LR
 
-subgraph BUSINESS["Business Layer"]
-    HR["HR Department"]
-    USERS["Employees"]
-    ADMINS["IT Administrators"]
-end
+EMP["Employee"]
 
-subgraph IAM["Identity & Access Management"]
-    ENTRA["Microsoft Entra ID"]
-    USERSOBJ["Users"]
-    GROUPS["Security Groups"]
-    AU["Administrative Units"]
-    RBAC["RBAC"]
-    CA["Conditional Access"]
-    JML["Joiner-Mover-Leaver"]
-end
+RULES["Role Mapping Rules"]
 
-subgraph AUTOMATION["Automation"]
-    CSV["HR CSV"]
-    CONFIG["Tenant Config"]
-    PS["PowerShell Automation"]
-    GRAPH["Microsoft Graph"]
-    REPORTS["Reports & Logs"]
-end
+ENGINE["RBAC Engine"]
 
-subgraph CLOUD["Microsoft Cloud"]
-    M365["Microsoft 365"]
-    EXO["Exchange Online"]
-    TEAMS["Microsoft Teams"]
-    SPO["SharePoint"]
-    OD["OneDrive"]
-end
+ROLE["Directory Role"]
 
-subgraph SECURITY["Cloud Security"]
-    PIM["Privileged Identity Management"]
-    DEFENDER["Microsoft Defender"]
-    SENTINEL["Microsoft Sentinel"]
-    INTUNE["Microsoft Intune"]
-    KEYVAULT["Azure Key Vault"]
-end
+ENTRA["Microsoft Entra ID"]
 
-subgraph DEVOPS["Infrastructure & DevOps"]
-    GITHUB["GitHub Portfolio"]
-    TF["Terraform"]
-    DOCS["Documentation"]
-end
+ACCESS["Administrative Access"]
 
-HR --> CSV
-USERS --> CSV
+EMP --> RULES
 
-CSV --> PS
-CONFIG --> PS
+RULES --> ENGINE
 
-PS --> GRAPH
+ENGINE --> ROLE
 
-GRAPH --> ENTRA
+ROLE --> ENTRA
 
-ENTRA --> USERSOBJ
-ENTRA --> GROUPS
-ENTRA --> AU
-ENTRA --> RBAC
-ENTRA --> CA
-ENTRA --> JML
+ENTRA --> ACCESS
 
-RBAC --> M365
-CA --> M365
+style EMP fill:#64748B,color:#fff
 
-M365 --> EXO
-M365 --> TEAMS
-M365 --> SPO
-M365 --> OD
+style RULES fill:#2563EB,color:#fff
 
-ENTRA --> PIM
-PIM --> DEFENDER
-DEFENDER --> SENTINEL
-ENTRA --> INTUNE
-ENTRA --> KEYVAULT
+style ENGINE fill:#10B981,color:#fff
 
-PS --> REPORTS
+style ROLE fill:#8B5CF6,color:#fff
 
-REPORTS --> GITHUB
-DOCS --> GITHUB
-TF --> GITHUB
+style ENTRA fill:#06B6D4,color:#fff
 
-ADMINS --> GITHUB
+style ACCESS fill:#F59E0B,color:#fff

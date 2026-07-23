@@ -1,0 +1,71 @@
+flowchart TB
+
+SCRIPT["PowerShell Script"]
+
+AUTO["MI.Automation"]
+
+subgraph Modules
+
+PROV["Provisioning"]
+
+GROUPS["Groups"]
+
+AU["Administrative Units"]
+
+MAN["Managers"]
+
+LIC["Licensing"]
+
+RBAC["RBAC"]
+
+REP["Reporting"]
+
+LOG["Logging"]
+
+end
+
+GRAPH["Microsoft Graph"]
+
+ENTRA["Microsoft Entra ID"]
+
+SCRIPT --> AUTO
+
+AUTO --> PROV
+AUTO --> GROUPS
+AUTO --> AU
+AUTO --> MAN
+AUTO --> LIC
+AUTO --> RBAC
+AUTO --> REP
+
+PROV --> GRAPH
+GROUPS --> GRAPH
+AU --> GRAPH
+MAN --> GRAPH
+LIC --> GRAPH
+RBAC --> GRAPH
+
+GRAPH --> ENTRA
+
+LOG -.-> PROV
+LOG -.-> GROUPS
+LOG -.-> AU
+LOG -.-> MAN
+LOG -.-> LIC
+LOG -.-> RBAC
+LOG -.-> REP
+
+style SCRIPT fill:#64748B,color:#fff
+style AUTO fill:#2563EB,color:#fff
+style GRAPH fill:#06B6D4,color:#fff
+style ENTRA fill:#06B6D4,color:#fff
+
+style PROV fill:#10B981,color:#fff
+style GROUPS fill:#10B981,color:#fff
+style AU fill:#10B981,color:#fff
+style MAN fill:#10B981,color:#fff
+style LIC fill:#10B981,color:#fff
+style RBAC fill:#10B981,color:#fff
+style REP fill:#10B981,color:#fff
+
+style LOG fill:#F59E0B,color:#fff

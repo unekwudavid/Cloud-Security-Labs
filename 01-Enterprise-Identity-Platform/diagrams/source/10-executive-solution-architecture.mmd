@@ -1,0 +1,37 @@
+flowchart TB
+
+subgraph Business
+HR["HR Department"]
+IT["IT Operations"]
+SEC["Security Team"]
+end
+
+subgraph Identity
+IAM["Enterprise IAM Platform"]
+end
+
+subgraph Cloud
+ENTRA["Microsoft Entra ID"]
+M365["Microsoft 365"]
+AZURE["Azure"]
+APPS["Enterprise Applications"]
+end
+
+HR --> IAM
+IT --> IAM
+SEC --> IAM
+
+IAM --> ENTRA
+
+ENTRA --> M365
+ENTRA --> AZURE
+ENTRA --> APPS
+
+style IAM fill:#2563EB,color:#fff,stroke:#1E40AF,stroke-width:4px
+style ENTRA fill:#06B6D4,color:#fff
+style HR fill:#64748B,color:#fff
+style IT fill:#64748B,color:#fff
+style SEC fill:#64748B,color:#fff
+style M365 fill:#D1FAE5
+style AZURE fill:#DBEAFE
+style APPS fill:#FCE7F3

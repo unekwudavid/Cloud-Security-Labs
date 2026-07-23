@@ -1,0 +1,50 @@
+flowchart TB
+
+USER["Enterprise Users"]
+
+ENTRA["Microsoft Entra ID"]
+
+GROUPS["Security Groups"]
+
+ROLES["Directory Roles"]
+
+LICENSES["Licenses"]
+
+AU["Administrative Units"]
+
+M365["Microsoft 365"]
+
+AZURE["Azure Resources"]
+
+APPS["Enterprise Applications"]
+
+USER --> ENTRA
+
+ENTRA --> GROUPS
+
+ENTRA --> ROLES
+
+ENTRA --> LICENSES
+
+ENTRA --> AU
+
+GROUPS --> M365
+
+GROUPS --> AZURE
+
+GROUPS --> APPS
+
+ROLES --> AZURE
+
+LICENSES --> M365
+
+style USER fill:#64748B,color:#fff
+style ENTRA fill:#06B6D4,color:#fff,stroke-width:3px
+style GROUPS fill:#10B981,color:#fff
+style ROLES fill:#8B5CF6,color:#fff
+style LICENSES fill:#F59E0B,color:#fff
+style AU fill:#10B981,color:#fff
+
+style M365 fill:#DBEAFE
+style AZURE fill:#DBEAFE
+style APPS fill:#DBEAFE

@@ -1,0 +1,82 @@
+flowchart LR
+
+subgraph HR["HR Source"]
+A[pilot-employees.csv]
+end
+
+subgraph ORCH["Joiner Orchestrator"]
+B[10-Invoke-MIJoiner.ps1]
+end
+
+subgraph MOD["Automation Modules"]
+
+P[MI.Provisioning]
+
+G[MI.Groups]
+
+AU[MI.AdministrativeUnits]
+
+M[MI.Managers]
+
+L[MI.Licensing]
+
+R[MI.RBAC]
+
+REP[MI.Reporting]
+
+LOG[MI.Logging]
+
+end
+
+subgraph ENTRA["Microsoft Entra ID"]
+
+Users
+
+Groups
+
+AdministrativeUnits
+
+Managers
+
+Licenses
+
+DirectoryRoles
+
+end
+
+A --> B
+
+B --> P
+
+P --> Users
+
+P --> G
+G --> Groups
+
+P --> AU
+AU --> AdministrativeUnits
+
+P --> M
+M --> Managers
+
+P --> L
+L --> Licenses
+
+B --> R
+R --> DirectoryRoles
+
+B --> REP
+
+REP --> CSV[CSV Reports]
+
+LOG -.-> P
+LOG -.-> G
+LOG -.-> AU
+LOG -.-> M
+LOG -.-> L
+LOG -.-> R
+LOG -.-> REP
+
+style ORCH fill:#fff2cc
+style MOD fill:#d5e8d4
+style ENTRA fill:#f8cecc

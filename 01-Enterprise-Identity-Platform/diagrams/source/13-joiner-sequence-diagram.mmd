@@ -1,0 +1,43 @@
+sequenceDiagram
+
+autonumber
+
+participant HR as HR System
+participant ORCH as Joiner Orchestrator
+participant PROV as Provisioning Engine
+participant ENTRA as Microsoft Entra ID
+participant REPORT as Reporting
+
+HR->>ORCH: New Employee Record
+
+activate ORCH
+
+ORCH->>PROV: Validate Employee
+
+activate PROV
+
+PROV->>ENTRA: Create User
+
+ENTRA-->>PROV: User ObjectId
+
+PROV->>ENTRA: Assign Groups
+
+PROV->>ENTRA: Assign Administrative Unit
+
+PROV->>ENTRA: Assign Manager
+
+PROV->>ENTRA: Assign License
+
+deactivate PROV
+
+ORCH->>ENTRA: Assign Directory Role
+
+ORCH->>ENTRA: Backfill EmployeeId
+
+ORCH->>REPORT: Generate Provisioning Report
+
+REPORT-->>HR: CSV Report
+
+deactivate ORCH
+
+Note over ORCH,REPORT: Enterprise Joiner workflow completed successfully

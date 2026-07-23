@@ -1,0 +1,39 @@
+flowchart TB
+
+AUTO["MI.Automation"]
+
+AUTO --> LOG["MI.Logging"]
+
+AUTO --> PROV["MI.Provisioning"]
+
+AUTO --> GROUPS["MI.Groups"]
+
+AUTO --> AU["MI.AdministrativeUnits"]
+
+AUTO --> MAN["MI.Managers"]
+
+AUTO --> LIC["MI.Licensing"]
+
+AUTO --> RBAC["MI.RBAC"]
+
+AUTO --> REPORT["MI.Reporting"]
+
+PROV --> LOG
+GROUPS --> LOG
+AU --> LOG
+MAN --> LOG
+LIC --> LOG
+RBAC --> LOG
+REPORT --> LOG
+
+style AUTO fill:#2563EB,color:#ffffff,stroke:#1E40AF,stroke-width:3px
+
+style PROV fill:#10B981,color:#ffffff
+style GROUPS fill:#10B981,color:#ffffff
+style AU fill:#10B981,color:#ffffff
+style MAN fill:#10B981,color:#ffffff
+style LIC fill:#10B981,color:#ffffff
+style RBAC fill:#10B981,color:#ffffff
+
+style LOG fill:#F59E0B,color:#ffffff
+style REPORT fill:#8B5CF6,color:#ffffff
