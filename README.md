@@ -87,6 +87,14 @@ As the Identity & Access Management Engineer, I am responsible for designing and
 - Privileged Identity Management (PIM)
 - GitHub
 
+### Completed Features
+
+- ✅ Administrative Units
+- ✅ Manager Assignment
+- ✅ Configuration-driven Dynamic Group Automation
+- ⚠ Dynamic Group creation requires Microsoft Entra ID Premium (P1/P2). Automation implemented and validated against Microsoft Graph.
+- 🖼️ See license requirement details in `01-Enterprise-Identity-Platform/modules/02-Identity-Provisioning/screenshots/Licesnse-Requirement.png`
+
 **Project Status:** 🚧 In Progress
 
 ---

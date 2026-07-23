@@ -230,11 +230,22 @@ $Skipped = ($Results | Where-Object Status -eq $ProvisioningStatus.Skipped).Coun
 $Failed = ($Results | Where-Object Status -eq $ProvisioningStatus.Failed).Count
 $Total = $Results.Count
 
+
+# Enterprise provisioning treats both Created and Skipped
+# as successful processing outcomes.
+#
+
+$Successful = $Created + $Skipped
+
 $SuccessRate = if ($Total -gt 0) {
-    [math]::Round(($Created / $Total) * 100, 2)
+
+    [math]::Round(($Successful / $Total) * 100,2)
+
 }
 else {
+
     0
+
 }
 
 Write-Host ""

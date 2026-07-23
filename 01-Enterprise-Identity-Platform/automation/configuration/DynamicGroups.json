@@ -1,0 +1,61 @@
+{
+  "Version": "1.0",
+
+  "Groups": [
+
+    {
+      "DisplayName": "DG-Engineering",
+      "Description": "Dynamic Engineering Users",
+      "MembershipRule": "(user.department -eq \"Engineering\")"
+    },
+
+    {
+      "DisplayName": "DG-HR",
+      "Description": "Dynamic HR Users",
+      "MembershipRule": "(user.department -eq \"HR\")"
+    },
+
+    {
+      "DisplayName": "DG-Finance",
+      "Description": "Dynamic Finance Users",
+      "MembershipRule": "(user.department -eq \"Finance\")"
+    },
+
+    {
+      "DisplayName": "DG-Marketing",
+      "Description": "Dynamic Marketing Users",
+      "MembershipRule": "(user.department -eq \"Marketing\")"
+    },
+
+    {
+      "DisplayName": "DG-Sales",
+      "Description": "Dynamic Sales Users",
+      "MembershipRule": "(user.department -eq \"Sales\")"
+    },
+
+    {
+      "DisplayName": "DG-Operations",
+      "Description": "Dynamic Operations Users",
+      "MembershipRule": "(user.department -eq \"Operations\")"
+    },
+
+    {
+      "DisplayName": "DG-Security",
+      "Description": "Dynamic Security Users",
+      "MembershipRule": "(user.department -eq \"Security\")"
+    },
+
+    {
+      "DisplayName": "DG-CustomerSupport",
+      "Description": "Dynamic Customer Support Users",
+      "MembershipRule": "(user.department -eq \"Customer Support\")"
+    },
+
+    {
+      "DisplayName": "DG-Executive",
+      "Description": "Dynamic Executive Users",
+      "MembershipRule": "(user.department -eq \"Executive\")"
+    }
+
+  ]
+}

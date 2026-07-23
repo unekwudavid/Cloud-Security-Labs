@@ -1,0 +1,93 @@
+flowchart TD
+
+    A["HR Source<br/>pilot-employees.csv"]
+
+    B["08-Assign-Roles.ps1"]
+
+    C["RoleMappings.json"]
+
+    D["Get-MIRoleMappings()"]
+
+    E["Get-MIRequiredRole()"]
+
+    F{"Role Decision"}
+
+    G["Job Title Mapping"]
+
+    H["Department Mapping"]
+
+    I["Default Role"]
+
+    J["Get-MIDirectoryRole()"]
+
+    K{"Role Active?"}
+
+    L["Activate Directory Role<br/>New-MgDirectoryRole"]
+
+    M["Microsoft Entra Directory Roles"]
+
+    N["Add-MIUserToRole()"]
+
+    O["Microsoft Graph<br/>Role Management API"]
+
+    P["Employee User"]
+
+    Q["Assigned Directory Role"]
+
+    R["Write-MILog()"]
+
+    S["RBAC Report CSV"]
+
+    T["automation/reports"]
+
+    %% FLOW
+
+    A --> B
+    C --> D
+    D --> E
+    B --> E
+
+    E --> F
+
+    F -->|Job Title Match| G
+    F -->|Department Match| H
+    F -->|Default| I
+
+    G --> J
+    H --> J
+    I --> J
+
+    J --> K
+
+    K -->|Already Active| N
+    K -->|Activate| L
+
+    L --> M
+    M --> N
+
+    N --> O
+    O --> P
+    P --> Q
+
+    %% Logging
+
+    B --> R
+    J --> R
+    N --> R
+
+    R --> S
+    S --> T
+
+    %% Styles
+
+    classDef script fill:#1F4E79,color:#ffffff,stroke:#0B2E4F,stroke-width:2px;
+    classDef config fill:#FFF2CC,color:#000000,stroke:#B8860B,stroke-width:2px;
+    classDef azure fill:#D5E8D4,color:#000000,stroke:#2E7D32,stroke-width:2px;
+    classDef report fill:#F8CECC,color:#000000,stroke:#B85450,stroke-width:2px;
+    classDef decision fill:#E1D5E7,color:#000000,stroke:#6A1B9A,stroke-width:2px;
+
+    class A,C,D,G,H,I config;
+    class B,E,J,N script;
+    class L,M,O,P,Q azure;
+    class R,S,T report;
+    class F,K decision;

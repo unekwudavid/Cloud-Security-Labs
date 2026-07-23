@@ -1,0 +1,31 @@
+{
+  "Version": "1.0",
+  "LastUpdated": "2026-07-22",
+
+  "Departments": {
+    "Engineering": "Global Reader",
+    "HR": "User Administrator",
+    "Finance": "Reports Reader",
+    "Marketing": "Groups Administrator",
+    "Sales": "Reports Reader",
+    "Operations": "Groups Administrator",
+    "Security": "Security Reader",
+    "Executive": "Global Reader",
+    "Customer Support": "Helpdesk Administrator"
+  },
+
+  "JobTitles": {
+    "IT Manager": "Global Administrator",
+    "Security Analyst": "Security Reader",
+    "Security Manager": "Security Administrator",
+    "HR Manager": "User Administrator",
+    "Finance Manager": "Reports Reader",
+    "Engineering Manager": "Global Reader",
+    "Operations Manager": "Groups Administrator",
+    "Marketing Manager": "Groups Administrator",
+    "Sales Manager": "Reports Reader",
+    "Chief Executive Officer": "Global Administrator"
+  },
+
+  "Default": "Global Reader"
+}

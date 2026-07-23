@@ -30,19 +30,24 @@ For automation and provisioning workflow diagrams, see:
 
 Provisioning screenshots (capture outputs from sample runs) are available in the identity provisioning module screenshot folder:
 
-- `../../modules/02-Identity-Provisioning/screenshots/provision-miemployees-01.png` — Example: single user provisioning run and summary
-- `../../modules/02-Identity-Provisioning/screenshots/provision-miemployees-multiple.png` — Example: bulk provisioning run with mixed results
-- `../../modules/02-Identity-Provisioning/screenshots/provision-managers-01.png` — Example: manager provisioning and report
-- `../../modules/02-Identity-Provisioning/screenshots/provision-run-terminal-01.png` — Example: terminal output showing group & manager assignment
+- `../../modules/02-Identity-Provisioning/screenshots/provisioning-screenshot-01.png`
+- `../../modules/02-Identity-Provisioning/screenshots/provisioning-screenshot-02.png`
+- `../../modules/02-Identity-Provisioning/screenshots/provisioning-screenshot-03.png`
+- `../../modules/02-Identity-Provisioning/screenshots/provisioning-screenshot-04.png`
+- `../../modules/02-Identity-Provisioning/screenshots/provisioning-screenshot-05.png`
+- `../../modules/02-Identity-Provisioning/screenshots/provisioning-screenshot-06.png`
+- `../../modules/02-Identity-Provisioning/screenshots/provisioning-screenshot-07.png`
+- `../../modules/02-Identity-Provisioning/screenshots/provisioning-screenshot-08.png`
+- `../../modules/02-Identity-Provisioning/screenshots/provisioning-screenshot-09.png`
 
 ### Sample Provisioning Evidence
 
-![Single user provisioning run](../../modules/02-Identity-Provisioning/screenshots/provision-miemployees-01.png)
+![Provisioning screenshot 1](../../modules/02-Identity-Provisioning/screenshots/provisioning-screenshot-01.png)
 
-![Bulk provisioning run](../../modules/02-Identity-Provisioning/screenshots/provision-miemployees-multiple.png)
+![Provisioning screenshot 2](../../modules/02-Identity-Provisioning/screenshots/provisioning-screenshot-02.png)
 
-![Manager provisioning report](../../modules/02-Identity-Provisioning/screenshots/provision-managers-01.png)
+![Provisioning screenshot 3](../../modules/02-Identity-Provisioning/screenshots/provisioning-screenshot-03.png)
 
-![Provisioning terminal output](../../modules/02-Identity-Provisioning/screenshots/provision-run-terminal-01.png)
+![Provisioning screenshot 4](../../modules/02-Identity-Provisioning/screenshots/provisioning-screenshot-04.png)
 
-If the image files are not present, add the screenshot PNGs to the `../../modules/02-Identity-Provisioning/screenshots/` folder using the filenames above.
+If the image files are not present, add the screenshot PNGs to the `../../modules/02-Identity-Provisioning/screenshots/` folder using the renamed filenames above.

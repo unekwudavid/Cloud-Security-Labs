@@ -281,3 +281,167 @@
 [2026-07-20 22:07:08] [INFO] Discovering subscribed licenses...
 [2026-07-20 22:07:09] [WARN] No subscribed licenses found in tenant.
 [2026-07-20 22:07:09] [WARN] License assignment skipped. No subscribed SKUs available.
+[2026-07-21 14:13:47] [INFO] Processing Dynamic Group: DG-Engineering
+[2026-07-21 14:13:50] [ERROR] Authentication needed. Please call Connect-MgGraph.
+[2026-07-21 14:13:51] [INFO] Processing Dynamic Group: DG-HR
+[2026-07-21 14:13:51] [ERROR] Authentication needed. Please call Connect-MgGraph.
+[2026-07-21 14:13:51] [INFO] Processing Dynamic Group: DG-Finance
+[2026-07-21 14:13:51] [ERROR] Authentication needed. Please call Connect-MgGraph.
+[2026-07-21 14:13:51] [INFO] Processing Dynamic Group: DG-Marketing
+[2026-07-21 14:13:51] [ERROR] Authentication needed. Please call Connect-MgGraph.
+[2026-07-21 14:13:51] [INFO] Processing Dynamic Group: DG-Sales
+[2026-07-21 14:13:52] [ERROR] Authentication needed. Please call Connect-MgGraph.
+[2026-07-21 14:13:52] [INFO] Processing Dynamic Group: DG-Operations
+[2026-07-21 14:13:52] [ERROR] Authentication needed. Please call Connect-MgGraph.
+[2026-07-21 14:13:52] [INFO] Processing Dynamic Group: DG-Security
+[2026-07-21 14:13:52] [ERROR] Authentication needed. Please call Connect-MgGraph.
+[2026-07-21 14:13:52] [INFO] Processing Dynamic Group: DG-CustomerSupport
+[2026-07-21 14:13:53] [ERROR] Authentication needed. Please call Connect-MgGraph.
+[2026-07-21 14:13:53] [INFO] Processing Dynamic Group: DG-Executive
+[2026-07-21 14:13:53] [ERROR] Authentication needed. Please call Connect-MgGraph.
+[2026-07-21 14:14:46] [INFO] Processing Dynamic Group: DG-Engineering
+[2026-07-21 14:14:48] [ERROR] [NoLicenseForOperation] : Tenant does not have proper license.
+[2026-07-21 14:14:48] [INFO] Processing Dynamic Group: DG-HR
+[2026-07-21 14:14:49] [ERROR] [NoLicenseForOperation] : Tenant does not have proper license.
+[2026-07-21 14:14:49] [INFO] Processing Dynamic Group: DG-Finance
+[2026-07-21 14:14:50] [ERROR] [NoLicenseForOperation] : Tenant does not have proper license.
+[2026-07-21 14:14:50] [INFO] Processing Dynamic Group: DG-Marketing
+[2026-07-21 14:14:51] [ERROR] [NoLicenseForOperation] : Tenant does not have proper license.
+[2026-07-21 14:14:51] [INFO] Processing Dynamic Group: DG-Sales
+[2026-07-21 14:14:51] [ERROR] [NoLicenseForOperation] : Tenant does not have proper license.
+[2026-07-21 14:14:51] [INFO] Processing Dynamic Group: DG-Operations
+[2026-07-21 14:14:53] [ERROR] [NoLicenseForOperation] : Tenant does not have proper license.
+[2026-07-21 14:14:53] [INFO] Processing Dynamic Group: DG-Security
+[2026-07-21 14:14:55] [ERROR] [NoLicenseForOperation] : Tenant does not have proper license.
+[2026-07-21 14:14:55] [INFO] Processing Dynamic Group: DG-CustomerSupport
+[2026-07-21 14:14:55] [ERROR] [NoLicenseForOperation] : Tenant does not have proper license.
+[2026-07-21 14:14:55] [INFO] Processing Dynamic Group: DG-Executive
+[2026-07-21 14:14:57] [ERROR] [NoLicenseForOperation] : Tenant does not have proper license.
+[2026-07-21 14:24:27] [INFO] Processing Dynamic Group: DG-Engineering
+[2026-07-21 14:24:35] [ERROR] Failed creating DG-Engineering: [NoLicenseForOperation] : Tenant does not have proper license.
+[2026-07-21 14:24:35] [INFO] Processing Dynamic Group: DG-HR
+[2026-07-21 14:24:36] [ERROR] Failed creating DG-HR: [NoLicenseForOperation] : Tenant does not have proper license.
+[2026-07-21 14:24:36] [INFO] Processing Dynamic Group: DG-Finance
+[2026-07-21 14:24:38] [ERROR] Failed creating DG-Finance: [NoLicenseForOperation] : Tenant does not have proper license.
+[2026-07-21 14:24:38] [INFO] Processing Dynamic Group: DG-Marketing
+[2026-07-21 14:24:39] [ERROR] Failed creating DG-Marketing: [NoLicenseForOperation] : Tenant does not have proper license.
+[2026-07-21 14:24:40] [INFO] Processing Dynamic Group: DG-Sales
+[2026-07-21 14:24:41] [ERROR] Failed creating DG-Sales: [NoLicenseForOperation] : Tenant does not have proper license.
+[2026-07-21 14:24:41] [INFO] Processing Dynamic Group: DG-Operations
+[2026-07-21 14:24:42] [ERROR] Failed creating DG-Operations: [NoLicenseForOperation] : Tenant does not have proper license.
+[2026-07-21 14:24:42] [INFO] Processing Dynamic Group: DG-Security
+[2026-07-21 14:24:44] [ERROR] Failed creating DG-Security: [NoLicenseForOperation] : Tenant does not have proper license.
+[2026-07-21 14:24:44] [INFO] Processing Dynamic Group: DG-CustomerSupport
+[2026-07-21 14:24:45] [ERROR] Failed creating DG-CustomerSupport: [NoLicenseForOperation] : Tenant does not have proper license.
+[2026-07-21 14:24:45] [INFO] Processing Dynamic Group: DG-Executive
+[2026-07-21 14:24:47] [ERROR] Failed creating DG-Executive: [NoLicenseForOperation] : Tenant does not have proper license.
+[2026-07-22 14:31:37] [INFO] Locating role User Administrator
+[2026-07-22 14:31:40] [INFO] User Administrator not activated. Activating...
+[2026-07-22 14:34:35] [INFO] Locating role User Administrator
+[2026-07-22 14:34:36] [INFO] User Administrator not activated. Activating...
+[2026-07-22 14:47:00] [INFO] Locating role User Administrator
+[2026-07-22 14:47:03] [INFO] User Administrator not activated. Activating...
+[2026-07-22 14:47:28] [INFO] Locating role User Administrator
+[2026-07-22 14:47:29] [INFO] User Administrator not activated. Activating...
+[2026-07-22 14:51:13] [INFO] Assigning role 'Global Reader'
+[2026-07-22 14:51:13] [INFO] Locating role Global Reader
+[2026-07-22 14:51:16] [ERROR] [Authorization_RequestDenied] : Insufficient privileges to complete the operation.
+[2026-07-22 16:50:03] [INFO] Assigning role 'Global Reader'
+[2026-07-22 16:50:03] [INFO] Locating role Global Reader
+[2026-07-22 16:50:06] [SUCCESS] Global Reader assigned successfully.
+[2026-07-22 20:26:24] [INFO] Processing employee MI-0021
+[2026-07-22 20:26:27] [WARN] User not found: MI-0021
+[2026-07-22 20:28:07] [INFO] Processing employee MI-0021
+[2026-07-22 20:28:09] [WARN] User not found: MI-0021
+[2026-07-22 20:30:56] [INFO] Processing employee MI-0020
+[2026-07-22 20:30:57] [WARN] User not found: MI-0020
+[2026-07-22 20:33:46] [INFO] Processing employee MI-0019
+[2026-07-22 20:33:47] [WARN] User not found: MI-0019
+[2026-07-22 20:47:58] [INFO] Processing employee MI-0019
+[2026-07-22 20:47:59] [WARN] User already exists: william.smith@daveshub.onmicrosoft.com
+[2026-07-22 20:47:59] [INFO] Creating user william.smith@daveshub.onmicrosoft.com
+[2026-07-22 20:48:00] [ERROR] [Request_BadRequest] : Another object with the same value for property userPrincipalName already exists.
+[2026-07-22 20:58:41] [INFO] Processing employee MI-0019
+[2026-07-22 20:58:47] [WARN] User already exists: william.smith@daveshub.onmicrosoft.com
+[2026-07-22 21:17:36] [INFO] Processing employee MI-0019
+[2026-07-22 21:17:37] [INFO] Assigning role 'Global Reader'
+[2026-07-22 21:17:37] [INFO] Locating role 'Global Reader'
+[2026-07-22 21:17:40] [ERROR] [Authorization_RequestDenied] : Insufficient privileges to complete the operation.
+[2026-07-22 21:17:40] [INFO] Processing employee MI-0018
+[2026-07-22 21:17:40] [INFO] Assigning role 'Global Reader'
+[2026-07-22 21:17:40] [INFO] Locating role 'Global Reader'
+[2026-07-22 21:17:41] [ERROR] [Authorization_RequestDenied] : Insufficient privileges to complete the operation.
+[2026-07-22 21:17:41] [INFO] Processing employee MI-0017
+[2026-07-22 21:17:42] [INFO] Assigning role 'Global Reader'
+[2026-07-22 21:17:42] [INFO] Locating role 'Global Reader'
+[2026-07-22 21:17:43] [ERROR] [Authorization_RequestDenied] : Insufficient privileges to complete the operation.
+[2026-07-22 21:17:43] [INFO] Processing employee MI-0016
+[2026-07-22 21:17:43] [INFO] Assigning role 'Global Reader'
+[2026-07-22 21:17:43] [INFO] Locating role 'Global Reader'
+[2026-07-22 21:17:44] [ERROR] [Authorization_RequestDenied] : Insufficient privileges to complete the operation.
+[2026-07-22 21:17:44] [INFO] Processing employee MI-0015
+[2026-07-22 21:17:45] [INFO] Assigning role 'Global Reader'
+[2026-07-22 21:17:45] [INFO] Locating role 'Global Reader'
+[2026-07-22 21:17:46] [ERROR] [Authorization_RequestDenied] : Insufficient privileges to complete the operation.
+[2026-07-22 21:17:46] [INFO] Processing employee MI-0013
+[2026-07-22 21:17:46] [INFO] Assigning role 'Global Reader'
+[2026-07-22 21:17:46] [INFO] Locating role 'Global Reader'
+[2026-07-22 21:17:47] [ERROR] [Authorization_RequestDenied] : Insufficient privileges to complete the operation.
+[2026-07-22 21:17:47] [INFO] Processing employee MI-0014
+[2026-07-22 21:17:47] [INFO] Assigning role 'Global Reader'
+[2026-07-22 21:17:47] [INFO] Locating role 'Global Reader'
+[2026-07-22 21:17:48] [ERROR] [Authorization_RequestDenied] : Insufficient privileges to complete the operation.
+[2026-07-22 21:17:48] [INFO] Processing employee MI-0012
+[2026-07-22 21:17:49] [INFO] Assigning role 'Global Reader'
+[2026-07-22 21:17:49] [INFO] Locating role 'Global Reader'
+[2026-07-22 21:17:50] [ERROR] [Authorization_RequestDenied] : Insufficient privileges to complete the operation.
+[2026-07-22 21:17:50] [INFO] Processing employee MI-0011
+[2026-07-22 21:17:51] [INFO] Assigning role 'Global Reader'
+[2026-07-22 21:17:51] [INFO] Locating role 'Global Reader'
+[2026-07-22 21:17:52] [ERROR] [Authorization_RequestDenied] : Insufficient privileges to complete the operation.
+[2026-07-22 21:17:52] [INFO] Processing employee MI-0001
+[2026-07-22 21:17:52] [INFO] Assigning role 'User Administrator'
+[2026-07-22 21:17:53] [INFO] Locating role 'User Administrator'
+[2026-07-22 21:17:54] [INFO] User Administrator not activated. Activating...
+[2026-07-22 21:17:57] [ERROR] Role not found: User Administrator
+[2026-07-22 21:24:14] [INFO] Processing employee MI-0019
+[2026-07-22 21:24:16] [INFO] Assigning role 'Global Reader'
+[2026-07-22 21:24:16] [INFO] Locating role 'Global Reader'
+[2026-07-22 21:24:17] [SUCCESS] Global Reader assigned successfully.
+[2026-07-22 21:24:17] [INFO] Processing employee MI-0018
+[2026-07-22 21:24:18] [INFO] Assigning role 'Global Reader'
+[2026-07-22 21:24:18] [INFO] Locating role 'Global Reader'
+[2026-07-22 21:24:19] [SUCCESS] Global Reader assigned successfully.
+[2026-07-22 21:24:19] [INFO] Processing employee MI-0017
+[2026-07-22 21:24:20] [INFO] Assigning role 'Global Reader'
+[2026-07-22 21:24:20] [INFO] Locating role 'Global Reader'
+[2026-07-22 21:24:22] [SUCCESS] Global Reader assigned successfully.
+[2026-07-22 21:24:22] [INFO] Processing employee MI-0016
+[2026-07-22 21:24:22] [INFO] Assigning role 'Global Reader'
+[2026-07-22 21:24:22] [INFO] Locating role 'Global Reader'
+[2026-07-22 21:24:23] [SUCCESS] Global Reader assigned successfully.
+[2026-07-22 21:24:23] [INFO] Processing employee MI-0015
+[2026-07-22 21:24:24] [INFO] Assigning role 'Global Reader'
+[2026-07-22 21:24:24] [INFO] Locating role 'Global Reader'
+[2026-07-22 21:24:25] [SUCCESS] Global Reader assigned successfully.
+[2026-07-22 21:24:25] [INFO] Processing employee MI-0013
+[2026-07-22 21:24:25] [INFO] Assigning role 'Global Reader'
+[2026-07-22 21:24:25] [INFO] Locating role 'Global Reader'
+[2026-07-22 21:24:26] [SUCCESS] Global Reader assigned successfully.
+[2026-07-22 21:24:26] [INFO] Processing employee MI-0014
+[2026-07-22 21:24:27] [INFO] Assigning role 'Global Reader'
+[2026-07-22 21:24:27] [INFO] Locating role 'Global Reader'
+[2026-07-22 21:24:28] [SUCCESS] Global Reader assigned successfully.
+[2026-07-22 21:24:28] [INFO] Processing employee MI-0012
+[2026-07-22 21:24:28] [INFO] Assigning role 'Global Reader'
+[2026-07-22 21:24:28] [INFO] Locating role 'Global Reader'
+[2026-07-22 21:24:29] [SUCCESS] Global Reader assigned successfully.
+[2026-07-22 21:24:29] [INFO] Processing employee MI-0011
+[2026-07-22 21:24:30] [INFO] Assigning role 'Global Reader'
+[2026-07-22 21:24:30] [INFO] Locating role 'Global Reader'
+[2026-07-22 21:24:31] [SUCCESS] Global Reader assigned successfully.
+[2026-07-22 21:24:31] [INFO] Processing employee MI-0001
+[2026-07-22 21:24:31] [INFO] Assigning role 'User Administrator'
+[2026-07-22 21:24:31] [INFO] Locating role 'User Administrator'
+[2026-07-22 21:24:32] [INFO] User Administrator not activated. Activating...
+[2026-07-22 21:24:36] [SUCCESS] User Administrator assigned successfully.

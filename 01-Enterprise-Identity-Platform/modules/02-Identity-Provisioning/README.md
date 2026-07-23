@@ -4,22 +4,18 @@ This module contains deliverables, implementation guidance, and evidence for the
 
 ## Screenshot Evidence
 
-Captured provisioning evidence is stored in the local screenshot folder and shown below:
+Captured provisioning evidence is stored in the local screenshot folder.
 
-### Single user provisioning run
+### Provisioning screenshot files
 
-![Single user provisioning run](./screenshots/provision-miemployees-01.png)
-
-### Bulk provisioning run
-
-![Bulk provisioning run](./screenshots/provision-miemployees-multiple.png)
-
-### Manager provisioning report
-
-![Manager provisioning run](./screenshots/provision-managers-01.png)
-
-### Terminal output with group and manager assignment
-
-![Provisioning terminal output](./screenshots/provision-run-terminal-01.png)
+- `./screenshots/provisioning-screenshot-01.png`
+- `./screenshots/provisioning-screenshot-02.png`
+- `./screenshots/provisioning-screenshot-03.png`
+- `./screenshots/provisioning-screenshot-04.png`
+- `./screenshots/provisioning-screenshot-05.png`
+- `./screenshots/provisioning-screenshot-06.png`
+- `./screenshots/provisioning-screenshot-07.png`
+- `./screenshots/provisioning-screenshot-08.png`
+- `./screenshots/provisioning-screenshot-09.png`
 
 These images support the identity provisioning deliverables, including validation, operational runbooks, and implementation reporting.

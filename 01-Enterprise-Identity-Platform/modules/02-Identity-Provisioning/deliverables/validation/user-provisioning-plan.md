@@ -34,7 +34,12 @@ See `identity-provisioning-standard.md` for naming and lifecycle standards.
 
 Provisioning evidence and captured sample runs are stored in the `../screenshots/` folder.
 
-- `../screenshots/provision-miemployees-01.png`
-- `../screenshots/provision-miemployees-multiple.png`
-- `../screenshots/provision-managers-01.png`
-- `../screenshots/provision-run-terminal-01.png`
+- `../screenshots/provisioning-screenshot-01.png`
+- `../screenshots/provisioning-screenshot-02.png`
+- `../screenshots/provisioning-screenshot-03.png`
+- `../screenshots/provisioning-screenshot-04.png`
+- `../screenshots/provisioning-screenshot-05.png`
+- `../screenshots/provisioning-screenshot-06.png`
+- `../screenshots/provisioning-screenshot-07.png`
+- `../screenshots/provisioning-screenshot-08.png`
+- `../screenshots/provisioning-screenshot-09.png`
