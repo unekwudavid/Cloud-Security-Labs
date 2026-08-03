@@ -1,2 +1,0 @@
-"EmployeeID","DisplayName","UserPrincipalName","Department","JobTitle","Country","Status","Reason","ObjectId","TemporaryPassword","DepartmentGroup","CompanyGroup","AdministrativeUnit","AUAssigned","Manager","ManagerAssigned","License","LicenseAssigned","LicenseStatus"
-"MI-0020","John Doe","john.doe@daveshub.onmicrosoft.com","Engineering","Software Engineer","United States","Skipped","User already exists","","P@ssword123!",,,,"False",,"False",,"False",
