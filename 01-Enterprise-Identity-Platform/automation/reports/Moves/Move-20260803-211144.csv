@@ -1,0 +1,5 @@
+"RunId","EmployeeId","DisplayName","DepartmentBefore","DepartmentAfter","JobTitleBefore","JobTitleAfter","CountryBefore","CountryAfter","ManagerBefore","ManagerAfter","AUBefore","AUAfter","LicenseBefore","LicenseAfter","RoleBefore","RoleAfter","Status","Duration","Timestamp"
+"33da4ec1-68a4-411a-b9f9-1ae8727a74db","MI-0019","William Smith","Security Operations","Security Operations","Security Analyst","Security Analyst","Nigeria","Nigeria",,,,,,,,,"Completed","00:00:00.0085325","8/3/2026 9:11:42 PM"
+"c7a38583-f85e-44e9-9ffe-78737bba12c8","MI-0018","Emma Wilson","Engineering","Engineering","DevOps Engineer","DevOps Engineer","Nigeria","Nigeria",,,,,,,,,"Completed","00:00:00.0084185","8/3/2026 9:11:43 PM"
+"b39c93c5-dc98-45c0-8613-ac71b4790301","MI-0011","Isabella Martinez","HR","HR","HR Manager","HR Manager","Nigeria","Nigeria",,,,,,,,,"Completed","00:00:00.0077951","8/3/2026 9:11:43 PM"
+"17c929e1-9d19-44c3-88de-ccf62173f84c","MI-0010","James White","",,"",,"",,"","","","","","","","","Failed",,"8/3/2026 9:11:44 PM"

@@ -17,80 +17,55 @@ Mustard Innovations Enterprise Cloud IAM
 1.0
 #>
 
-# ================================
+# ============================================
+# Resolve Project Paths
+# ============================================
+
+$ScriptDir = Split-Path -Parent $PSCommandPath
+
+# automation\powershell -> automation -> project root
+$ProjectRoot = Split-Path -Parent (Split-Path -Parent $ScriptDir)
+
+# Repository root
+$RepoRoot = Split-Path -Parent $ProjectRoot
+
+# ============================================
 # Configuration
-# ================================
-
-# ============================================
-# Organizational Standards
 # ============================================
 
-# Load configuration
-$Config = Import-PowerShellDataFile ".\automation\config\tenant-config.psd1"
+$ConfigPath = Join-Path `
+    $ProjectRoot `
+    "automation\configuration\tenant-config.psd1"
+
+$CsvPath = Join-Path `
+    $ProjectRoot `
+    "HR\source\pilot-employees.csv"
+
+$LogDirectory = Join-Path `
+    $ProjectRoot `
+    "automation\logs"
+
+$LogPath = Join-Path `
+    $LogDirectory `
+    "validation-log.txt"
+
+if (!(Test-Path $ConfigPath))
+{
+    throw "Configuration file not found: $ConfigPath"
+}
+
+$Config = Import-PowerShellDataFile $ConfigPath
 
 $ValidDepartments = $Config.Departments
-$ValidCountries = $Config.Countries.Keys
+$ValidCountries   = $Config.Countries.Keys
 
-# Resolve paths relative to the script location (repository root is 3 levels up)
-$ScriptDir = Split-Path -Parent $PSCommandPath
-$RepoRoot = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $ScriptDir))
-$CsvPath = Join-Path $RepoRoot "01-Enterprise-Cloud-IAM\HR\source\pilot-employees.csv"
-$LogPath = Join-Path $RepoRoot "01-Enterprise-Cloud-IAM\automation\logs\validation-log.txt"
-
-Write-Host "====================================="
-Write-Host " Mustard Innovations IAM Validation"
-Write-Host "====================================="
-Write-Host ""
-
-# check if the HR dataset exists
-if (-not (Test-Path $CsvPath)) {
-    Write-Host "ERROR: HR file not found." -ForegroundColor Red
-    Write-Host "Expected path: $CsvPath" -ForegroundColor Red
-    exit
+if (!(Test-Path $LogDirectory))
+{
+    New-Item `
+        -ItemType Directory `
+        -Path $LogDirectory |
+        Out-Null
 }
-
-Write-Host "HR dataset located successfully." -ForegroundColor Green
-
-#import the HR dataset
-$Employees = Import-Csv $CsvPath
-
-Write-Host "$($Employees.Count) employee records loaded." -ForegroundColor Green
-
-# ============================================
-# Validate Mandatory Fields
-# ============================================
-
-Write-Host ""
-Write-Host "Validating mandatory fields..."
-
-$ValidationErrors = @()
-
-foreach ($Employee in $Employees) {
-
-    if ([string]::IsNullOrWhiteSpace($Employee.EmployeeID)) {
-        $ValidationErrors += "Missing EmployeeID"
-    }
-
-    if ([string]::IsNullOrWhiteSpace($Employee.FirstName)) {
-        $ValidationErrors += "Employee $($Employee.EmployeeID): Missing FirstName"
-    }
-
-    if ([string]::IsNullOrWhiteSpace($Employee.LastName)) {
-        $ValidationErrors += "Employee $($Employee.EmployeeID): Missing LastName"
-    }
-
-    if ([string]::IsNullOrWhiteSpace($Employee.Department)) {
-        $ValidationErrors += "Employee $($Employee.EmployeeID): Missing Department"
-    }
-
-    if ([string]::IsNullOrWhiteSpace($Employee.Country)) {
-        $ValidationErrors += "Employee $($Employee.EmployeeID): Missing Country"
-    }
-}
-
-# ============================================
-# Validate Employee ID Format
-# ============================================
 
 Write-Host ""
 Write-Host "Validating Employee ID format..."

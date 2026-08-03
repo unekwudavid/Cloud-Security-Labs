@@ -28,10 +28,6 @@ param(
 
 )
 
-#import created modules
-Import-Module `
-"$PSScriptRoot\..\modules\MI.Automation.psm1" `
--Force
 
 
 #pipeline configuration for the joiner workflow
@@ -45,11 +41,6 @@ $Pipeline = @(
     @{
         Name = "User Provisioning"
         Script = "03-Provision-MIEmployees.ps1"
-    }
-
-    @{
-        Name = "Directory Role Assignment"
-        Script = "08-Assign-Roles.ps1"
     }
 
     @{
@@ -80,11 +71,13 @@ foreach($Step in $Pipeline)
     $Path = Join-Path $PSScriptRoot $Step.Script
 
     if($Step.Script -eq "09-Backfill-EmployeeIds.ps1")
-    {
+{
 
-        & $Path -Live:$Live
+    & $Path `
+        -Live:$Live `
+        -Limit $Limit
 
-    }
+}
     else
     {
 

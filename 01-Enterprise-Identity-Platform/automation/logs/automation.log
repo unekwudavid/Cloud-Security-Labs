@@ -445,3 +445,339 @@
 [2026-07-22 21:24:31] [INFO] Locating role 'User Administrator'
 [2026-07-22 21:24:32] [INFO] User Administrator not activated. Activating...
 [2026-07-22 21:24:36] [SUCCESS] User Administrator assigned successfully.
+[2026-08-01 21:50:38] [INFO] Processing employee MI-0020
+[2026-08-01 21:50:46] [WARN] User already exists: john.doe@daveshub.onmicrosoft.com
+[2026-08-01 21:50:46] [INFO] Processing john.doe@daveshub.onmicrosoft.com
+[2026-08-01 21:50:48] [SUCCESS] EmployeeId assigned successfully.
+[2026-08-01 21:50:48] [INFO] Processing william.smith@daveshub.onmicrosoft.com
+[2026-08-01 21:50:48] [INFO] EmployeeId already assigned.
+[2026-08-01 21:50:48] [INFO] Processing emma.wilson@daveshub.onmicrosoft.com
+[2026-08-01 21:50:49] [INFO] EmployeeId already assigned.
+[2026-08-01 21:50:49] [INFO] Processing james.white@daveshub.onmicrosoft.com
+[2026-08-01 21:50:49] [INFO] EmployeeId already assigned.
+[2026-08-01 21:50:49] [INFO] Processing olivia.johnson@daveshub.onmicrosoft.com
+[2026-08-01 21:50:50] [INFO] EmployeeId already assigned.
+[2026-08-01 21:50:50] [INFO] Processing amelia.hall@daveshub.onmicrosoft.com
+[2026-08-01 21:50:50] [INFO] EmployeeId already assigned.
+[2026-08-01 21:50:50] [INFO] Processing charlotte.lee@daveshub.onmicrosoft.com
+[2026-08-01 21:50:50] [INFO] EmployeeId already assigned.
+[2026-08-01 21:50:51] [INFO] Processing henry.walker@daveshub.onmicrosoft.com
+[2026-08-01 21:50:51] [INFO] EmployeeId already assigned.
+[2026-08-01 21:50:51] [INFO] Processing liam.anderson@daveshub.onmicrosoft.com
+[2026-08-01 21:50:51] [INFO] EmployeeId already assigned.
+[2026-08-01 21:50:52] [INFO] Processing isabella.martinez@daveshub.onmicrosoft.com
+[2026-08-01 21:50:52] [INFO] EmployeeId already assigned.
+[2026-08-01 21:50:52] [INFO] Processing sarah.johnson@daveshub.onmicrosoft.com
+[2026-08-01 21:50:52] [INFO] EmployeeId already assigned.
+[2026-08-01 21:50:52] [INFO] Processing david.wilson@daveshub.onmicrosoft.com
+[2026-08-01 21:50:53] [INFO] EmployeeId already assigned.
+[2026-08-01 21:50:53] [INFO] Processing emily.brown@daveshub.onmicrosoft.com
+[2026-08-01 21:50:54] [INFO] EmployeeId already assigned.
+[2026-08-01 21:50:54] [INFO] Processing michael.scott@daveshub.onmicrosoft.com
+[2026-08-01 21:50:54] [INFO] EmployeeId already assigned.
+[2026-08-01 21:50:54] [INFO] Processing olivia.smith@daveshub.onmicrosoft.com
+[2026-08-01 21:50:54] [WARN] User not found.
+[2026-08-01 21:50:55] [INFO] Processing daniel.moore@daveshub.onmicrosoft.com
+[2026-08-01 21:50:55] [WARN] User not found.
+[2026-08-01 21:50:55] [INFO] Processing grace.taylor@daveshub.onmicrosoft.com
+[2026-08-01 21:50:55] [WARN] User not found.
+[2026-08-01 21:50:55] [INFO] Processing john.davis@daveshub.onmicrosoft.com
+[2026-08-01 21:50:56] [WARN] User not found.
+[2026-08-01 21:50:56] [INFO] Processing sophia.clark@daveshub.onmicrosoft.com
+[2026-08-01 21:50:56] [WARN] User not found.
+[2026-08-01 21:50:57] [INFO] Processing james.white@daveshub.onmicrosoft.com
+[2026-08-01 21:50:57] [INFO] EmployeeId already assigned.
+[2026-08-01 21:55:18] [INFO] Processing employee MI-0021
+[2026-08-01 21:55:24] [INFO] Creating user michael.brown@daveshub.onmicrosoft.com
+[2026-08-01 21:55:25] [SUCCESS] User created successfully.
+[2026-08-01 21:55:25] [INFO] Starting group assignment...
+[2026-08-01 21:55:25] [INFO] Searching for group: SG-AllCompany
+[2026-08-01 21:55:31] [SUCCESS] SG-AllCompany assigned successfully.
+[2026-08-01 21:55:31] [INFO] Searching for group: SG-Engineering
+[2026-08-01 21:55:32] [SUCCESS] SG-Engineering assigned successfully.
+[2026-08-01 21:55:32] [SUCCESS] Group assignment completed.
+[2026-08-01 21:55:32] [INFO] Assigning manager for user 192f7fe0-907d-4d7a-b0e5-676c3cb9f4ab
+[2026-08-01 21:55:34] [SUCCESS] Assigned manager 'james.carter@daveshub.onmicrosoft.com' to Michael Brown.
+[2026-08-01 21:55:34] [INFO] Attempting license assignment...
+[2026-08-01 21:55:34] [INFO] Discovering subscribed licenses...
+[2026-08-01 21:55:39] [WARN] No subscribed licenses found in tenant.
+[2026-08-01 21:55:39] [WARN] License assignment skipped. No subscribed SKUs available.
+[2026-08-01 21:55:39] [INFO] Reconciling RBAC assignment...
+[2026-08-01 21:55:40] [ERROR] Role 'Application Administrator' not found.
+[2026-08-01 21:55:40] [INFO] Processing michael.brown@daveshub.onmicrosoft.com
+[2026-08-01 21:55:41] [INFO] EmployeeId already assigned.
+[2026-08-01 21:55:41] [INFO] Processing john.doe@daveshub.onmicrosoft.com
+[2026-08-01 21:55:41] [INFO] EmployeeId already assigned.
+[2026-08-01 21:55:41] [INFO] Processing william.smith@daveshub.onmicrosoft.com
+[2026-08-01 21:55:42] [INFO] EmployeeId already assigned.
+[2026-08-01 21:55:42] [INFO] Processing emma.wilson@daveshub.onmicrosoft.com
+[2026-08-01 21:55:43] [INFO] EmployeeId already assigned.
+[2026-08-01 21:55:43] [INFO] Processing james.white@daveshub.onmicrosoft.com
+[2026-08-01 21:55:43] [INFO] EmployeeId already assigned.
+[2026-08-01 21:55:43] [INFO] Processing olivia.johnson@daveshub.onmicrosoft.com
+[2026-08-01 21:55:44] [INFO] EmployeeId already assigned.
+[2026-08-01 21:55:44] [INFO] Processing amelia.hall@daveshub.onmicrosoft.com
+[2026-08-01 21:55:44] [INFO] EmployeeId already assigned.
+[2026-08-01 21:55:44] [INFO] Processing charlotte.lee@daveshub.onmicrosoft.com
+[2026-08-01 21:55:45] [INFO] EmployeeId already assigned.
+[2026-08-01 21:55:45] [INFO] Processing henry.walker@daveshub.onmicrosoft.com
+[2026-08-01 21:55:45] [INFO] EmployeeId already assigned.
+[2026-08-01 21:55:45] [INFO] Processing liam.anderson@daveshub.onmicrosoft.com
+[2026-08-01 21:55:46] [INFO] EmployeeId already assigned.
+[2026-08-01 21:55:46] [INFO] Processing isabella.martinez@daveshub.onmicrosoft.com
+[2026-08-01 21:55:47] [INFO] EmployeeId already assigned.
+[2026-08-01 21:55:47] [INFO] Processing sarah.johnson@daveshub.onmicrosoft.com
+[2026-08-01 21:55:47] [INFO] EmployeeId already assigned.
+[2026-08-01 21:55:47] [INFO] Processing david.wilson@daveshub.onmicrosoft.com
+[2026-08-01 21:55:48] [INFO] EmployeeId already assigned.
+[2026-08-01 21:55:48] [INFO] Processing emily.brown@daveshub.onmicrosoft.com
+[2026-08-01 21:55:48] [INFO] EmployeeId already assigned.
+[2026-08-01 21:55:48] [INFO] Processing michael.scott@daveshub.onmicrosoft.com
+[2026-08-01 21:55:49] [INFO] EmployeeId already assigned.
+[2026-08-01 21:55:49] [INFO] Processing olivia.smith@daveshub.onmicrosoft.com
+[2026-08-01 21:55:50] [WARN] User not found.
+[2026-08-01 21:55:50] [INFO] Processing daniel.moore@daveshub.onmicrosoft.com
+[2026-08-01 21:55:50] [WARN] User not found.
+[2026-08-01 21:55:50] [INFO] Processing grace.taylor@daveshub.onmicrosoft.com
+[2026-08-01 21:55:51] [WARN] User not found.
+[2026-08-01 21:55:51] [INFO] Processing john.davis@daveshub.onmicrosoft.com
+[2026-08-01 21:55:51] [WARN] User not found.
+[2026-08-01 21:55:51] [INFO] Processing sophia.clark@daveshub.onmicrosoft.com
+[2026-08-01 21:55:52] [WARN] User not found.
+[2026-08-01 21:55:52] [INFO] Processing james.white@daveshub.onmicrosoft.com
+[2026-08-01 21:55:52] [INFO] EmployeeId already assigned.
+[2026-08-01 22:19:09] [INFO] Processing employee MI-0022
+[2026-08-01 22:19:10] [INFO] Creating user emily.davis@daveshub.onmicrosoft.com
+[2026-08-01 22:19:12] [SUCCESS] User created successfully.
+[2026-08-01 22:19:12] [INFO] Starting group assignment...
+[2026-08-01 22:19:12] [INFO] Searching for group: SG-AllCompany
+[2026-08-01 22:19:13] [SUCCESS] SG-AllCompany assigned successfully.
+[2026-08-01 22:19:13] [INFO] Searching for group: SG-Engineering
+[2026-08-01 22:19:14] [SUCCESS] SG-Engineering assigned successfully.
+[2026-08-01 22:19:14] [SUCCESS] Group assignment completed.
+[2026-08-01 22:19:14] [INFO] Assigning manager for user 6687cd6a-6f97-4f86-b7a1-4676b76e907f
+[2026-08-01 22:19:16] [SUCCESS] Assigned manager 'james.carter@daveshub.onmicrosoft.com' to Emily Davis.
+[2026-08-01 22:19:16] [INFO] Attempting license assignment...
+[2026-08-01 22:19:16] [INFO] Discovering subscribed licenses...
+[2026-08-01 22:19:16] [WARN] No subscribed licenses found in tenant.
+[2026-08-01 22:19:16] [WARN] License assignment skipped. No subscribed SKUs available.
+[2026-08-01 22:19:16] [INFO] Reconciling RBAC assignment...
+[2026-08-01 22:19:23] [SUCCESS] RBAC updated.
+[2026-08-01 22:19:23] [INFO] Processing emily.davis@daveshub.onmicrosoft.com
+[2026-08-01 22:19:23] [INFO] EmployeeId already assigned.
+[2026-08-01 22:19:23] [INFO] Processing michael.brown@daveshub.onmicrosoft.com
+[2026-08-01 22:19:27] [WARN] User not found.
+[2026-08-01 22:19:27] [INFO] Processing john.doe@daveshub.onmicrosoft.com
+[2026-08-01 22:40:27] [INFO] Processing employee MI-0021
+[2026-08-01 22:40:29] [INFO] Creating user michael.brown@daveshub.onmicrosoft.com
+[2026-08-01 22:40:30] [SUCCESS] User created successfully.
+[2026-08-01 22:40:30] [INFO] Starting group assignment...
+[2026-08-01 22:40:30] [INFO] Searching for group: SG-AllCompany
+[2026-08-01 22:40:35] [SUCCESS] SG-AllCompany assigned successfully.
+[2026-08-01 22:40:35] [INFO] Searching for group: SG-Engineering
+[2026-08-01 22:40:36] [SUCCESS] SG-Engineering assigned successfully.
+[2026-08-01 22:40:36] [SUCCESS] Group assignment completed.
+[2026-08-01 22:40:36] [INFO] Assigning manager for user 9c742cba-18fb-4e92-ab84-641537e4eb53
+[2026-08-01 22:40:38] [SUCCESS] Assigned manager 'james.carter@daveshub.onmicrosoft.com' to Michael Brown.
+[2026-08-01 22:40:38] [INFO] Attempting license assignment...
+[2026-08-01 22:40:38] [INFO] Discovering subscribed licenses...
+[2026-08-01 22:40:42] [WARN] No subscribed licenses found in tenant.
+[2026-08-01 22:40:42] [WARN] License assignment skipped. No subscribed SKUs available.
+[2026-08-01 22:40:42] [INFO] Processing michael.brown@daveshub.onmicrosoft.com
+[2026-08-01 22:40:43] [INFO] EmployeeId already assigned.
+[2026-08-01 22:55:28] [INFO] Processing employee MI-0022
+[2026-08-01 22:55:32] [WARN] User already exists: emily.davis@daveshub.onmicrosoft.com
+[2026-08-01 22:55:32] [INFO] Processing emily.davis@daveshub.onmicrosoft.com
+[2026-08-01 22:55:33] [INFO] EmployeeId already assigned.
+[2026-08-01 22:56:23] [INFO] Processing employee MI-0023
+[2026-08-01 22:56:25] [WARN] User already exists: olivia.johnson@daveshub.onmicrosoft.com
+[2026-08-01 22:56:25] [INFO] Processing olivia.johnson@daveshub.onmicrosoft.com
+[2026-08-01 22:56:26] [INFO] EmployeeId already assigned.
+[2026-08-01 22:57:26] [INFO] Processing employee MI-0021
+[2026-08-01 22:57:31] [INFO] Creating user michael.brown@daveshub.onmicrosoft.com
+[2026-08-01 22:57:33] [SUCCESS] User created successfully.
+[2026-08-01 22:57:33] [INFO] Starting group assignment...
+[2026-08-01 22:57:33] [INFO] Searching for group: SG-AllCompany
+[2026-08-01 22:57:38] [SUCCESS] SG-AllCompany assigned successfully.
+[2026-08-01 22:57:38] [INFO] Searching for group: SG-Engineering
+[2026-08-01 22:57:40] [SUCCESS] SG-Engineering assigned successfully.
+[2026-08-01 22:57:40] [SUCCESS] Group assignment completed.
+[2026-08-01 22:57:40] [INFO] Assigning manager for user 43870fa2-865b-4802-ba9f-742aaab8b862
+[2026-08-01 22:57:42] [SUCCESS] Assigned manager 'james.carter@daveshub.onmicrosoft.com' to Michael Brown.
+[2026-08-01 22:57:42] [INFO] Attempting license assignment...
+[2026-08-01 22:57:42] [INFO] Discovering subscribed licenses...
+[2026-08-01 22:57:43] [WARN] No subscribed licenses found in tenant.
+[2026-08-01 22:57:44] [WARN] License assignment skipped. No subscribed SKUs available.
+[2026-08-01 22:57:44] [INFO] Reconciling RBAC assignment...
+[2026-08-01 22:57:52] [SUCCESS] RBAC updated.
+[2026-08-01 22:57:52] [INFO] Processing michael.brown@daveshub.onmicrosoft.com
+[2026-08-01 22:57:53] [INFO] EmployeeId already assigned.
+[2026-08-01 23:02:31] [INFO] Processing employee MI-0022
+[2026-08-01 23:02:33] [INFO] Creating user emily.jones@daveshub.onmicrosoft.com
+[2026-08-01 23:02:35] [SUCCESS] User created successfully.
+[2026-08-01 23:02:35] [INFO] Starting group assignment...
+[2026-08-01 23:02:35] [INFO] Searching for group: SG-AllCompany
+[2026-08-01 23:02:36] [SUCCESS] SG-AllCompany assigned successfully.
+[2026-08-01 23:02:36] [INFO] Searching for group: SG-Engineering
+[2026-08-01 23:02:37] [SUCCESS] SG-Engineering assigned successfully.
+[2026-08-01 23:02:37] [SUCCESS] Group assignment completed.
+[2026-08-01 23:02:37] [INFO] Assigning Administrative Unit MI-Nigeria
+[2026-08-01 23:02:38] [SUCCESS] MI-Nigeria assigned successfully
+[2026-08-01 23:02:38] [INFO] Assigning manager for user 237ff77d-9bfc-44e5-97ea-f0a62bb861a6
+[2026-08-01 23:02:39] [SUCCESS] Assigned manager 'james.carter@daveshub.onmicrosoft.com' to Emily Jones.
+[2026-08-01 23:02:39] [INFO] Attempting license assignment...
+[2026-08-01 23:02:39] [INFO] Discovering subscribed licenses...
+[2026-08-01 23:02:41] [WARN] No subscribed licenses found in tenant.
+[2026-08-01 23:02:41] [WARN] License assignment skipped. No subscribed SKUs available.
+[2026-08-01 23:02:41] [INFO] Reconciling RBAC assignment...
+[2026-08-01 23:02:46] [SUCCESS] RBAC updated.
+[2026-08-01 23:02:46] [INFO] Processing emily.jones@daveshub.onmicrosoft.com
+[2026-08-01 23:02:47] [INFO] EmployeeId already assigned.
+[2026-08-01 23:10:08] [INFO] Processing employee MI-0023
+[2026-08-01 23:10:10] [INFO] Creating user olivia.james@daveshub.onmicrosoft.com
+[2026-08-01 23:10:11] [SUCCESS] User created successfully.
+[2026-08-01 23:10:11] [INFO] Starting group assignment...
+[2026-08-01 23:10:11] [INFO] Searching for group: SG-AllCompany
+[2026-08-01 23:10:14] [SUCCESS] SG-AllCompany assigned successfully.
+[2026-08-01 23:10:14] [INFO] Searching for group: SG-HR
+[2026-08-01 23:10:15] [SUCCESS] SG-HR assigned successfully.
+[2026-08-01 23:10:15] [SUCCESS] Group assignment completed.
+[2026-08-01 23:10:15] [INFO] Assigning Administrative Unit MI-Canada
+[2026-08-01 23:10:16] [SUCCESS] MI-Canada assigned successfully
+[2026-08-01 23:10:16] [INFO] Assigning manager for user 5e14d220-751c-4ca9-bedf-04460436c992
+[2026-08-01 23:10:18] [SUCCESS] Assigned manager 'rebecca.adams@daveshub.onmicrosoft.com' to Olivia James.
+[2026-08-01 23:10:18] [INFO] Attempting license assignment...
+[2026-08-01 23:10:19] [INFO] Discovering subscribed licenses...
+[2026-08-01 23:10:20] [WARN] No subscribed licenses found in tenant.
+[2026-08-01 23:10:20] [WARN] License assignment skipped. No subscribed SKUs available.
+[2026-08-01 23:10:20] [INFO] Reconciling RBAC assignment...
+[2026-08-01 23:10:25] [SUCCESS] RBAC updated.
+[2026-08-01 23:10:26] [INFO] Processing olivia.james@daveshub.onmicrosoft.com
+[2026-08-01 23:10:26] [INFO] EmployeeId already assigned.
+[2026-08-03 18:19:40] [ERROR] The term 'Get-MICurrentUserState' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+[2026-08-03 18:32:21] [INFO] Retrieving current identity state for MI-0019
+[2026-08-03 18:32:30] [ERROR] A parameter cannot be found that matches parameter name 'Changes'.
+[2026-08-03 18:39:36] [INFO] Retrieving current identity state for MI-0019
+[2026-08-03 18:39:37] [ERROR] Exception setting "Duration": "The property 'Duration' cannot be found on this object. Verify that the property exists and can be set."
+[2026-08-03 20:05:12] [INFO] Retrieving current identity state for MI-0019
+[2026-08-03 20:34:23] [INFO] Retrieving current identity state for MI-0019
+[2026-08-03 20:38:01] [INFO] Retrieving current identity state for MI-0019
+[2026-08-03 20:39:46] [INFO] Retrieving current identity state for MI-0019
+[2026-08-03 20:44:47] [INFO] Retrieving current identity state for MI-0019
+[2026-08-03 20:44:48] [INFO] Updating profile for d1b8d1c3-a736-46e0-9034-6aadf94ed9bc (Department, Job Title, Country)
+[2026-08-03 20:44:49] [SUCCESS] User profile updated successfully.
+[2026-08-03 20:44:49] [INFO] Updating profile for d1b8d1c3-a736-46e0-9034-6aadf94ed9bc (Department, Job Title, Country)
+[2026-08-03 20:44:50] [SUCCESS] User profile updated successfully.
+[2026-08-03 20:44:50] [INFO] Updating profile for d1b8d1c3-a736-46e0-9034-6aadf94ed9bc (Department, Job Title, Country)
+[2026-08-03 20:44:50] [SUCCESS] User profile updated successfully.
+[2026-08-03 20:44:50] [INFO] Reconciling group memberships...
+[2026-08-03 20:44:51] [INFO] Adding to SG-AllCompany
+[2026-08-03 20:44:51] [INFO] Starting group assignment...
+[2026-08-03 20:44:51] [INFO] Searching for group: SG-AllCompany
+[2026-08-03 20:44:57] [SUCCESS] SG-AllCompany assigned successfully.
+[2026-08-03 20:44:57] [SUCCESS] Group assignment completed.
+[2026-08-03 20:44:57] [INFO] Removing from All Company
+[2026-08-03 20:44:58] [INFO] Removing from SG-Engineering
+[2026-08-03 20:44:59] [SUCCESS] Group reconciliation completed.
+[2026-08-03 20:44:59] [INFO] Reconciling RBAC assignment...
+[2026-08-03 20:45:04] [ERROR] Role 'Security Reader' not found.
+[2026-08-03 20:45:04] [INFO] Reconciling Administrative Unit membership...
+[2026-08-03 20:45:06] [INFO] Removing from AU: MI-Canada
+[2026-08-03 20:45:06] [INFO] Adding user to AU: MI-Nigeria
+[2026-08-03 20:45:07] [SUCCESS] Administrative Unit updated successfully.
+[2026-08-03 20:45:07] [ERROR] Cannot bind argument to parameter 'ManagerUPN' because it is an empty string.
+[2026-08-03 20:54:09] [INFO] Retrieving current identity state for MI-0019
+[2026-08-03 20:54:57] [INFO] Retrieving current identity state for MI-0019
+[2026-08-03 20:54:57] [INFO] Retrieving current identity state for MI-0018
+[2026-08-03 20:54:57] [INFO] Updating profile for 8c1d6a6e-d217-4da9-a14c-79e12c6f86c1 (Department, Job Title, Country)
+[2026-08-03 20:54:58] [SUCCESS] User profile updated successfully.
+[2026-08-03 20:54:58] [INFO] Reconciling group memberships...
+[2026-08-03 20:54:58] [INFO] Adding to SG-AllCompany
+[2026-08-03 20:54:58] [INFO] Starting group assignment...
+[2026-08-03 20:54:58] [INFO] Searching for group: SG-AllCompany
+[2026-08-03 20:54:58] [SUCCESS] SG-AllCompany assigned successfully.
+[2026-08-03 20:54:58] [SUCCESS] Group assignment completed.
+[2026-08-03 20:54:59] [INFO] Removing from All Company
+[2026-08-03 20:54:59] [SUCCESS] Group reconciliation completed.
+[2026-08-03 20:54:59] [WARN] No manager mapping found for department 'Engineering'. Skipping manager update.
+[2026-08-03 20:54:59] [INFO] Reconciling Administrative Unit membership...
+[2026-08-03 20:55:00] [INFO] Removing from AU: MI-UnitedKingdom
+[2026-08-03 20:55:00] [INFO] Adding user to AU: MI-Nigeria
+[2026-08-03 20:55:00] [SUCCESS] Administrative Unit updated successfully.
+[2026-08-03 20:55:00] [INFO] Reconciling RBAC assignment...
+[2026-08-03 20:55:00] [INFO] Locating role 'Application Administrator'
+[2026-08-03 20:55:04] [SUCCESS] RBAC updated.
+[2026-08-03 21:02:57] [INFO] Retrieving current identity state for MI-0019
+[2026-08-03 21:02:58] [INFO] Retrieving current identity state for MI-0018
+[2026-08-03 21:02:58] [INFO] Retrieving current identity state for MI-0011
+[2026-08-03 21:02:59] [INFO] Updating profile for 945843f6-441a-43dc-9dbc-a2b8844103a0 (Department, Job Title, Country)
+[2026-08-03 21:02:59] [SUCCESS] User profile updated successfully.
+[2026-08-03 21:02:59] [INFO] Reconciling group memberships...
+[2026-08-03 21:03:00] [INFO] Adding to SG-AllCompany
+[2026-08-03 21:03:00] [INFO] Starting group assignment...
+[2026-08-03 21:03:00] [INFO] Searching for group: SG-AllCompany
+[2026-08-03 21:03:00] [SUCCESS] SG-AllCompany assigned successfully.
+[2026-08-03 21:03:00] [SUCCESS] Group assignment completed.
+[2026-08-03 21:03:00] [INFO] Adding to SG-HR
+[2026-08-03 21:03:00] [INFO] Starting group assignment...
+[2026-08-03 21:03:00] [INFO] Searching for group: SG-HR
+[2026-08-03 21:03:01] [SUCCESS] SG-HR assigned successfully.
+[2026-08-03 21:03:01] [SUCCESS] Group assignment completed.
+[2026-08-03 21:03:01] [SUCCESS] Group reconciliation completed.
+[2026-08-03 21:03:01] [WARN] No manager mapping found for department 'HR'. Skipping manager update.
+[2026-08-03 21:03:01] [INFO] Reconciling Administrative Unit membership...
+[2026-08-03 21:03:03] [INFO] Adding user to AU: MI-Nigeria
+[2026-08-03 21:03:03] [SUCCESS] Administrative Unit updated successfully.
+[2026-08-03 21:03:03] [INFO] Reconciling RBAC assignment...
+[2026-08-03 21:03:03] [INFO] Locating role 'User Administrator'
+[2026-08-03 21:03:07] [SUCCESS] RBAC updated.
+[2026-08-03 21:09:41] [INFO] Retrieving current identity state for MI-0019
+[2026-08-03 21:09:42] [INFO] Retrieving current identity state for MI-0018
+[2026-08-03 21:09:43] [INFO] Retrieving current identity state for MI-0011
+[2026-08-03 21:11:41] [INFO] Retrieving current identity state for MI-0019
+[2026-08-03 21:11:42] [INFO] Retrieving current identity state for MI-0018
+[2026-08-03 21:11:43] [INFO] Retrieving current identity state for MI-0011
+[2026-08-03 21:11:43] [INFO] Retrieving current identity state for MI-0010
+[2026-08-03 21:11:44] [ERROR] Employee not found: MI-0010
+[2026-08-03 21:17:52] [INFO] Retrieving current identity state for MI-0019
+[2026-08-03 21:17:59] [INFO] Retrieving current identity state for MI-0018
+[2026-08-03 21:18:00] [INFO] Retrieving current identity state for MI-0011
+[2026-08-03 21:18:00] [INFO] Retrieving current identity state for MI-0022
+[2026-08-03 21:18:00] [ERROR] Cannot process argument transformation on parameter 'ObjectId'. Cannot convert value to type System.String.
+[2026-08-03 21:22:43] [INFO] Retrieving current identity state for MI-0019
+[2026-08-03 21:22:44] [INFO] Retrieving current identity state for MI-0018
+[2026-08-03 21:22:45] [INFO] Retrieving current identity state for MI-0011
+[2026-08-03 21:22:45] [INFO] Retrieving current identity state for MI-0022
+[2026-08-03 21:22:45] [INFO] Updating profile for 6687cd6a-6f97-4f86-b7a1-4676b76e907f 237ff77d-9bfc-44e5-97ea-f0a62bb861a6 (Department, Job Title, Country)
+[2026-08-03 21:22:46] [ERROR] [Request_ResourceNotFound] : Resource '6687cd6a-6f97-4f86-b7a1-4676b76e907f 237ff77d-9bfc-44e5-97ea-f0a62bb861a6' does not exist or one of its queried reference-property objects are not present.
+[2026-08-03 21:22:46] [INFO] Reconciling group memberships...
+[2026-08-03 21:22:46] [INFO] Adding to SG-AllCompany
+[2026-08-03 21:22:46] [INFO] Starting group assignment...
+[2026-08-03 21:22:46] [INFO] Searching for group: SG-AllCompany
+[2026-08-03 21:22:51] [ERROR] Failed assigning SG-AllCompany : [Request_BadRequest] : Invalid object identifier '6687cd6a-6f97-4f86-b7a1-4676b76e907f 237ff77d-9bfc-44e5-97ea-f0a62bb861a6'.
+[2026-08-03 21:22:51] [SUCCESS] Group assignment completed.
+[2026-08-03 21:22:51] [INFO] Adding to SG-Engineering
+[2026-08-03 21:22:51] [INFO] Starting group assignment...
+[2026-08-03 21:22:51] [INFO] Searching for group: SG-Engineering
+[2026-08-03 21:22:52] [ERROR] Failed assigning SG-Engineering : [Request_BadRequest] : Invalid object identifier '6687cd6a-6f97-4f86-b7a1-4676b76e907f 237ff77d-9bfc-44e5-97ea-f0a62bb861a6'.
+[2026-08-03 21:22:52] [SUCCESS] Group assignment completed.
+[2026-08-03 21:22:52] [SUCCESS] Group reconciliation completed.
+[2026-08-03 21:22:52] [INFO] Reconciling manager assignment...
+[2026-08-03 21:22:53] [SUCCESS] Manager updated.
+[2026-08-03 21:22:53] [INFO] Reconciling Administrative Unit membership...
+[2026-08-03 21:22:58] [INFO] Adding user to AU: MI-Nigeria
+[2026-08-03 21:22:58] [ERROR] [Request_BadRequest] : Invalid object identifier '6687cd6a-6f97-4f86-b7a1-4676b76e907f 237ff77d-9bfc-44e5-97ea-f0a62bb861a6'.
+[2026-08-03 21:22:58] [INFO] Reconciling RBAC assignment...
+[2026-08-03 21:22:58] [INFO] Locating role 'Application Administrator'
+[2026-08-03 21:23:02] [SUCCESS] RBAC updated.
+[2026-08-03 21:27:33] [INFO] Retrieving current identity state for MI-0019
+[2026-08-03 21:27:35] [INFO] Retrieving current identity state for MI-0018
+[2026-08-03 21:27:35] [INFO] Retrieving current identity state for MI-0011
+[2026-08-03 21:27:35] [INFO] Retrieving current identity state for MI-0022
+[2026-08-03 21:27:37] [ERROR] Multiple users found for EmployeeID: MI-0022
+[2026-08-03 21:31:34] [INFO] Retrieving current identity state for MI-0019
+[2026-08-03 21:31:36] [INFO] Retrieving current identity state for MI-0018
+[2026-08-03 21:31:37] [INFO] Retrieving current identity state for MI-0011
+[2026-08-03 21:31:37] [INFO] Retrieving current identity state for MI-0022
+[2026-08-03 21:31:37] [ERROR] Multiple users found for EmployeeID: MI-0022

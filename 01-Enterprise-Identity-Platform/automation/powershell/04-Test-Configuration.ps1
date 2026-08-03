@@ -1,7 +1,7 @@
 # Load configuration
 $ScriptDir = Split-Path -Parent $PSCommandPath
 $RepoRoot = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $ScriptDir))
-$ConfigPath = Join-Path $RepoRoot "01-Enterprise-Cloud-IAM\automation\config\tenant-config.psd1"
+$ConfigPath = Join-Path $RepoRoot "01-Enterprise-Identity-Platform\automation\config\tenant-config.psd1"
 
 $Config = Import-PowerShellDataFile $ConfigPath
 

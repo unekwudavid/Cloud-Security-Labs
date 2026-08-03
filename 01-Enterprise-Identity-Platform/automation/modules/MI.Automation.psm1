@@ -9,6 +9,7 @@ $moduleRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $moduleFiles = @(
     'MI.Logging.psm1',
     'MI.Provisioning.psm1',
+    'MI.Movers.psm1',
     'MI.Groups.psm1',
     'MI.AdministrativeUnits.psm1',
     'MI.Managers.psm1',

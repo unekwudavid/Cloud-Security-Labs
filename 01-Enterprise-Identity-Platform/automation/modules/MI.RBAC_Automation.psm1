@@ -42,8 +42,9 @@ function Get-MIRoleMappings {
 # Determine Required Role
 # ============================================================
 
-function Get-MIRequiredRole {
+function Get-MIRequiredRBACRole {
 
+    [CmdletBinding()]
     param(
 
         [Parameter(Mandatory)]
@@ -55,34 +56,32 @@ function Get-MIRequiredRole {
     )
 
     #
-    # Job Title takes precedence
+    # Job title takes precedence
     #
 
-    if (
-        $Mappings.JobTitles.PSObject.Properties.Name -contains $Employee.JobTitle
-    ) {
+    if($Mappings.JobTitles.$($Employee.JobTitle))
+    {
 
         return $Mappings.JobTitles.$($Employee.JobTitle)
 
     }
 
     #
-    # Department fallback
+    # Otherwise use department
     #
 
-    if (
-        $Mappings.Departments.PSObject.Properties.Name -contains $Employee.Department
-    ) {
+    if($Mappings.Departments.$($Employee.Department))
+    {
 
         return $Mappings.Departments.$($Employee.Department)
 
     }
 
     #
-    # Default role
+    # Default
     #
 
-    return $Mappings.Default
+    return $Mappings.DefaultRole
 
 }
 
@@ -185,13 +184,113 @@ function Add-MIUserToRole {
 
 }
 
+#============================================================
+#Update RBAC automation
+#============================================================
+function Update-MIUserRBAC {
+
+    [CmdletBinding()]
+    param(
+
+        [Parameter(Mandatory)]
+        [string]$ObjectId,
+
+        [Parameter(Mandatory)]
+        [string]$RoleName
+
+    )
+
+    Write-MILog "Reconciling RBAC assignment..." "INFO"
+
+    try{
+
+        $Role = Get-MIDirectoryRole -RoleName $RoleName
+
+        if(-not $Role){
+
+            throw "Role '$RoleName' not found."
+
+        }
+
+        $CurrentRoles = Get-MgDirectoryRole -All |
+            Where-Object{
+
+                (
+                    Get-MgDirectoryRoleMember `
+                        -DirectoryRoleId $_.Id `
+                        -All
+                ).Id -contains $ObjectId
+
+            }
+
+        foreach($ExistingRole in $CurrentRoles){
+
+            if($ExistingRole.DisplayName -ne $RoleName){
+
+                Remove-MgDirectoryRoleMemberByRef `
+                    -DirectoryRoleId $ExistingRole.Id `
+                    -DirectoryObjectId $ObjectId
+
+            }
+
+        }
+
+        if($CurrentRoles.DisplayName -contains $RoleName){
+
+            Write-MILog "Correct RBAC role already assigned." "INFO"
+
+            return [PSCustomObject]@{
+
+                Success = $true
+                Status = "No Change"
+
+            }
+
+        }
+
+        New-MgDirectoryRoleMemberByRef `
+            -DirectoryRoleId $Role.Id `
+            -BodyParameter @{
+
+                "@odata.id"="https://graph.microsoft.com/v1.0/directoryObjects/$ObjectId"
+
+            }
+
+        Write-MILog "RBAC updated." "SUCCESS"
+
+        return [PSCustomObject]@{
+
+            Success = $true
+            Status = "Updated"
+
+        }
+
+    }
+
+    catch{
+
+        Write-MILog $_.Exception.Message "ERROR"
+
+        return [PSCustomObject]@{
+
+            Success = $false
+            Status = "Failed"
+            Reason = $_.Exception.Message
+
+        }
+
+    }
+
+}
+
 # ============================================================
 # Export Functions
 # ============================================================
 
 Export-ModuleMember -Function @(
     'Get-MIRoleMappings',
-    'Get-MIRequiredRole',
+    'Get-MIRequiredRBACRole',
     'Get-MIDirectoryRole',
-    'Add-MIUserToRole'
+    'Add-MIUserToRole',
+    'update-MIUserRBAC'
 )

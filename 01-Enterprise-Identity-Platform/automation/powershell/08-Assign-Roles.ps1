@@ -35,9 +35,12 @@ $RoleMappingPath = Join-Path `
     $ProjectRoot `
     "automation\configuration\RoleMappings.json"
 
-Import-Module `
-    "$ProjectRoot\automation\modules\MI.Automation.psm1" `
-    -Force
+#import MI automation modules
+$ModuleRoot = Join-Path $PSScriptRoot "..\modules"
+
+Import-Module "$ModuleRoot\MI.Logging.psm1" -Force
+Import-Module "$ModuleRoot\MI.RBAC_Automation.psm1" -Force
+Import-Module "$ModuleRoot\MI.Reporting.psm1" -Force
 
 $Employees = Import-Csv $CsvPath
 

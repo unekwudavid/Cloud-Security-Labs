@@ -66,8 +66,20 @@ if (-not $Config.Countries) {
     exit 1
 }
 
-# Load shared automation helpers
-Import-Module "$PSScriptRoot\..\modules\MI.Automation.psm1" -Force
+# ============================================
+# Load Required Modules
+# ============================================
+
+$ModuleRoot = Join-Path $PSScriptRoot "..\modules"
+
+Import-Module "$ModuleRoot\MI.Logging.psm1" -Force
+Import-Module "$ModuleRoot\MI.Provisioning.psm1" -Force
+Import-Module "$ModuleRoot\MI.Groups.psm1" -Force
+Import-Module "$ModuleRoot\MI.AdministrativeUnits.psm1" -Force
+Import-Module "$ModuleRoot\MI.Managers.psm1" -Force
+Import-Module "$ModuleRoot\MI.Licensing.psm1" -Force
+Import-Module "$ModuleRoot\MI.Reporting.psm1" -Force
+Import-Module "$ModuleRoot\MI.RBAC_Automation.psm1" -Force
 
 # Source provisioning status constants into global scope so module functions can access them
 . "$PSScriptRoot\..\constants\ProvisioningStatus.ps1"
@@ -121,7 +133,15 @@ $AUMappings = Get-MIAUMappings `
 
 #get license mappings
 $LicenseMappings = Get-MILicenseMappings `
-    -Path (Join-Path $PSScriptRoot "..\configuration\LicenseMappings.json")   
+    -Path (Join-Path $PSScriptRoot "..\configuration\LicenseMappings.json") 
+    
+# Get RBAC mappings
+$RBACMappings = Get-Content `
+(
+Join-Path $PSScriptRoot `
+"..\configuration\RBACMappings.json"
+) |
+ConvertFrom-Json    
 
 
 foreach ($Employee in ($Employees | Select-Object -First $Limit)) {
@@ -210,6 +230,33 @@ if ($RequiredLicense) {
 
 }
 
+# ========================================
+# RBAC ASSIGNMENT
+# ========================================
+
+$RequiredRole = Get-MIRequiredRBACRole `
+    -Employee $Employee `
+    -Mappings $RBACMappings
+
+if ($RequiredRole) {
+
+    Write-Host ""
+    Write-Host "========================================"
+    Write-Host " RBAC ASSIGNMENT"
+    Write-Host "========================================"
+
+    Write-Host "Employee : $($Employee.FirstName) $($Employee.LastName)"
+    Write-Host "Role     : $RequiredRole"
+
+    $RBACResult = Update-MIUserRBAC `
+    -ObjectId $Result.ObjectId `
+    -RoleName $RequiredRole
+
+    $Result.Role = $RequiredRole
+    $Result.RoleAssigned = $RBACResult.Success
+
+}
+
         # Populate report fields
         $Result.DepartmentGroup = ($RequiredGroups | Where-Object {$_ -ne "All Company"}) -join ", "
         $Result.CompanyGroup = "All Company"
@@ -262,7 +309,9 @@ Write-Host "Success Rate........... $SuccessRate%"
 Write-Host "========================================"
 
 
-#
+# Format table for console output
+$Results | Format-List *
+
 $Results |
 Sort-Object EmployeeID |
 Format-Table `
@@ -272,13 +321,16 @@ Department,
 Status,
 DepartmentGroup,
 CompanyGroup,
+AdministrativeUnit,
 Manager,
 License,
 LicenseStatus,
+Role,
+RoleAssigned,
 TemporaryPassword -AutoSize
 
 $TimeStamp = Get-Date -Format "yyyyMMdd-HHmmss"
-$ReportDir = Join-Path $RepoRoot "01-Enterprise-Cloud-IAM\automation\reports"
+$ReportDir = Join-Path $RepoRoot "01-Enterprise-Identity-Platform\automation\reports"
 
 if (-not (Test-Path $ReportDir)) {
     New-Item -ItemType Directory -Path $ReportDir -Force | Out-Null

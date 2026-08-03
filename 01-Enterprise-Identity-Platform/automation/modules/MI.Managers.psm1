@@ -66,4 +66,82 @@ function Set-MIUserManager {
     }
 }
 
-Export-ModuleMember -Function Get-MIManagerMappings, Set-MIUserManager
+#update MI User Manager
+function Update-MIUserManager {
+
+    [CmdletBinding()]
+    param(
+
+        [Parameter(Mandatory)]
+        [string]$ObjectId,
+
+        [Parameter(Mandatory)]
+        [string]$ManagerUPN
+
+    )
+
+    Write-MILog "Reconciling manager assignment..." "INFO"
+
+    try {
+
+        $Manager = Get-MgUser `
+            -Filter "userPrincipalName eq '$ManagerUPN'"
+
+        if(-not $Manager){
+
+            throw "Manager '$ManagerUPN' not found."
+
+        }
+
+        $CurrentManager = Get-MgUserManager `
+            -UserId $ObjectId `
+            -ErrorAction SilentlyContinue
+
+        if($CurrentManager.Id -eq $Manager.Id){
+
+            Write-MILog "Manager already correct." "INFO"
+
+            return [PSCustomObject]@{
+
+                Success = $true
+                Status = "No Change"
+
+            }
+
+        }
+
+        Set-MgUserManagerByRef `
+            -UserId $ObjectId `
+            -BodyParameter @{
+
+                "@odata.id" = "https://graph.microsoft.com/v1.0/users/$($Manager.Id)"
+
+            }
+
+        Write-MILog "Manager updated." "SUCCESS"
+
+        return [PSCustomObject]@{
+
+            Success = $true
+            Status = "Updated"
+
+        }
+
+    }
+
+    catch{
+
+        Write-MILog $_.Exception.Message "ERROR"
+
+        return [PSCustomObject]@{
+
+            Success = $false
+            Status = "Failed"
+            Reason = $_.Exception.Message
+
+        }
+
+    }
+
+}
+Export-ModuleMember -Function Get-MIManagerMappings,Set-MIUserManager,Update-MIUserManager

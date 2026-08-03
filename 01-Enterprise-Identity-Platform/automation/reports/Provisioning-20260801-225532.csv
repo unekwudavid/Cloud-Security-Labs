@@ -1,0 +1,2 @@
+"EmployeeID","DisplayName","UserPrincipalName","Department","JobTitle","Role","RoleAssigned","Country","Status","Reason","ObjectId","TemporaryPassword","DepartmentGroup","CompanyGroup","AdministrativeUnit","AUAssigned","Manager","ManagerAssigned","License","LicenseAssigned","LicenseStatus"
+"MI-0022","Emily Davis","emily.davis@daveshub.onmicrosoft.com","Engineering","Software Engineer",,"False","United States","Skipped","User already exists","","P@ssword123!",,,,"False",,"False",,"False",

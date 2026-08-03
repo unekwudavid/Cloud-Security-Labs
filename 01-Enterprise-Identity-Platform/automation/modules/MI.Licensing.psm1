@@ -91,4 +91,81 @@ function Set-MIUserLicense {
     }
 }
 
-Export-ModuleMember -Function Get-MILicenseMappings, Get-MITenantLicenses, Get-MIRequiredLicense, Set-MIUserLicense
+#update user license
+function Update-MIUserLicense {
+
+    [CmdletBinding()]
+    param(
+
+        [Parameter(Mandatory)]
+        [string]$ObjectId,
+
+        [Parameter(Mandatory)]
+        [string]$SkuPartNumber
+
+    )
+    Write-MILog "Reconciling license assignment..." "INFO"
+    try{
+
+        $DesiredSku = Get-MgSubscribedSku |
+            Where-Object SkuPartNumber -eq $SkuPartNumber
+
+        if(!$DesiredSku){
+
+            throw "SKU '$SkuPartNumber' not found."
+
+        }
+
+        $CurrentLicenses = (Get-MgUserLicenseDetail `
+            -UserId $ObjectId).SkuId
+
+        if($CurrentLicenses -contains $DesiredSku.SkuId){
+
+            Write-MILog "Correct license already assigned." "INFO"
+
+            return [PSCustomObject]@{
+
+                Success = $true
+                Status = "No Change"
+
+            }
+
+        }
+
+        Set-MgUserLicense `
+            -UserId $ObjectId `
+            -AddLicenses @(
+                @{
+                    SkuId = $DesiredSku.SkuId
+                }
+            ) `
+            -RemoveLicenses $CurrentLicenses
+
+        Write-MILog "License updated." "SUCCESS"
+
+        return [PSCustomObject]@{
+
+            Success = $true
+            Status = "Updated"
+
+        }
+
+    }
+
+    catch{
+
+        Write-MILog $_.Exception.Message "ERROR"
+
+        return [PSCustomObject]@{
+
+            Success = $false
+            Status = "Failed"
+            Reason = $_.Exception.Message
+
+        }
+
+    }
+
+}
+
+Export-ModuleMember -Function Get-MILicenseMappings,Get-MITenantLicenses,Get-MIRequiredLicense,Set-MIUserLicense,Update-MIUserLicense

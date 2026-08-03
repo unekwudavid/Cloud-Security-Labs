@@ -124,6 +124,10 @@ function New-MIProvisioningResult {
 
         JobTitle = $Employee.JobTitle
 
+        Role = $null
+
+        RoleAssigned = $false
+
         Country = $Employee.Country
 
         Status = $Status

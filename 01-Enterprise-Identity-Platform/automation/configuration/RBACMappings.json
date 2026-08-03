@@ -1,0 +1,35 @@
+{
+  "DefaultRole": "Global Reader",
+
+  "Departments": {
+
+    "Engineering": "Application Administrator",
+
+    "Security Operations": "Security Reader",
+
+    "IT": "Cloud Device Administrator",
+
+    "HR": "User Administrator",
+
+    "Finance": "Reports Reader",
+
+    "Executive": "Global Reader",
+
+    "Marketing": "Global Reader"
+
+  },
+
+  "JobTitles": {
+
+    "SOC Analyst": "Security Reader",
+
+    "Security Engineer": "Security Administrator",
+
+    "Cloud Engineer": "Cloud Application Administrator",
+
+    "IT Manager": "Privileged Role Administrator",
+
+    "Security Manager": "Security Administrator"
+
+  }
+}
