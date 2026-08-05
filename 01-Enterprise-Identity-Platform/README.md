@@ -1,7 +1,7 @@
 # Enterprise Identity Platform
 
 <p align="center">
-  <img src="./diagrams/exports/09-executive-solution-architecture.png" alt="Enterprise Identity Platform cover" width="100%" />
+  <img src="./screenshots/enterprise IAM cover page.png" alt="Enterprise Identity Platform cover" width="100%" />
 </p>
 
 ### Project 1 — Enterprise Cloud IAM
