@@ -1,0 +1,2 @@
+"RunId","EmployeeId","DisplayName","DepartmentBefore","DepartmentAfter","JobTitleBefore","JobTitleAfter","CountryBefore","CountryAfter","ManagerBefore","ManagerAfter","AUBefore","AUAfter","LicenseBefore","LicenseAfter","RoleBefore","RoleAfter","Status","Duration","Timestamp"
+"17056fd2-0f1e-41e1-a0eb-d7338e607b4e","MI-0017","James White","Security Operations","Security Operations","SOC Manager","SOC Manager","Nigeria","Nigeria",,,"MI-Nigeria","MI-Nigeria",,,"Global Reader",,"Completed","00:00:12.9050703","8/4/2026 3:16:49 PM"

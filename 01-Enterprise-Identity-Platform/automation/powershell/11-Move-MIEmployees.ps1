@@ -107,6 +107,10 @@ $CurrentState = Get-MICurrentUserState `
 $DesiredState = Get-MIDesiredUserState `
     -Employee $Employee
 
+$DesiredState.AdministrativeUnit = Get-MIAdministrativeUnit `
+    -Employee $DesiredState `
+    -Mappings $AUMappings
+
 # ======================================================
 # move result object
 # ======================================================
@@ -179,7 +183,23 @@ Write-Host "========================================"
 Write-Host " MOVE PLAN"
 Write-Host "========================================"
 
+Write-Host ""
+Write-Host "Current vs Desired"
+Write-Host "------------------"
+Write-Host ("Department      : {0} -> {1}" -f $CurrentState.Department, $DesiredState.Department)
+Write-Host ("Job Title       : {0} -> {1}" -f $CurrentState.JobTitle, $DesiredState.JobTitle)
+Write-Host ("Country         : {0} -> {1}" -f $CurrentState.Country, $DesiredState.Country)
+Write-Host ("Admin Unit      : {0} -> {1}" -f $CurrentState.AdministrativeUnit, $DesiredState.AdministrativeUnit)
+Write-Host ("Manager         : {0} -> {1}" -f $CurrentState.Manager, $DesiredState.Manager)
+Write-Host ("License         : {0} -> {1}" -f $CurrentState.License, $DesiredState.License)
+Write-Host ("RBAC Role       : {0} -> {1}" -f $CurrentState.Role, $DesiredState.Role)
+Write-Host ""
+
 $MovePlan | Format-Table -AutoSize
+
+foreach ($Task in $MovePlan.Tasks) {
+    Write-Host ("Task {0} -> {1}" -f $Task.Action, $Task.Reason)
+}
 
 # ======================================================
 # Execute Move Plan
@@ -227,9 +247,15 @@ if (-not [string]::IsNullOrWhiteSpace($ObjectId)) {
                 $ActionResult = [PSCustomObject]@{ Status = 'Completed'; Reason = '' }
             }
 
+            $ReasonSuffix = if ($ActionResult.PSObject.Properties.Name -contains 'Reason' -and $ActionResult.Reason) {
+                " : $($ActionResult.Reason)"
+            }
+            else {
+                ""
+            }
+
             $MoveResult.ActionsExecuted += (
-                "Profile Updated - {0}{1}" -f $ActionResult.Status,
-                (if ($ActionResult.PSObject.Properties.Name -contains 'Reason' -and $ActionResult.Reason) { " : $($ActionResult.Reason)" } else { "" })
+                "Profile Updated - {0}{1}" -f $ActionResult.Status, $ReasonSuffix
             )
 
         }
@@ -248,9 +274,15 @@ if (-not [string]::IsNullOrWhiteSpace($ObjectId)) {
             $ActionResult = [PSCustomObject]@{ Status = 'Completed'; Reason = '' }
         }
 
+        $ReasonSuffix = if ($ActionResult.PSObject.Properties.Name -contains 'Reason' -and $ActionResult.Reason) {
+            " : $($ActionResult.Reason)"
+        }
+        else {
+            ""
+        }
+
         $MoveResult.ActionsExecuted += (
-            "Groups updated - {0}{1}" -f $ActionResult.Status,
-            (if ($ActionResult.PSObject.Properties.Name -contains 'Reason' -and $ActionResult.Reason) { " : $($ActionResult.Reason)" } else { "" })
+            "Groups updated - {0}{1}" -f $ActionResult.Status, $ReasonSuffix
         )
 
     }
@@ -269,9 +301,15 @@ if (-not [string]::IsNullOrWhiteSpace($ObjectId)) {
             $ActionResult = [PSCustomObject]@{ Status = 'Completed'; Reason = '' }
         }
 
+        $ReasonSuffix = if ($ActionResult.PSObject.Properties.Name -contains 'Reason' -and $ActionResult.Reason) {
+            " : $($ActionResult.Reason)"
+        }
+        else {
+            ""
+        }
+
         $MoveResult.ActionsExecuted += (
-            "Administrative Unit updated - {0}{1}" -f $ActionResult.Status,
-            (if ($ActionResult.PSObject.Properties.Name -contains 'Reason' -and $ActionResult.Reason) { " : $($ActionResult.Reason)" } else { "" })
+            "Administrative Unit updated - {0}{1}" -f $ActionResult.Status, $ReasonSuffix
         )
 
     }
@@ -302,9 +340,15 @@ if (-not [string]::IsNullOrWhiteSpace($ObjectId)) {
             $ActionResult = [PSCustomObject]@{ Status = 'Completed'; Reason = '' }
         }
 
+        $ReasonSuffix = if ($ActionResult.PSObject.Properties.Name -contains 'Reason' -and $ActionResult.Reason) {
+            " : $($ActionResult.Reason)"
+        }
+        else {
+            ""
+        }
+
         $MoveResult.ActionsExecuted += (
-            "Manager updated - {0}{1}" -f $ActionResult.Status,
-            (if ($ActionResult.PSObject.Properties.Name -contains 'Reason' -and $ActionResult.Reason) { " : $($ActionResult.Reason)" } else { "" })
+            "Manager updated - {0}{1}" -f $ActionResult.Status, $ReasonSuffix
         )
 
     }
@@ -323,9 +367,15 @@ if (-not [string]::IsNullOrWhiteSpace($ObjectId)) {
             $ActionResult = [PSCustomObject]@{ Status = 'Completed'; Reason = '' }
         }
 
+        $ReasonSuffix = if ($ActionResult.PSObject.Properties.Name -contains 'Reason' -and $ActionResult.Reason) {
+            " : $($ActionResult.Reason)"
+        }
+        else {
+            ""
+        }
+
         $MoveResult.ActionsExecuted += (
-            "License updated - {0}{1}" -f $ActionResult.Status,
-            (if ($ActionResult.PSObject.Properties.Name -contains 'Reason' -and $ActionResult.Reason) { " : $($ActionResult.Reason)" } else { "" })
+            "License updated - {0}{1}" -f $ActionResult.Status, $ReasonSuffix
         )
 
     }
@@ -344,9 +394,15 @@ if (-not [string]::IsNullOrWhiteSpace($ObjectId)) {
             $ActionResult = [PSCustomObject]@{ Status = 'Completed'; Reason = '' }
         }
 
+        $ReasonSuffix = if ($ActionResult.PSObject.Properties.Name -contains 'Reason' -and $ActionResult.Reason) {
+            " : $($ActionResult.Reason)"
+        }
+        else {
+            ""
+        }
+
         $MoveResult.ActionsExecuted += (
-            "RBAC updated - {0}{1}" -f $ActionResult.Status,
-            (if ($ActionResult.PSObject.Properties.Name -contains 'Reason' -and $ActionResult.Reason) { " : $($ActionResult.Reason)" } else { "" })
+            "RBAC updated - {0}{1}" -f $ActionResult.Status, $ReasonSuffix
         )
 
     }

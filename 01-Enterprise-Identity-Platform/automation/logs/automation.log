@@ -781,3 +781,62 @@ Check the spelling of the name, or if a path was included, verify that the path 
 [2026-08-03 21:31:37] [INFO] Retrieving current identity state for MI-0011
 [2026-08-03 21:31:37] [INFO] Retrieving current identity state for MI-0022
 [2026-08-03 21:31:37] [ERROR] Multiple users found for EmployeeID: MI-0022
+[2026-08-04 14:31:45] [INFO] Retrieving current identity state for MI-0015
+[2026-08-04 14:31:55] [ERROR] Employee not found: MI-0015
+[2026-08-04 14:33:55] [INFO] Retrieving current identity state for MI-0015
+[2026-08-04 14:34:02] [ERROR] Employee not found: MI-0015
+[2026-08-04 14:34:29] [INFO] Retrieving current identity state for MI-0015
+[2026-08-04 14:34:30] [INFO] Updating profile for 307da8fa-568d-48a4-a2bc-58e4c49e2412 (Department, Job Title, Country)
+[2026-08-04 14:34:31] [SUCCESS] User profile updated successfully.
+[2026-08-04 14:34:31] [ERROR] The term 'if' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+[2026-08-04 14:36:10] [INFO] Retrieving current identity state for MI-0015
+[2026-08-04 14:36:10] [ERROR] Employee not found: MI-0015
+[2026-08-04 14:37:29] [INFO] Retrieving current identity state for MI-0015
+[2026-08-04 14:37:51] [INFO] Retrieving current identity state for MI-0015
+[2026-08-04 14:37:52] [INFO] Retrieving current identity state for MI-0013
+[2026-08-04 14:37:52] [INFO] Updating profile for 864ac810-f1e1-4326-aa92-bdff8ff25420 (Department, Job Title, Country)
+[2026-08-04 14:37:53] [SUCCESS] User profile updated successfully.
+[2026-08-04 14:37:53] [INFO] Reconciling group memberships...
+[2026-08-04 14:37:53] [INFO] Adding to SG-AllCompany
+[2026-08-04 14:37:53] [INFO] Starting group assignment...
+[2026-08-04 14:37:53] [INFO] Searching for group: SG-AllCompany
+[2026-08-04 14:37:59] [SUCCESS] SG-AllCompany assigned successfully.
+[2026-08-04 14:38:00] [SUCCESS] Group assignment completed.
+[2026-08-04 14:38:00] [INFO] Removing from All Company
+[2026-08-04 14:38:00] [SUCCESS] Group reconciliation completed.
+[2026-08-04 14:38:00] [INFO] Reconciling manager assignment...
+[2026-08-04 14:38:01] [INFO] Manager already correct.
+[2026-08-04 14:38:01] [INFO] Reconciling Administrative Unit membership...
+[2026-08-04 14:38:07] [INFO] Removing from AU: MI-UnitedKingdom
+[2026-08-04 14:38:07] [INFO] Adding user to AU: MI-Nigeria
+[2026-08-04 14:38:08] [SUCCESS] Administrative Unit updated successfully.
+[2026-08-04 14:38:08] [INFO] Reconciling RBAC assignment...
+[2026-08-04 14:38:08] [INFO] Locating role 'Application Administrator'
+[2026-08-04 14:38:13] [SUCCESS] RBAC updated.
+[2026-08-04 14:55:39] [INFO] Retrieving current identity state for MI-0015
+[2026-08-04 15:07:54] [INFO] Retrieving current identity state for MI-0015
+[2026-08-04 15:07:57] [INFO] Reconciling Administrative Unit membership...
+[2026-08-04 15:07:58] [INFO] Adding user to AU: MI-Nigeria
+[2026-08-04 15:07:58] [SUCCESS] Administrative Unit updated successfully.
+[2026-08-04 15:13:56] [INFO] Retrieving current identity state for MI--0020
+[2026-08-04 15:13:57] [ERROR] Employee not found: MI--0020
+[2026-08-04 15:16:46] [INFO] Retrieving current identity state for MI-0017
+[2026-08-04 15:16:49] [INFO] Updating profile for 0828d644-38a1-4afe-abe5-53e943b4688a (Department, Job Title, Country)
+[2026-08-04 15:16:50] [SUCCESS] User profile updated successfully.
+[2026-08-04 15:16:50] [INFO] Reconciling group memberships...
+[2026-08-04 15:16:50] [INFO] Adding to SG-AllCompany
+[2026-08-04 15:16:50] [INFO] Starting group assignment...
+[2026-08-04 15:16:50] [INFO] Searching for group: SG-AllCompany
+[2026-08-04 15:16:51] [SUCCESS] SG-AllCompany assigned successfully.
+[2026-08-04 15:16:51] [SUCCESS] Group assignment completed.
+[2026-08-04 15:16:51] [INFO] Removing from All Company
+[2026-08-04 15:16:52] [SUCCESS] Group reconciliation completed.
+[2026-08-04 15:16:52] [INFO] Reconciling manager assignment...
+[2026-08-04 15:16:53] [SUCCESS] Manager updated.
+[2026-08-04 15:16:53] [INFO] Reconciling Administrative Unit membership...
+[2026-08-04 15:16:54] [INFO] User already in correct Administrative Unit.
+[2026-08-04 15:16:54] [INFO] Reconciling RBAC assignment...
+[2026-08-04 15:16:54] [INFO] Locating role 'Security Reader'
+[2026-08-04 15:16:55] [INFO] Security Reader not activated. Activating...
+[2026-08-04 15:17:02] [SUCCESS] RBAC updated.

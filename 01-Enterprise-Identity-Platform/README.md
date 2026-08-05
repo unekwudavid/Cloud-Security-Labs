@@ -1,4 +1,9 @@
 # Enterprise Identity Platform
+
+<p align="center">
+  <img src="./diagrams/exports/09-executive-solution-architecture.png" alt="Enterprise Identity Platform cover" width="100%" />
+</p>
+
 ### Project 1 — Enterprise Cloud IAM
 **Mustard Innovations (Fictional Enterprise)**
 

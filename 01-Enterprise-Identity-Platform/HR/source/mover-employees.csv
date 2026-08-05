@@ -1,4 +1,10 @@
 EmployeeID,FirstName,LastName,OldDepartment,NewDepartment,OldJobTitle,NewJobTitle,OldCountry,NewCountry,ChangeReason
+MI-0017,James,White,Security Operations,Security Operations,SOC Manager,SOC Manager,Nigeria,Nigeria,No Change
+MI-0023,Olivia,James,HR,HR Specialist,HR Specialist,Canada,Nigeria,No Change
+MI-0021,Michael,Brown,Engineering,Engineering,Software Engineer,Software Engineer,Nigeria,Nigeria,No Change
+MI--0020,John,Doe,Engineering,HR,Software Engineer,HR Manager,Nigeria,Canada,Promotion
+MI-0015,Amelia,Hall,Engineering,Engineering,Software Engineer,DevOps Engineer,Nigeria,Nigeria,Promotion
+MI-0013,Charlotte,Lee,Engineering,Engineering,Software Engineer,DevOps Engineer,Nigeria,Nigeria,Promotion
 MI-0019,William,Smith,Engineering,Security Operations,Software Engineer,Security Analyst,Nigeria,Nigeria,Internal Transfer
 MI-0018,Emma,Wilson,Engineering,Engineering,Software Engineer,DevOps Engineer,Nigeria,Nigeria,Promotion
 MI-0011,Isabella,Martinez,Engineering,HR,Software Engineer,HR Manager,Nigeria,Nigeria,Department Transfer

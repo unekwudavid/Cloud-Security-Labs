@@ -48,6 +48,67 @@ function Get-MICurrentUserState {
 
     $User = $Users | Select-Object -First 1
 
+    # Resolve current administrative unit membership from directory AUs
+    $AdministrativeUnit = $null
+    $AdministrativeUnits = Get-MgDirectoryAdministrativeUnit -All
+
+    foreach ($AU in $AdministrativeUnits) {
+
+        $Members = Get-MgDirectoryAdministrativeUnitMember `
+            -AdministrativeUnitId $AU.Id `
+            -All
+
+        if ($Members.Id -contains $User.Id) {
+            $AdministrativeUnit = $AU.DisplayName
+            break
+        }
+
+    }
+
+    # Resolve current manager from Graph (best-effort)
+    $Manager = $null
+    try {
+        $ManagerObject = Get-MgUserManager -UserId $User.Id -ErrorAction Stop
+        if ($ManagerObject) {
+            $Manager = $ManagerObject.AdditionalProperties.displayName
+            if ([string]::IsNullOrWhiteSpace($Manager) -and $ManagerObject.DisplayName) {
+                $Manager = $ManagerObject.DisplayName
+            }
+        }
+    }
+    catch {
+        $Manager = $null
+    }
+
+    # Resolve current licenses (best-effort)
+    $License = $null
+    try {
+        $LicenseDetails = Get-MgUserLicenseDetail -UserId $User.Id -ErrorAction Stop
+        if ($LicenseDetails) {
+            $License = @($LicenseDetails | ForEach-Object { $_.SkuPartNumber } | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }) -join ', '
+        }
+    }
+    catch {
+        $License = $null
+    }
+
+    # Resolve current directory role membership (best-effort)
+    $Role = $null
+    try {
+        $RoleMemberships = Get-MgUserMemberOf -UserId $User.Id -All -ErrorAction Stop
+        if ($RoleMemberships) {
+            $DirectoryRoles = $RoleMemberships |
+                Where-Object { $_.AdditionalProperties.'@odata.type' -eq '#microsoft.graph.directoryRole' }
+
+            if ($DirectoryRoles) {
+                $Role = @($DirectoryRoles | ForEach-Object { $_.AdditionalProperties.displayName } | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }) -join ', '
+            }
+        }
+    }
+    catch {
+        $Role = $null
+    }
+
     #
     # Return current state
     #
@@ -65,6 +126,14 @@ function Get-MICurrentUserState {
         JobTitle = $User.JobTitle
 
         Country = $User.Country
+
+        AdministrativeUnit = $AdministrativeUnit
+
+        Manager = $Manager
+
+        License = $License
+
+        Role = $Role
 
     }
 
@@ -106,6 +175,8 @@ function Get-MIDesiredUserState {
             ($Employee.Country -as [string]).Trim()
         }
 
+        AdministrativeUnit = $null
+
         Manager = if ($Employee.PSObject.Properties['Manager']) {
             ($Employee.Manager -as [string]).Trim()
         }
@@ -138,6 +209,9 @@ function Compare-MIUserState {
         CountryChanged =
             $CurrentState.Country -ne $DesiredState.Country
 
+        AdministrativeUnitChanged =
+            $CurrentState.AdministrativeUnit -ne $DesiredState.AdministrativeUnit
+
         ManagerChanged =
             $CurrentState.Manager -ne $DesiredState.Manager
 
@@ -169,6 +243,7 @@ function New-MIMovePlan {
             Action   = "UpdateProfile"
             Property = "Profile"
             Priority = 1
+            Reason   = "Department, job title, or country changed."
         })
 
     }
@@ -180,6 +255,7 @@ function New-MIMovePlan {
             Action   = "UpdateGroups"
             Property = "Groups"
             Priority = 2
+            Reason   = "Required group membership is derived from department or country changes."
         })
 
     }
@@ -191,17 +267,19 @@ function New-MIMovePlan {
             Action   = "UpdateManager"
             Property = "Department"
             Priority = 3
+            Reason   = "Department change triggers manager reconciliation."
         })
 
     }
 
-    # Country changes also update administrative unit.
-    if ($Changes.CountryChanged) {
+    # Administrative unit should reconcile when the observed AU state or country target changes.
+    if ($Changes.AdministrativeUnitChanged -or $Changes.CountryChanged) {
 
         $Tasks.Add([PSCustomObject]@{
             Action   = "UpdateAdministrativeUnit"
             Property = "Country"
             Priority = 4
+            Reason   = "Observed AU or target country requires administrative-unit reconciliation."
         })
 
     }
@@ -213,6 +291,7 @@ function New-MIMovePlan {
             Action   = "UpdateRBAC"
             Property = "RBAC"
             Priority = 5
+            Reason   = "Department or job title changed so role assignment should be re-evaluated."
         })
 
     }
@@ -227,6 +306,7 @@ function New-MIMovePlan {
             Action   = "UpdateManager"
             Property = "Manager"
             Priority = 1
+            Reason   = "Manager field changed explicitly in the source data."
         })
 
     }
@@ -243,6 +323,7 @@ function New-MIMovePlan {
                 Action   = "UpdateLicense"
                 Property = "License"
                 Priority = 5
+                Reason   = "License entitlements changed in the desired state."
             })
 
         }

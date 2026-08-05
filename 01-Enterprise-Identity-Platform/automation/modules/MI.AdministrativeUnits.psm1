@@ -29,8 +29,19 @@ function Get-MIAdministrativeUnit {
         $Mappings
     )
 
-    if ($Mappings.Countries.$($Employee.Country)) {
-        return $Mappings.Countries.$($Employee.Country)
+    $Country = if ($Employee.PSObject.Properties['Country']) {
+        ($Employee.Country -as [string]).Trim()
+    }
+    else {
+        $null
+    }
+
+    if ([string]::IsNullOrWhiteSpace($Country)) {
+        return $null
+    }
+
+    if ($Mappings.Countries.PSObject.Properties.Name -contains $Country) {
+        return $Mappings.Countries.$Country
     }
 
     return $null
