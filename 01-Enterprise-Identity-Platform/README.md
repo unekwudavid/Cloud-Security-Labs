@@ -4,11 +4,51 @@
   <img src="./screenshots/enterprise IAM cover page.png" alt="Enterprise Identity Platform cover" width="100%" />
 </p>
 
+<p align="center">
+  <img alt="Microsoft Entra ID" src="https://img.shields.io/badge/Microsoft-Entra%20ID-0078D4?style=for-the-badge&logo=microsoft&logoColor=white" />
+  <img alt="Microsoft Graph" src="https://img.shields.io/badge/Microsoft-Graph-5E5E5E?style=for-the-badge&logo=microsoft&logoColor=white" />
+  <img alt="PowerShell" src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white" />
+  <img alt="IAM Automation" src="https://img.shields.io/badge/IAM-Automation-00A4EF?style=for-the-badge" />
+  <img alt="Security" src="https://img.shields.io/badge/Security-Identity%20Governance-6A5ACD?style=for-the-badge" />
+</p>
+
 ## Project Overview
+
+> 🔐 Identity Security Automation for the full Joiner–Mover–Leaver lifecycle
 
 This platform demonstrates the design, automation, and operational execution of an enterprise-grade identity lifecycle environment built around Microsoft Entra ID, Microsoft Graph, and PowerShell-based orchestration.
 
 It supports the full **Joiner – Mover – Leaver (JML)** lifecycle and reflects a realistic enterprise identity model for employee lifecycle management, security group handling, RBAC, license control, manager assignment, and administrative unit reconciliation.
+
+### At a Glance
+
+- 🔑 Automated onboarding and offboarding
+- 🧠 Desired-state vs current-state reconciliation
+- 🛡️ Privileged access protection and fail-closed handling
+- 📊 Operational reporting and lifecycle evidence
+- ⚙️ Modular PowerShell orchestration for enterprise IAM
+
+### Architecture Snapshot
+
+```text
+HR Feed / CSV --> Validation --> Identity State Discovery --> Desired State Model
+          |                                              |
+          v                                              v
+   Joiner / Mover / Leaver Orchestration --> Execution Planning --> Live or Preview Run
+          |                                              |
+          v                                              v
+Microsoft Graph API --> Entra ID Users / Groups / Roles / Licenses / Units --> Logs & Reports
+```
+
+### Project Highlights
+
+| Area | Value Delivered |
+|---|---|
+| Identity Lifecycle | End-to-end Joiner, Mover, and Leaver orchestration |
+| Security Controls | RBAC cleanup, privileged protection, fail-closed handling |
+| Automation | Modular PowerShell and Graph-based execution |
+| Governance | State reconciliation, reviewability, and reporting |
+| Operational Value | Reduced manual admin effort and license leakage |
 
 ---
 
@@ -25,6 +65,288 @@ The project simulates a fictional enterprise organization, **Mustard Innovations
 - Reporting and operational logging
 
 ---
+
+---
+
+## Business Impact
+
+The platform is designed to reduce the operational cost, security exposure, and administrative overhead associated with employee identity lifecycle management.
+
+For the fictional Mustard Innovations environment, the business case is modelled against a hypothetical enterprise with approximately **1,000 employees** and a continuously changing workforce.
+
+The financial figures below are **illustrative estimates used to demonstrate potential enterprise impact**, rather than measured production savings.
+
+### Estimated Annual Impact
+
+| Business Area | Estimated Annual Impact |
+|---|---:|
+| Joiner provisioning automation | $20,000 – $35,000 |
+| Mover lifecycle automation | $15,000 – $30,000 |
+| Leaver/offboarding automation | $20,000 – $40,000 |
+| Reduced manual access administration | $15,000 – $25,000 |
+| Reduced excessive-license exposure | $10,000 – $25,000 |
+| Reduced security and compliance exposure | $25,000 – $75,000+ |
+| **Potential annual impact** | **$105,000 – $230,000+** |
+
+These estimates represent potential operational savings, avoided access-management costs, license optimization, and reduced security/compliance exposure.
+
+### Operational Efficiency
+
+Without lifecycle automation, identity operations can require manual coordination between HR, IT, security, and application owners.
+
+The platform automates repetitive activities such as:
+
+- User provisioning
+- Group assignment
+- License assignment and removal
+- Manager assignment
+- Administrative Unit reconciliation
+- RBAC assignment and removal
+- Session revocation
+- Employee offboarding
+- Identity state validation
+- Execution reporting
+
+This can reduce the number of manual identity administration tasks performed by IT and security teams.
+
+### Example Productivity Model
+
+Assuming:
+
+- 1,000 employees
+- 20% annual employee movement
+- 200 lifecycle events per year
+- 30–60 minutes of manual identity administration per event
+- Average operational labour cost of $40/hour
+
+Manual lifecycle administration could represent approximately:
+
+**100–200 hours of administrative effort annually.**
+
+Automating these activities creates capacity that can instead be directed toward security engineering, governance, incident response, and infrastructure operations.
+
+### License Optimization
+
+The platform also provides a foundation for automatically removing licenses when employees leave the organization.
+
+For example, if 100 employees leave during a year and each retains an unused $20/month license for three months:
+
+**100 × $20 × 3 = $6,000**
+
+of avoidable annual license expenditure.
+
+Automated lifecycle processing can reduce this type of license leakage by tying license state to employee lifecycle state.
+
+### Security Risk Reduction
+
+The financial impact is not limited to labour savings.
+
+Delayed deprovisioning can create security exposure when former employees retain:
+
+- Active accounts
+- Group memberships
+- Directory roles
+- Application access
+- Active sessions
+- Administrative privileges
+
+The Leaver orchestration reduces this exposure by automatically evaluating and executing access-removal actions.
+
+The project also implements **fail-closed behaviour** for privileged identity operations.
+
+During live testing, a privileged identity with an assigned Microsoft Entra directory role encountered an authorization failure when account disablement was attempted.
+
+Rather than treating the RBAC discovery failure as "no roles found," the workflow was designed to prevent unsafe account disablement until privileged access could be evaluated.
+
+This demonstrates how IAM automation can reduce both operational risk and potential security incident exposure.
+
+### Compliance and Auditability
+
+Automated execution produces structured operational evidence including:
+
+- Execution timestamps
+- Employee identifiers
+- Planned actions
+- Executed actions
+- Success/failure status
+- Execution duration
+- Automation logs
+- Lifecycle reports
+
+This reduces the effort required to demonstrate that identity lifecycle processes are being consistently executed and provides evidence for internal audits and security reviews.
+
+### Business Value
+
+The platform therefore provides value across four major areas:
+
+**Cost Reduction**
+
+- Reduced manual identity administration
+- Reduced unused license expenditure
+- Reduced operational overhead
+
+**Security**
+
+- Faster access removal
+- Privileged identity protection
+- Fail-closed security controls
+- Reduced orphaned access
+
+**Operational Efficiency**
+
+- Automated lifecycle execution
+- Consistent state reconciliation
+- Reduced manual intervention
+- Repeatable processes
+
+**Governance**
+
+- Centralized lifecycle logic
+- Execution plans
+- Logging and reporting
+- Audit-oriented evidence
+
+
+---
+
+## Project Scope
+
+The platform covers the design and implementation of an automated employee identity lifecycle for a Microsoft Entra ID environment.
+
+### In Scope
+
+#### Identity Lifecycle Management
+
+- Joiner orchestration
+- Mover orchestration
+- Leaver orchestration
+- Current identity state discovery
+- Desired identity state modelling
+- State comparison
+- Lifecycle execution planning
+- Preview and live execution modes
+
+#### Identity Provisioning
+
+- HR data validation
+- Microsoft Entra user creation
+- Employee ID synchronization
+- Manager assignment
+- Department and job-title handling
+- Country-based identity organization
+
+#### Access Management
+
+- Security group assignment
+- Group reconciliation
+- Group removal during offboarding
+- Microsoft 365 group handling
+- License assignment
+- License removal
+- Administrative Unit assignment and reconciliation
+
+#### Privileged Access Management
+
+- Microsoft Entra RBAC discovery
+- Directory role assignment
+- Directory role reconciliation
+- Privileged role removal during offboarding
+- Dependency-aware action ordering
+- Fail-closed behaviour when privileged-access discovery fails
+
+#### Automation Engineering
+
+- Microsoft Graph PowerShell automation
+- Reusable PowerShell modules
+- CSV-driven HR workflows
+- JSON configuration
+- Execution planning
+- Idempotent state reconciliation
+- Preview/live execution separation
+
+#### Operational Management
+
+- Structured logging
+- Execution reports
+- Execution metrics
+- Success/failure tracking
+- Post-execution validation
+- Audit-oriented evidence
+- Portfolio documentation
+
+### Out of Scope
+
+The current implementation does not attempt to provide a complete enterprise IAM product.
+
+The following areas remain outside the current implementation or are planned extensions:
+
+- Full production HRIS integration
+- Real-time event-driven HR integration
+- Complete Microsoft Entra PIM activation workflows
+- Automated mailbox archival implementation
+- Full application entitlement governance
+- SaaS application deprovisioning
+- Service-account lifecycle management
+- Non-human identity governance
+- Production secrets-management infrastructure
+- Multi-tenant production deployment
+- Full ITSM integration
+- Production-scale high availability architecture
+
+These areas provide potential future expansion of the platform.
+
+
+---
+
+## Scale & Enterprise Relevance
+
+Although implemented as a portfolio environment, the platform is designed around patterns applicable to enterprise IAM operations.
+
+The architecture separates:
+
+- HR data ingestion
+- Identity state discovery
+- Desired-state modelling
+- State comparison
+- Execution planning
+- Action execution
+- Logging
+- Reporting
+
+This separation allows individual lifecycle operations to be extended without redesigning the entire platform.
+
+The orchestration model can be extended from a small pilot environment to larger employee populations by introducing:
+
+- Event-driven HR integrations
+- Queue-based processing
+- ITSM integration
+- Centralized secrets management
+- Azure Automation or CI/CD execution
+- Microsoft Entra PIM integration
+- Application entitlement reconciliation
+- Centralized monitoring
+- Enterprise audit pipelines
+
+The current project therefore serves as a **reference implementation of an enterprise IAM orchestration architecture**, rather than simply a collection of PowerShell scripts.
+
+---
+
+## Recruiter Snapshot
+
+| Capability | Demonstrated |
+|---|---|
+| Identity Lifecycle | Joiner, Mover, Leaver |
+| Identity Platform | Microsoft Entra ID |
+| Automation | PowerShell 7 + Microsoft Graph |
+| Access Governance | Groups, RBAC, Administrative Units, Licenses |
+| Security Engineering | Fail-closed privileged identity handling |
+| Architecture | State-based orchestration |
+| Execution Model | Preview + Live |
+| Operations | Logging, reporting, metrics, validation |
+| Data Integration | CSV HR source + JSON configuration |
+| Engineering Practices | Modular, reusable, idempotent automation |
+| Enterprise Thinking | Dependency-aware lifecycle execution |
+
 
 ## Objectives
 
@@ -119,7 +441,7 @@ The project simulates a fictional enterprise organization, **Mustard Innovations
 | Joiner Lifecycle | ✅ Complete |
 | Mover Lifecycle | ✅ Complete |
 | Leaver Lifecycle | ✅ Complete |
-| Security Hardening | ✅ Complete |
+| Security Hardening | ✅ Core Controls Complete |
 
 ---
 
@@ -140,7 +462,7 @@ Typical actions include:
 - RBAC assignment
 - Reporting and validation
 
-#### Joiner execution gallery (5 examples)
+#### Joiner execution gallery (12 images)
 
 ![Joiner 1](./screenshots/joiner%20orchestration/Screenshot%20(80).png)
 
@@ -151,6 +473,20 @@ Typical actions include:
 ![Joiner 4](./screenshots/joiner%20orchestration/Screenshot%20(83).png)
 
 ![Joiner 5](./screenshots/joiner%20orchestration/Screenshot%20(84).png)
+
+![Joiner 6](./screenshots/joiner%20orchestration/Screenshot%20(86).png)
+
+![Joiner 7](./screenshots/joiner%20orchestration/Screenshot%20(87).png)
+
+![Joiner 8](./screenshots/joiner%20orchestration/Screenshot%20(88).png)
+
+![Joiner 9](./screenshots/joiner%20orchestration/Screenshot%20(94).png)
+
+![Joiner 10](./screenshots/joiner%20orchestration/Screenshot%20(96).png)
+
+![Joiner 11](./screenshots/joiner%20orchestration/Screenshot%20(98).png)
+
+![Joiner 12](./screenshots/joiner%20orchestration/Screenshot%20(123).png)
 
 ---
 
@@ -167,17 +503,31 @@ Typical actions include:
 - RBAC updates
 - Reporting and validation
 
-#### Mover execution gallery (5 examples)
+#### Mover execution gallery (12 images)
 
-![Mover 1](./screenshots/mover%20orchestration/Screenshot%20(100).png)
+![Mover 1](./screenshots/mover%20orchestration/Screenshot%20(99).png)
 
-![Mover 2](./screenshots/mover%20orchestration/Screenshot%20(101).png)
+![Mover 2](./screenshots/mover%20orchestration/Screenshot%20(100).png)
 
-![Mover 3](./screenshots/mover%20orchestration/Screenshot%20(103).png)
+![Mover 3](./screenshots/mover%20orchestration/Screenshot%20(101).png)
 
-![Mover 4](./screenshots/mover%20orchestration/Screenshot%20(104).png)
+![Mover 4](./screenshots/mover%20orchestration/Screenshot%20(103).png)
 
-![Mover 5](./screenshots/mover%20orchestration/Screenshot%20(105).png)
+![Mover 5](./screenshots/mover%20orchestration/Screenshot%20(104).png)
+
+![Mover 6](./screenshots/mover%20orchestration/Screenshot%20(105).png)
+
+![Mover 7](./screenshots/mover%20orchestration/Screenshot%20(106).png)
+
+![Mover 8](./screenshots/mover%20orchestration/Screenshot%20(107).png)
+
+![Mover 9](./screenshots/mover%20orchestration/Screenshot%20(108).png)
+
+![Mover 10](./screenshots/mover%20orchestration/Screenshot%20(112).png)
+
+![Mover 11](./screenshots/mover%20orchestration/Screenshot%20(114).png)
+
+![Mover 12](./screenshots/mover%20orchestration/Screenshot%20(116).png)
 
 ---
 
@@ -199,7 +549,7 @@ Typical actions include:
 - Mailbox archival handling
 - Reporting and audit trail
 
-#### Leaver execution gallery (5 examples)
+#### Leaver execution gallery (15 images)
 
 ![Leaver 1](./screenshots/leaver%20orchestration/Screenshot%20(111).png)
 
@@ -210,6 +560,26 @@ Typical actions include:
 ![Leaver 4](./screenshots/leaver%20orchestration/Screenshot%20(119).png)
 
 ![Leaver 5](./screenshots/leaver%20orchestration/Screenshot%20(124).png)
+
+![Leaver 6](./screenshots/leaver%20orchestration/Screenshot%20(127).png)
+
+![Leaver 7](./screenshots/leaver%20orchestration/Screenshot%20(128).png)
+
+![Leaver 8](./screenshots/leaver%20orchestration/Screenshot%20(130).png)
+
+![Leaver 9](./screenshots/leaver%20orchestration/Screenshot%20(131).png)
+
+![Leaver 10](./screenshots/leaver%20orchestration/Screenshot%20(133).png)
+
+![Leaver 11](./screenshots/leaver%20orchestration/Screenshot%20(134).png)
+
+![Leaver 12](./screenshots/leaver%20orchestration/Screenshot%20(135).png)
+
+![Leaver 13](./screenshots/leaver%20orchestration/Screenshot%20(136).png)
+
+![Leaver 14](./screenshots/leaver%20orchestration/Screenshot%20(137).png)
+
+![Leaver 15](./screenshots/leaver%20orchestration/Screenshot%20(139).png)
 
 ---
 
@@ -232,14 +602,100 @@ Typical actions include:
 
 The platform includes security-first controls designed to reflect enterprise IAM operating principles.
 
+---
+
+## Engineering Highlights
+
+### Identity Lifecycle Engineering
+
+- Joiner, Mover, and Leaver orchestration
+- Current-state identity discovery
+- Desired-state modelling
+- State comparison
+- Execution-plan generation
+- Prioritized lifecycle actions
+- Access reconciliation
+
+### Security Engineering
+
+- Microsoft Entra RBAC lifecycle management
+- Privileged identity handling
+- Least-privilege principles
+- Fail-closed security controls
+- Authorization failure handling
+- Dependency-aware execution ordering
+- Privileged access removal before account disablement
+
+### Automation Engineering
+
+- PowerShell 7 automation
+- Microsoft Graph PowerShell SDK
+- Modular PowerShell architecture
+- Reusable orchestration functions
+- CSV-driven HR lifecycle processing
+- Preview and live execution modes
+- State-based reconciliation
+
+### Operational Engineering
+
+- Structured logging
+- Execution reports
+- Execution metrics
+- Post-execution validation
+- Failure tracking
+- Audit-oriented execution evidence
+
 ### Privileged Identity Protection
 
 During live Leaver testing, the orchestration engine encountered a privileged identity that retained a Microsoft Entra directory role.
 
 The account-disable operation returned:
 
-```text
 403 Authorization_RequestDenied
+
+The issue was traced to the employee retaining a Microsoft Entra directory role assignment.
+
+After the privileged role assignment was removed, the account-disable operation succeeded.
+
+This exposed an important lifecycle dependency:
+
+> **Privileged access must be removed before disabling a privileged identity.**
+
+### Fail-Closed Behavior
+
+The Leaver orchestration engine does not interpret failed RBAC discovery as evidence that no privileged roles exist.
+
+When RBAC discovery fails:
+
+1. The engine determines whether the account requires disablement.
+2. RBAC discovery is attempted.
+3. If RBAC discovery succeeds, privileged assignments are evaluated.
+4. Privileged RBAC assignments are removed before account disablement.
+5. If RBAC discovery fails, account disablement is blocked.
+6. Independent lifecycle actions can continue to be evaluated separately.
+7. The failure is recorded for operational investigation.
+
+This prevents the automation engine from making an unsafe assumption about privileged access.
+
+### Security Controls
+
+The platform implements:
+
+- Least-privilege principles
+- RBAC lifecycle management
+- Privileged identity handling
+- Fail-closed security behavior
+- Authorization failure handling
+- Dependency-aware execution ordering
+- Preview execution before live changes
+- Desired-state vs current-state comparison
+- Controlled action prioritization
+- Session revocation
+- Group and license reconciliation
+- Administrative Unit reconciliation
+- Operational logging
+- Execution reporting
+- Post-execution validation
 ---
 
 ## Executive Summary
