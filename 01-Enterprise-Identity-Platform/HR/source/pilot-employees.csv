@@ -1,4 +1,5 @@
 EmployeeID,FirstName,LastName,Department,Country,JobTitle,Office,ManagerEmployeeID,EmployeeType,StartDate
+MI-0024,Steve,Johnson,Engineering,Nigeria,Software Engineer,Lagos,MI-0006,Full-Time,2026-07-15
 MI-0023,Olivia,James,HR,Canada,HR Specialist,Toronto,MI-0006,Full-Time,2026-07-15
 MI-0022,Emily,Jones,Engineering,Nigeria,Software Engineer,Lagos,MI-0006,Full-Time,2026-07-15
 MI-0021,Michael,Brown,Engineering,United States,Software Engineer,New York,MI-0006,Full-Time,2026-07-15

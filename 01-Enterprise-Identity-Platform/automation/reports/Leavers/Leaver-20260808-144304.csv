@@ -1,0 +1,2 @@
+"RunId","EmployeeId","DisplayName","Department","JobTitle","Country","Status","Duration","Timestamp","PlannedActions","ActionsExecuted"
+"863e0adb-3a5f-4a0d-8dff-d2cf0e5216b0","MI-0011","Isabella Martinez","HR","HR Manager","Nigeria","Completed","00:00:11.3605140","8/8/2026 2:42:53 PM","RemoveRBAC; DisableAccount; RevokeSessions; RemoveGroups; ArchiveMailbox","RemoveRBAC; DisableAccount; RevokeSessions; RemoveGroups; ArchiveMailbox"

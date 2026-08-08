@@ -840,3 +840,555 @@ Check the spelling of the name, or if a path was included, verify that the path 
 [2026-08-04 15:16:54] [INFO] Locating role 'Security Reader'
 [2026-08-04 15:16:55] [INFO] Security Reader not activated. Activating...
 [2026-08-04 15:17:02] [SUCCESS] RBAC updated.
+[2026-08-06 13:48:46] [INFO] Retrieving current identity state for MI-0017
+[2026-08-06 13:49:14] [INFO] Building desired leaver state for MI-0017
+[2026-08-06 13:51:03] [INFO] Building desired leaver state for MI-0017
+[2026-08-06 13:53:04] [INFO] Building desired leaver state for MI-0017
+[2026-08-06 13:55:14] [INFO] Building desired leaver state for MI-0017
+[2026-08-06 13:57:30] [INFO] Comparing current identity state...
+[2026-08-06 13:59:32] [INFO] Building leaver execution plan...
+[2026-08-07 13:00:20] [INFO] Retrieving current identity state for MI-0017
+[2026-08-07 13:00:31] [INFO] Building desired leaver state for MI-0017
+[2026-08-07 13:00:31] [INFO] Comparing current identity state...
+[2026-08-07 13:00:31] [INFO] Building leaver execution plan...
+[2026-08-07 13:00:31] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260807-130031.csv
+[2026-08-07 13:00:31] [INFO] Execution Metrics
+[2026-08-07 13:00:31] [INFO] Processed : 1
+[2026-08-07 13:00:31] [INFO] Completed : 1
+[2026-08-07 13:00:31] [INFO] Failed    : 0
+[2026-08-07 13:00:31] [INFO] Completed at : 08/07/2026 13:00:31
+[2026-08-07 13:01:59] [INFO] Retrieving current identity state for MI-0017
+[2026-08-07 13:02:02] [INFO] Building desired leaver state for MI-0017
+[2026-08-07 13:02:02] [INFO] Comparing current identity state...
+[2026-08-07 13:02:02] [INFO] Building leaver execution plan...
+[2026-08-07 13:02:02] [INFO] Retrieving current identity state for MI-0023
+[2026-08-07 13:02:04] [INFO] Building desired leaver state for MI-0023
+[2026-08-07 13:02:05] [INFO] Comparing current identity state...
+[2026-08-07 13:02:05] [INFO] Building leaver execution plan...
+[2026-08-07 13:02:05] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260807-130205.csv
+[2026-08-07 13:02:05] [INFO] Execution Metrics
+[2026-08-07 13:02:05] [INFO] Processed : 2
+[2026-08-07 13:02:05] [INFO] Completed : 2
+[2026-08-07 13:02:05] [INFO] Failed    : 0
+[2026-08-07 13:02:05] [INFO] Completed at : 08/07/2026 13:02:05
+[2026-08-07 13:03:18] [INFO] Retrieving current identity state for MI-0017
+[2026-08-07 13:03:20] [INFO] Building desired leaver state for MI-0017
+[2026-08-07 13:03:20] [INFO] Comparing current identity state...
+[2026-08-07 13:03:20] [INFO] Building leaver execution plan...
+[2026-08-07 13:03:20] [INFO] Retrieving current identity state for MI-0023
+[2026-08-07 13:03:21] [INFO] Building desired leaver state for MI-0023
+[2026-08-07 13:03:21] [INFO] Comparing current identity state...
+[2026-08-07 13:03:21] [INFO] Building leaver execution plan...
+[2026-08-07 13:03:21] [INFO] Retrieving current identity state for MI-0021
+[2026-08-07 13:03:23] [INFO] Building desired leaver state for MI-0021
+[2026-08-07 13:03:23] [INFO] Comparing current identity state...
+[2026-08-07 13:03:23] [INFO] Building leaver execution plan...
+[2026-08-07 13:03:23] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260807-130323.csv
+[2026-08-07 13:03:23] [INFO] Execution Metrics
+[2026-08-07 13:03:23] [INFO] Processed : 3
+[2026-08-07 13:03:23] [INFO] Completed : 3
+[2026-08-07 13:03:23] [INFO] Failed    : 0
+[2026-08-07 13:03:23] [INFO] Completed at : 08/07/2026 13:03:23
+[2026-08-07 13:05:30] [INFO] Retrieving current identity state for MI-0017
+[2026-08-07 13:05:32] [INFO] Building desired leaver state for MI-0017
+[2026-08-07 13:05:33] [INFO] Comparing current identity state...
+[2026-08-07 13:05:33] [INFO] Building leaver execution plan...
+[2026-08-07 13:05:33] [INFO] Retrieving current identity state for MI-0023
+[2026-08-07 13:05:34] [INFO] Building desired leaver state for MI-0023
+[2026-08-07 13:05:34] [INFO] Comparing current identity state...
+[2026-08-07 13:05:34] [INFO] Building leaver execution plan...
+[2026-08-07 13:05:34] [INFO] Retrieving current identity state for MI-0021
+[2026-08-07 13:05:35] [INFO] Building desired leaver state for MI-0021
+[2026-08-07 13:05:35] [INFO] Comparing current identity state...
+[2026-08-07 13:05:35] [INFO] Building leaver execution plan...
+[2026-08-07 13:05:35] [INFO] Retrieving current identity state for MI-0020
+[2026-08-07 13:05:38] [INFO] Building desired leaver state for MI-0020
+[2026-08-07 13:05:38] [INFO] Comparing current identity state...
+[2026-08-07 13:05:38] [INFO] Building leaver execution plan...
+[2026-08-07 13:05:38] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260807-130538.csv
+[2026-08-07 13:05:38] [INFO] Execution Metrics
+[2026-08-07 13:05:38] [INFO] Processed : 4
+[2026-08-07 13:05:38] [INFO] Completed : 4
+[2026-08-07 13:05:38] [INFO] Failed    : 0
+[2026-08-07 13:05:38] [INFO] Completed at : 08/07/2026 13:05:38
+[2026-08-07 13:11:21] [INFO] Processing employee MI-0024
+[2026-08-07 13:11:23] [INFO] Creating user steve.johnson@daveshub.onmicrosoft.com
+[2026-08-07 13:11:24] [SUCCESS] User created successfully.
+[2026-08-07 13:11:24] [INFO] Starting group assignment...
+[2026-08-07 13:11:24] [INFO] Searching for group: SG-AllCompany
+[2026-08-07 13:11:33] [SUCCESS] SG-AllCompany assigned successfully.
+[2026-08-07 13:11:33] [INFO] Searching for group: SG-Engineering
+[2026-08-07 13:11:34] [SUCCESS] SG-Engineering assigned successfully.
+[2026-08-07 13:11:34] [SUCCESS] Group assignment completed.
+[2026-08-07 13:11:34] [INFO] Assigning Administrative Unit MI-Nigeria
+[2026-08-07 13:11:41] [SUCCESS] MI-Nigeria assigned successfully
+[2026-08-07 13:11:41] [INFO] Assigning manager for user 3a4a2f5a-677a-48f8-8ce9-13504bbb39d6
+[2026-08-07 13:11:43] [SUCCESS] Assigned manager 'james.carter@daveshub.onmicrosoft.com' to Steve Johnson.
+[2026-08-07 13:11:43] [INFO] Attempting license assignment...
+[2026-08-07 13:11:43] [INFO] Discovering subscribed licenses...
+[2026-08-07 13:11:43] [WARN] No subscribed licenses found in tenant.
+[2026-08-07 13:11:43] [WARN] License assignment skipped. No subscribed SKUs available.
+[2026-08-07 13:11:43] [INFO] Reconciling RBAC assignment...
+[2026-08-07 13:11:43] [INFO] Locating role 'Application Administrator'
+[2026-08-07 13:11:47] [SUCCESS] RBAC updated.
+[2026-08-07 13:13:37] [INFO] Retrieving current identity state for MI-0024
+[2026-08-07 13:13:39] [INFO] Building desired leaver state for MI-0024
+[2026-08-07 13:13:39] [INFO] Comparing current identity state...
+[2026-08-07 13:13:39] [INFO] Building leaver execution plan...
+[2026-08-07 13:13:39] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260807-131339.csv
+[2026-08-07 13:13:39] [INFO] Execution Metrics
+[2026-08-07 13:13:39] [INFO] Processed : 1
+[2026-08-07 13:13:39] [INFO] Completed : 1
+[2026-08-07 13:13:39] [INFO] Failed    : 0
+[2026-08-07 13:13:39] [INFO] Completed at : 08/07/2026 13:13:39
+[2026-08-07 13:24:59] [INFO] Retrieving current identity state for MI-0024
+[2026-08-07 13:25:01] [INFO] Building desired leaver state for MI-0024
+[2026-08-07 13:25:01] [INFO] Comparing current identity state...
+[2026-08-07 13:25:01] [INFO] Building leaver execution plan...
+[2026-08-07 13:25:01] [INFO] Disabling user account...
+[2026-08-07 13:25:02] [ERROR] [Authorization_RequestDenied] : Insufficient privileges to complete the operation.
+[2026-08-07 13:25:02] [INFO] Removing manager assignment...
+[2026-08-07 13:25:02] [SUCCESS] Manager removed successfully.
+[2026-08-07 13:25:02] [INFO] Revoking user sessions...
+[2026-08-07 13:25:05] [SUCCESS] Sessions revoked successfully.
+[2026-08-07 13:25:05] [INFO] Removing group memberships...
+[2026-08-07 13:25:06] [SUCCESS] Group memberships removed.
+[2026-08-07 13:25:06] [ERROR] Cannot validate argument on parameter 'Level'. The argument "WARNING" does not belong to the set "INFO,WARN,ERROR,SUCCESS" specified by the ValidateSet attribute. Supply an argument that is in the set and then try the command again.
+[2026-08-07 13:25:06] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260807-132506.csv
+[2026-08-07 13:25:06] [INFO] Execution Metrics
+[2026-08-07 13:25:06] [INFO] Processed : 1
+[2026-08-07 13:25:06] [INFO] Completed : 0
+[2026-08-07 13:25:06] [INFO] Failed    : 1
+[2026-08-07 13:25:06] [INFO] Completed at : 08/07/2026 13:25:06
+[2026-08-07 13:27:22] [INFO] Retrieving current identity state for MI-0015
+[2026-08-07 13:27:25] [INFO] Building desired leaver state for MI-0015
+[2026-08-07 13:27:25] [INFO] Comparing current identity state...
+[2026-08-07 13:27:25] [INFO] Building leaver execution plan...
+[2026-08-07 13:27:25] [INFO] Disabling user account...
+[2026-08-07 13:27:25] [ERROR] [Authorization_RequestDenied] : Insufficient privileges to complete the operation.
+[2026-08-07 13:27:25] [INFO] Revoking user sessions...
+[2026-08-07 13:27:26] [SUCCESS] Sessions revoked successfully.
+[2026-08-07 13:27:26] [INFO] Removing group memberships...
+[2026-08-07 13:27:28] [SUCCESS] Group memberships removed.
+[2026-08-07 13:27:28] [ERROR] Cannot validate argument on parameter 'Level'. The argument "WARNING" does not belong to the set "INFO,WARN,ERROR,SUCCESS" specified by the ValidateSet attribute. Supply an argument that is in the set and then try the command again.
+[2026-08-07 13:27:28] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260807-132728.csv
+[2026-08-07 13:27:28] [INFO] Execution Metrics
+[2026-08-07 13:27:28] [INFO] Processed : 1
+[2026-08-07 13:27:28] [INFO] Completed : 0
+[2026-08-07 13:27:28] [INFO] Failed    : 1
+[2026-08-07 13:27:28] [INFO] Completed at : 08/07/2026 13:27:28
+[2026-08-07 19:57:29] [INFO] Retrieving current identity state for MI-0017
+[2026-08-07 19:57:31] [INFO] Building desired leaver state for MI-0017
+[2026-08-07 19:57:31] [INFO] Comparing current identity state...
+[2026-08-07 19:57:31] [INFO] Building leaver execution plan...
+[2026-08-07 20:13:26] [INFO] Retrieving current identity state for MI-0015
+[2026-08-07 20:13:37] [ERROR] Employee not found: MI-0015
+[2026-08-07 20:13:37] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260807-201337.csv
+[2026-08-07 20:13:37] [INFO] Execution Metrics
+[2026-08-07 20:13:37] [INFO] Processed : 1
+[2026-08-07 20:13:37] [INFO] Completed : 0
+[2026-08-07 20:13:37] [INFO] Failed    : 1
+[2026-08-07 20:13:37] [INFO] Completed at : 08/07/2026 20:13:37
+[2026-08-07 20:14:03] [INFO] Retrieving current identity state for MI-0015
+[2026-08-07 20:14:08] [INFO] Building desired leaver state for MI-0015
+[2026-08-07 20:14:08] [INFO] Comparing current identity state...
+[2026-08-07 20:14:08] [INFO] Building leaver execution plan...
+[2026-08-07 20:14:08] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260807-201408.csv
+[2026-08-07 20:14:08] [INFO] Execution Metrics
+[2026-08-07 20:14:08] [INFO] Processed : 1
+[2026-08-07 20:14:08] [INFO] Completed : 1
+[2026-08-07 20:14:08] [INFO] Failed    : 0
+[2026-08-07 20:14:08] [INFO] Completed at : 08/07/2026 20:14:08
+[2026-08-07 20:20:40] [INFO] Retrieving current identity state for MI-0015
+[2026-08-07 20:20:42] [INFO] Building desired leaver state for MI-0015
+[2026-08-07 20:20:42] [INFO] Comparing current identity state...
+[2026-08-07 20:20:42] [INFO] Building leaver execution plan...
+[2026-08-07 20:20:43] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260807-202043.csv
+[2026-08-07 20:20:43] [INFO] Execution Metrics
+[2026-08-07 20:20:43] [INFO] Processed : 1
+[2026-08-07 20:20:43] [INFO] Completed : 1
+[2026-08-07 20:20:43] [INFO] Failed    : 0
+[2026-08-07 20:20:43] [INFO] Completed at : 08/07/2026 20:20:43
+[2026-08-07 20:25:19] [INFO] Retrieving current identity state for MI-0015
+[2026-08-07 20:25:21] [INFO] Building desired leaver state for MI-0015
+[2026-08-07 20:25:21] [INFO] Comparing current identity state...
+[2026-08-07 20:25:21] [INFO] Building leaver execution plan...
+[2026-08-07 20:25:22] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260807-202522.csv
+[2026-08-07 20:25:22] [INFO] Execution Metrics
+[2026-08-07 20:25:22] [INFO] Processed : 1
+[2026-08-07 20:25:22] [INFO] Completed : 0
+[2026-08-07 20:25:22] [INFO] Failed    : 0
+[2026-08-07 20:25:22] [INFO] Completed at : 08/07/2026 20:25:22
+[2026-08-07 21:47:12] [INFO] Retrieving current identity state for MI-0015
+[2026-08-07 21:47:13] [ERROR] Employee not found: MI-0015
+[2026-08-07 21:47:13] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260807-214713.csv
+[2026-08-07 21:47:13] [INFO] Execution Metrics
+[2026-08-07 21:47:13] [INFO] Processed : 1
+[2026-08-07 21:47:13] [INFO] Completed : 0
+[2026-08-07 21:47:13] [INFO] Failed    : 1
+[2026-08-07 21:47:13] [INFO] Completed at : 08/07/2026 21:47:13
+[2026-08-07 21:47:56] [INFO] Retrieving current identity state for MI-0015
+[2026-08-07 21:48:00] [INFO] Building desired leaver state for MI-0015
+[2026-08-07 21:48:00] [INFO] Comparing current identity state...
+[2026-08-07 21:48:00] [INFO] Building leaver execution plan...
+[2026-08-07 21:48:00] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260807-214800.csv
+[2026-08-07 21:48:00] [INFO] Execution Metrics
+[2026-08-07 21:48:00] [INFO] Processed : 1
+[2026-08-07 21:48:00] [INFO] Completed : 0
+[2026-08-07 21:48:00] [INFO] Failed    : 0
+[2026-08-07 21:48:00] [INFO] Completed at : 08/07/2026 21:48:00
+[2026-08-07 21:50:27] [INFO] Retrieving current identity state for MI-0015
+[2026-08-07 21:50:29] [INFO] Building desired leaver state for MI-0015
+[2026-08-07 21:50:29] [INFO] Comparing current identity state...
+[2026-08-07 21:50:29] [INFO] Building leaver execution plan...
+[2026-08-07 21:50:30] [INFO] Disabling user account...
+[2026-08-07 21:50:30] [ERROR] [Authorization_RequestDenied] : Insufficient privileges to complete the operation.
+[2026-08-07 21:50:30] [INFO] Revoking user sessions...
+[2026-08-07 21:50:30] [SUCCESS] Sessions revoked successfully.
+[2026-08-07 21:50:31] [ERROR] Cannot validate argument on parameter 'Level'. The argument "WARNING" does not belong to the set "INFO,WARN,ERROR,SUCCESS" specified by the ValidateSet attribute. Supply an argument that is in the set and then try the command again.
+[2026-08-07 21:50:31] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260807-215031.csv
+[2026-08-07 21:50:31] [INFO] Execution Metrics
+[2026-08-07 21:50:31] [INFO] Processed : 1
+[2026-08-07 21:50:31] [INFO] Completed : 0
+[2026-08-07 21:50:31] [INFO] Failed    : 1
+[2026-08-07 21:50:31] [INFO] Completed at : 08/07/2026 21:50:31
+[2026-08-07 21:59:10] [INFO] Retrieving current identity state for MI-0015
+[2026-08-07 21:59:13] [INFO] Building desired leaver state for MI-0015
+[2026-08-07 21:59:13] [INFO] Comparing current identity state...
+[2026-08-07 21:59:13] [INFO] Building leaver execution plan...
+[2026-08-07 21:59:13] [INFO] Revoking user sessions...
+[2026-08-07 21:59:14] [SUCCESS] Sessions revoked successfully.
+[2026-08-07 21:59:14] [ERROR] Cannot validate argument on parameter 'Level'. The argument "WARNING" does not belong to the set "INFO,WARN,ERROR,SUCCESS" specified by the ValidateSet attribute. Supply an argument that is in the set and then try the command again.
+[2026-08-07 21:59:14] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260807-215914.csv
+[2026-08-07 21:59:14] [INFO] Execution Metrics
+[2026-08-07 21:59:14] [INFO] Processed : 1
+[2026-08-07 21:59:14] [INFO] Completed : 0
+[2026-08-07 21:59:14] [INFO] Failed    : 1
+[2026-08-07 21:59:14] [INFO] Completed at : 08/07/2026 21:59:14
+[2026-08-07 22:06:37] [INFO] Retrieving current identity state for MI-0015
+[2026-08-07 22:06:41] [INFO] Building desired leaver state for MI-0015
+[2026-08-07 22:06:41] [INFO] Comparing current identity state...
+[2026-08-07 22:06:41] [INFO] Building leaver execution plan...
+[2026-08-07 22:06:41] [INFO] Revoking user sessions...
+[2026-08-07 22:06:42] [SUCCESS] Sessions revoked successfully.
+[2026-08-07 22:06:42] [WARN] Mailbox archiving not yet implemented.
+[2026-08-07 22:06:42] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260807-220642.csv
+[2026-08-07 22:06:42] [INFO] Execution Metrics
+[2026-08-07 22:06:42] [INFO] Processed : 1
+[2026-08-07 22:06:42] [INFO] Completed : 1
+[2026-08-07 22:06:42] [INFO] Failed    : 0
+[2026-08-07 22:06:42] [INFO] Completed at : 08/07/2026 22:06:42
+[2026-08-07 22:13:25] [INFO] Retrieving current identity state for MI-0015
+[2026-08-07 22:13:27] [INFO] Building desired leaver state for MI-0015
+[2026-08-07 22:13:27] [INFO] Comparing current identity state...
+[2026-08-07 22:13:27] [INFO] Building leaver execution plan...
+[2026-08-07 22:13:27] [INFO] Revoking user sessions...
+[2026-08-07 22:13:27] [SUCCESS] Sessions revoked successfully.
+[2026-08-07 22:13:27] [WARN] Mailbox archiving not yet implemented.
+[2026-08-07 22:13:28] [INFO] Retrieving current identity state for MI-0024
+[2026-08-07 22:13:30] [INFO] Building desired leaver state for MI-0024
+[2026-08-07 22:13:30] [INFO] Comparing current identity state...
+[2026-08-07 22:13:30] [INFO] Building leaver execution plan...
+[2026-08-07 22:13:30] [INFO] Disabling user account...
+[2026-08-07 22:13:30] [SUCCESS] Account disabled successfully.
+[2026-08-07 22:13:31] [INFO] Revoking user sessions...
+[2026-08-07 22:13:31] [SUCCESS] Sessions revoked successfully.
+[2026-08-07 22:13:31] [WARN] Mailbox archiving not yet implemented.
+[2026-08-07 22:13:31] [INFO] Retrieving current identity state for MI-0017
+[2026-08-07 22:13:32] [INFO] Building desired leaver state for MI-0017
+[2026-08-07 22:13:32] [INFO] Comparing current identity state...
+[2026-08-07 22:13:32] [INFO] Building leaver execution plan...
+[2026-08-07 22:13:32] [INFO] Removing manager assignment...
+[2026-08-07 22:13:33] [SUCCESS] Manager removed successfully.
+[2026-08-07 22:13:33] [INFO] Revoking user sessions...
+[2026-08-07 22:13:34] [SUCCESS] Sessions revoked successfully.
+[2026-08-07 22:13:34] [INFO] Removing group memberships...
+[2026-08-07 22:13:34] [SUCCESS] Group memberships removed.
+[2026-08-07 22:13:34] [WARN] Mailbox archiving not yet implemented.
+[2026-08-07 22:13:34] [INFO] Retrieving current identity state for MI-0023
+[2026-08-07 22:13:36] [INFO] Building desired leaver state for MI-0023
+[2026-08-07 22:13:36] [INFO] Comparing current identity state...
+[2026-08-07 22:13:36] [INFO] Building leaver execution plan...
+[2026-08-07 22:13:36] [INFO] Disabling user account...
+[2026-08-07 22:13:36] [SUCCESS] Account disabled successfully.
+[2026-08-07 22:13:36] [INFO] Removing manager assignment...
+[2026-08-07 22:13:38] [SUCCESS] Manager removed successfully.
+[2026-08-07 22:13:38] [INFO] Revoking user sessions...
+[2026-08-07 22:13:38] [SUCCESS] Sessions revoked successfully.
+[2026-08-07 22:13:38] [INFO] Removing group memberships...
+[2026-08-07 22:13:40] [SUCCESS] Group memberships removed.
+[2026-08-07 22:13:40] [WARN] Mailbox archiving not yet implemented.
+[2026-08-07 22:13:40] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260807-221340.csv
+[2026-08-07 22:13:40] [INFO] Execution Metrics
+[2026-08-07 22:13:40] [INFO] Processed : 4
+[2026-08-07 22:13:40] [INFO] Completed : 4
+[2026-08-07 22:13:40] [INFO] Failed    : 0
+[2026-08-07 22:13:40] [INFO] Completed at : 08/07/2026 22:13:40
+[2026-08-07 23:17:35] [INFO] Retrieving current identity state for MI-0015
+[2026-08-07 23:17:38] [ERROR] Unable to resolve RBAC role definition for MI-0015: A parameter cannot be found that matches parameter name 'UnifiedRbacResourceId'.
+[2026-08-07 23:22:33] [INFO] Retrieving current identity state for MI-0015
+[2026-08-07 23:22:35] [ERROR] Unable to resolve RBAC role definition for MI-0015: A parameter cannot be found that matches parameter name 'UnifiedRbacResourceId'.
+[2026-08-07 23:24:32] [INFO] Retrieving current identity state for MI-0015
+[2026-08-07 23:24:35] [ERROR] Unable to resolve RBAC role definition for MI-0015: A parameter cannot be found that matches parameter name 'UnifiedRbacResourceId'.
+[2026-08-07 23:30:52] [INFO] Retrieving current identity state for MI-0015
+[2026-08-07 23:30:57] [INFO] Retrieving RBAC assignments for MI-0015
+[2026-08-07 23:31:00] [SUCCESS] RBAC discovery completed for MI-0015. Assignments found: 1
+[2026-08-07 23:36:31] [INFO] Retrieving current identity state for MI-0015
+[2026-08-07 23:36:34] [INFO] Retrieving RBAC assignments for MI-0015
+[2026-08-07 23:36:34] [SUCCESS] RBAC discovery completed for MI-0015. Assignments found: 1
+[2026-08-07 23:36:34] [INFO] Building desired leaver state for MI-0015
+[2026-08-07 23:36:34] [INFO] Comparing current identity state...
+[2026-08-07 23:39:34] [INFO] Comparing current identity state...
+[2026-08-07 23:42:03] [INFO] Comparing current identity state...
+[2026-08-07 23:42:04] [ERROR] Account disable blocked because RBAC discovery was unsuccessful.
+[2026-08-07 23:46:04] [INFO] Building leaver execution plan...
+[2026-08-07 23:46:55] [INFO] Building leaver execution plan...
+[2026-08-07 23:55:07] [INFO] Building leaver execution plan...
+[2026-08-07 23:56:29] [INFO] Building leaver execution plan...
+[2026-08-08 00:15:59] [INFO] Retrieving current identity state for MI-0015
+[2026-08-08 00:15:59] [ERROR] Employee not found: MI-0015
+[2026-08-08 00:15:59] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260808-001559.csv
+[2026-08-08 00:15:59] [INFO] Execution Metrics
+[2026-08-08 00:15:59] [INFO] Processed : 1
+[2026-08-08 00:15:59] [INFO] Completed : 0
+[2026-08-08 00:15:59] [INFO] Failed    : 1
+[2026-08-08 00:15:59] [INFO] Completed at : 08/08/2026 00:15:59
+[2026-08-08 00:16:54] [INFO] Retrieving current identity state for MI-0015
+[2026-08-08 00:16:57] [INFO] Retrieving RBAC assignments for MI-0015
+[2026-08-08 00:16:58] [SUCCESS] RBAC discovery completed for MI-0015. Assignments found: 1
+[2026-08-08 00:16:58] [INFO] Building desired leaver state for MI-0015
+[2026-08-08 00:16:58] [INFO] Comparing current identity state...
+[2026-08-08 00:16:58] [INFO] Building leaver execution plan...
+[2026-08-08 00:16:58] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260808-001658.csv
+[2026-08-08 00:16:58] [INFO] Execution Metrics
+[2026-08-08 00:16:58] [INFO] Processed : 1
+[2026-08-08 00:16:58] [INFO] Completed : 0
+[2026-08-08 00:16:58] [INFO] Failed    : 0
+[2026-08-08 00:16:58] [INFO] Completed at : 08/08/2026 00:16:58
+[2026-08-08 00:18:48] [INFO] Building leaver execution plan...
+[2026-08-08 00:24:00] [INFO] Comparing current identity state...
+[2026-08-08 00:24:01] [ERROR] Account disable blocked because RBAC discovery was unsuccessful.
+[2026-08-08 00:24:34] [INFO] Building leaver execution plan...
+[2026-08-08 12:06:07] [INFO] Comparing current identity state...
+[2026-08-08 12:06:07] [ERROR] Account disable blocked because RBAC discovery was unsuccessful.
+[2026-08-08 12:07:31] [INFO] Building leaver execution plan...
+[2026-08-08 12:24:13] [INFO] Comparing current identity state...
+[2026-08-08 12:24:13] [ERROR] Account disable blocked because RBAC discovery was unsuccessful.
+[2026-08-08 12:33:00] [INFO] Retrieving current identity state for MI-0015
+[2026-08-08 12:33:05] [INFO] Retrieving RBAC assignments for MI-0015
+[2026-08-08 12:33:06] [SUCCESS] RBAC discovery completed for MI-0015. Assignments found: 1
+[2026-08-08 12:33:06] [INFO] Building desired leaver state for MI-0015
+[2026-08-08 12:33:06] [INFO] Comparing current identity state...
+[2026-08-08 12:33:06] [ERROR] Account disable blocked because RBAC discovery was unsuccessful.
+[2026-08-08 12:34:18] [INFO] Building leaver execution plan...
+[2026-08-08 12:34:18] [ERROR] DisableAccount BLOCKED: Account disable blocked because RBAC discovery was unsuccessful.
+[2026-08-08 12:39:34] [INFO] Comparing current identity state...
+[2026-08-08 12:39:34] [ERROR] Account disable blocked because RBAC discovery was unsuccessful.
+[2026-08-08 12:39:49] [INFO] Building leaver execution plan...
+[2026-08-08 12:39:49] [ERROR] LEAVER PLAN BLOCKED: Leaver execution blocked because RBAC discovery was unsuccessful.
+[2026-08-08 12:43:43] [INFO] Retrieving current identity state for MI-0015
+[2026-08-08 12:43:47] [INFO] Retrieving RBAC assignments for MI-0015
+[2026-08-08 12:43:47] [SUCCESS] RBAC discovery completed for MI-0015. Assignments found: 1
+[2026-08-08 12:44:38] [INFO] Building desired leaver state for MI-0015
+[2026-08-08 12:44:50] [INFO] Building desired leaver state for MI-0015
+[2026-08-08 12:45:23] [INFO] Comparing current identity state...
+[2026-08-08 12:46:02] [INFO] Building leaver execution plan...
+[2026-08-08 12:47:13] [INFO] Comparing current identity state...
+[2026-08-08 12:47:13] [ERROR] Account disable blocked because RBAC discovery was unsuccessful.
+[2026-08-08 12:47:52] [INFO] Building leaver execution plan...
+[2026-08-08 12:47:52] [ERROR] LEAVER PLAN BLOCKED: Leaver execution blocked because RBAC discovery was unsuccessful.
+[2026-08-08 13:01:39] [INFO] Building leaver execution plan...
+[2026-08-08 13:01:39] [ERROR] LEAVER PLAN BLOCKED: Leaver execution blocked because RBAC discovery was unsuccessful.
+[2026-08-08 13:05:43] [INFO] Retrieving current identity state for MI-0021
+[2026-08-08 13:05:46] [INFO] Retrieving RBAC assignments for MI-0021
+[2026-08-08 13:05:47] [SUCCESS] RBAC discovery completed for MI-0021. Assignments found: 1
+[2026-08-08 13:08:32] [INFO] Building desired leaver state for MI-0015
+[2026-08-08 13:10:06] [INFO] Retrieving current identity state for MI-0021
+[2026-08-08 13:10:07] [INFO] Retrieving RBAC assignments for MI-0021
+[2026-08-08 13:10:08] [SUCCESS] RBAC discovery completed for MI-0021. Assignments found: 1
+[2026-08-08 13:11:04] [INFO] Building desired leaver state for MI-0015
+[2026-08-08 13:16:22] [INFO] Building desired leaver state for MI-0021
+[2026-08-08 13:17:18] [INFO] Comparing current identity state...
+[2026-08-08 13:19:42] [INFO] Building leaver execution plan...
+[2026-08-08 13:21:21] [INFO] Executing leaver plan...
+[2026-08-08 13:21:21] [INFO] Processing action: RemoveRBAC
+[2026-08-08 13:21:21] [INFO] PREVIEW: Would execute RemoveRBAC
+[2026-08-08 13:21:21] [INFO] Processing action: DisableAccount
+[2026-08-08 13:21:21] [INFO] PREVIEW: Would execute DisableAccount
+[2026-08-08 13:21:21] [INFO] Processing action: ClearManager
+[2026-08-08 13:21:21] [INFO] PREVIEW: Would execute ClearManager
+[2026-08-08 13:21:21] [INFO] Processing action: RevokeSessions
+[2026-08-08 13:21:21] [INFO] PREVIEW: Would execute RevokeSessions
+[2026-08-08 13:21:21] [INFO] Processing action: RemoveGroups
+[2026-08-08 13:21:21] [INFO] PREVIEW: Would execute RemoveGroups
+[2026-08-08 13:21:21] [INFO] Processing action: ArchiveMailbox
+[2026-08-08 13:21:21] [INFO] PREVIEW: Would execute ArchiveMailbox
+[2026-08-08 13:26:26] [INFO] Executing leaver plan...
+[2026-08-08 13:26:26] [INFO] Processing action: RemoveRBAC
+[2026-08-08 13:26:26] [INFO] Removing RBAC assignments...
+[2026-08-08 13:26:27] [INFO] Removing RBAC role: Application Administrator
+[2026-08-08 13:26:28] [SUCCESS] Removed RBAC role: Application Administrator
+[2026-08-08 13:26:28] [SUCCESS] RBAC cleanup completed. Roles removed: 1
+[2026-08-08 13:26:28] [INFO] Processing action: DisableAccount
+[2026-08-08 13:26:28] [INFO] Disabling Entra ID account...
+[2026-08-08 13:26:29] [INFO] Processing action: ClearManager
+[2026-08-08 13:26:29] [INFO] Removing manager assignment...
+[2026-08-08 13:26:29] [SUCCESS] Manager removed successfully.
+[2026-08-08 13:26:29] [INFO] Processing action: RevokeSessions
+[2026-08-08 13:26:29] [INFO] Revoking user sessions...
+[2026-08-08 13:26:30] [SUCCESS] Sessions revoked successfully.
+[2026-08-08 13:26:30] [INFO] Processing action: RemoveGroups
+[2026-08-08 13:26:30] [INFO] Removing group memberships...
+[2026-08-08 13:26:31] [SUCCESS] Group memberships removed.
+[2026-08-08 13:26:31] [INFO] Processing action: ArchiveMailbox
+[2026-08-08 13:26:31] [INFO] Mailbox archival requested.
+[2026-08-08 13:28:07] [INFO] Retrieving current identity state for MI-0021
+[2026-08-08 13:28:10] [INFO] Retrieving RBAC assignments for MI-0021
+[2026-08-08 13:28:10] [SUCCESS] RBAC discovery completed for MI-0021. Assignments found: 0
+[2026-08-08 13:28:47] [INFO] Executing leaver plan...
+[2026-08-08 13:28:47] [INFO] Processing action: RemoveRBAC
+[2026-08-08 13:28:47] [INFO] Removing RBAC assignments...
+[2026-08-08 13:28:47] [INFO] No RBAC assignments found.
+[2026-08-08 13:28:47] [INFO] Processing action: DisableAccount
+[2026-08-08 13:28:47] [INFO] Disabling Entra ID account...
+[2026-08-08 13:28:48] [INFO] Processing action: ClearManager
+[2026-08-08 13:28:48] [INFO] Removing manager assignment...
+[2026-08-08 13:28:48] [SUCCESS] Manager removed successfully.
+[2026-08-08 13:28:48] [INFO] Processing action: RevokeSessions
+[2026-08-08 13:28:48] [INFO] Revoking user sessions...
+[2026-08-08 13:28:49] [SUCCESS] Sessions revoked successfully.
+[2026-08-08 13:28:49] [INFO] Processing action: RemoveGroups
+[2026-08-08 13:28:49] [INFO] Removing group memberships...
+[2026-08-08 13:28:49] [SUCCESS] Group memberships removed.
+[2026-08-08 13:28:49] [INFO] Processing action: ArchiveMailbox
+[2026-08-08 13:28:49] [INFO] Mailbox archival requested.
+[2026-08-08 13:31:16] [INFO] Retrieving current identity state for MI-0021
+[2026-08-08 13:31:22] [INFO] Retrieving RBAC assignments for MI-0021
+[2026-08-08 13:31:22] [SUCCESS] RBAC discovery completed for MI-0021. Assignments found: 0
+[2026-08-08 13:31:52] [INFO] Retrieving current identity state for MI-0021
+[2026-08-08 13:31:54] [INFO] Retrieving RBAC assignments for MI-0021
+[2026-08-08 13:31:55] [SUCCESS] RBAC discovery completed for MI-0021. Assignments found: 0
+[2026-08-08 13:33:30] [INFO] Retrieving current identity state for MI-0021
+[2026-08-08 13:33:33] [INFO] Retrieving RBAC assignments for MI-0021
+[2026-08-08 13:33:33] [SUCCESS] RBAC discovery completed for MI-0021. Assignments found: 0
+[2026-08-08 13:53:31] [INFO] Retrieving current identity state for MI-0015
+[2026-08-08 13:53:34] [INFO] Retrieving RBAC assignments for MI-0015
+[2026-08-08 13:53:35] [SUCCESS] RBAC discovery completed for MI-0015. Assignments found: 1
+[2026-08-08 13:56:09] [INFO] Retrieving current identity state for MI-0018
+[2026-08-08 13:56:12] [INFO] Retrieving RBAC assignments for MI-0018
+[2026-08-08 13:56:12] [SUCCESS] RBAC discovery completed for MI-0018. Assignments found: 1
+[2026-08-08 13:58:08] [INFO] Retrieving current identity state for MI-0018
+[2026-08-08 13:58:11] [INFO] Retrieving RBAC assignments for MI-0018
+[2026-08-08 13:58:12] [SUCCESS] RBAC discovery completed for MI-0018. Assignments found: 1
+[2026-08-08 13:58:12] [INFO] Building desired leaver state for MI-0018
+[2026-08-08 13:58:12] [INFO] Comparing current identity state...
+[2026-08-08 13:58:12] [INFO] Building leaver execution plan...
+[2026-08-08 13:58:12] [INFO] Removing RBAC assignments...
+[2026-08-08 13:58:12] [INFO] Removing RBAC role: Application Administrator
+[2026-08-08 13:58:13] [SUCCESS] Removed RBAC role: Application Administrator
+[2026-08-08 13:58:13] [SUCCESS] RBAC cleanup completed. Roles removed: 1
+[2026-08-08 13:58:13] [ERROR] The term 'Disable-MIUser' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+[2026-08-08 13:58:13] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260808-135813.csv
+[2026-08-08 13:58:13] [INFO] Execution Metrics
+[2026-08-08 13:58:13] [INFO] Processed : 1
+[2026-08-08 13:58:13] [INFO] Completed : 0
+[2026-08-08 13:58:13] [INFO] Failed    : 1
+[2026-08-08 13:58:13] [INFO] Completed at : 08/08/2026 13:58:13
+[2026-08-08 14:17:41] [INFO] Retrieving current identity state for MI-0011
+[2026-08-08 14:17:44] [INFO] Retrieving RBAC assignments for MI-0011
+[2026-08-08 14:17:45] [SUCCESS] RBAC discovery completed for MI-0011. Assignments found: 1
+[2026-08-08 14:18:42] [INFO] Retrieving current identity state for MI-0011
+[2026-08-08 14:18:45] [INFO] Retrieving RBAC assignments for MI-0011
+[2026-08-08 14:18:45] [SUCCESS] RBAC discovery completed for MI-0011. Assignments found: 1
+[2026-08-08 14:18:46] [INFO] Building desired leaver state for MI-0011
+[2026-08-08 14:18:46] [INFO] Comparing current identity state...
+[2026-08-08 14:18:46] [INFO] Building leaver execution plan...
+[2026-08-08 14:18:46] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260808-141846.csv
+[2026-08-08 14:18:46] [INFO] Execution Metrics
+[2026-08-08 14:18:46] [INFO] Processed : 1
+[2026-08-08 14:18:46] [INFO] Completed : 0
+[2026-08-08 14:18:46] [INFO] Failed    : 0
+[2026-08-08 14:18:46] [INFO] Completed at : 08/08/2026 14:18:46
+[2026-08-08 14:36:28] [INFO] Retrieving current identity state for MI-0011
+[2026-08-08 14:36:29] [ERROR] Employee not found: MI-0011
+[2026-08-08 14:36:29] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260808-143629.csv
+[2026-08-08 14:36:29] [INFO] Execution Metrics
+[2026-08-08 14:36:29] [INFO] Processed : 1
+[2026-08-08 14:36:29] [INFO] Completed : 0
+[2026-08-08 14:36:29] [INFO] Failed    : 1
+[2026-08-08 14:36:29] [INFO] Completed at : 08/08/2026 14:36:29
+[2026-08-08 14:38:50] [INFO] Retrieving current identity state for MI-0011
+[2026-08-08 14:38:59] [INFO] Retrieving RBAC assignments for MI-0011
+[2026-08-08 14:39:22] [SUCCESS] RBAC discovery completed for MI-0011. Assignments found: 1
+[2026-08-08 14:39:23] [INFO] Building desired leaver state for MI-0011
+[2026-08-08 14:39:23] [INFO] Comparing current identity state...
+[2026-08-08 14:39:23] [INFO] Building leaver execution plan...
+[2026-08-08 14:39:23] [INFO] Executing leaver plan...
+[2026-08-08 14:39:23] [INFO] Processing action: RemoveRBAC
+[2026-08-08 14:39:23] [INFO] PREVIEW: Would execute RemoveRBAC
+[2026-08-08 14:39:23] [INFO] Processing action: DisableAccount
+[2026-08-08 14:39:23] [INFO] PREVIEW: Would execute DisableAccount
+[2026-08-08 14:39:23] [INFO] Processing action: RevokeSessions
+[2026-08-08 14:39:23] [INFO] PREVIEW: Would execute RevokeSessions
+[2026-08-08 14:39:23] [INFO] Processing action: RemoveGroups
+[2026-08-08 14:39:23] [INFO] PREVIEW: Would execute RemoveGroups
+[2026-08-08 14:39:24] [INFO] Processing action: ArchiveMailbox
+[2026-08-08 14:39:24] [INFO] PREVIEW: Would execute ArchiveMailbox
+[2026-08-08 14:39:24] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260808-143924.csv
+[2026-08-08 14:39:24] [INFO] Execution Metrics
+[2026-08-08 14:39:24] [INFO] Processed : 1
+[2026-08-08 14:39:24] [INFO] Completed : 0
+[2026-08-08 14:39:24] [INFO] Failed    : 0
+[2026-08-08 14:39:24] [INFO] Completed at : 08/08/2026 14:39:24
+[2026-08-08 14:42:34] [INFO] Retrieving current identity state for MI-0011
+[2026-08-08 14:42:36] [INFO] Retrieving RBAC assignments for MI-0011
+[2026-08-08 14:42:36] [SUCCESS] RBAC discovery completed for MI-0011. Assignments found: 1
+[2026-08-08 14:42:36] [INFO] Building desired leaver state for MI-0011
+[2026-08-08 14:42:36] [INFO] Comparing current identity state...
+[2026-08-08 14:42:36] [INFO] Building leaver execution plan...
+[2026-08-08 14:42:36] [INFO] Executing leaver plan...
+[2026-08-08 14:42:37] [INFO] Processing action: RemoveRBAC
+[2026-08-08 14:42:37] [INFO] PREVIEW: Would execute RemoveRBAC
+[2026-08-08 14:42:37] [INFO] Processing action: DisableAccount
+[2026-08-08 14:42:37] [INFO] PREVIEW: Would execute DisableAccount
+[2026-08-08 14:42:37] [INFO] Processing action: RevokeSessions
+[2026-08-08 14:42:37] [INFO] PREVIEW: Would execute RevokeSessions
+[2026-08-08 14:42:37] [INFO] Processing action: RemoveGroups
+[2026-08-08 14:42:37] [INFO] PREVIEW: Would execute RemoveGroups
+[2026-08-08 14:42:37] [INFO] Processing action: ArchiveMailbox
+[2026-08-08 14:42:37] [INFO] PREVIEW: Would execute ArchiveMailbox
+[2026-08-08 14:42:37] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260808-144237.csv
+[2026-08-08 14:42:37] [INFO] Execution Metrics
+[2026-08-08 14:42:37] [INFO] Processed : 1
+[2026-08-08 14:42:37] [INFO] Completed : 0
+[2026-08-08 14:42:37] [INFO] Failed    : 0
+[2026-08-08 14:42:37] [INFO] Completed at : 08/08/2026 14:42:37
+[2026-08-08 14:42:51] [INFO] Retrieving current identity state for MI-0011
+[2026-08-08 14:42:52] [INFO] Retrieving RBAC assignments for MI-0011
+[2026-08-08 14:42:53] [SUCCESS] RBAC discovery completed for MI-0011. Assignments found: 1
+[2026-08-08 14:42:53] [INFO] Building desired leaver state for MI-0011
+[2026-08-08 14:42:53] [INFO] Comparing current identity state...
+[2026-08-08 14:42:53] [INFO] Building leaver execution plan...
+[2026-08-08 14:42:53] [INFO] Executing leaver plan...
+[2026-08-08 14:42:53] [INFO] Processing action: RemoveRBAC
+[2026-08-08 14:42:53] [INFO] Removing RBAC assignments...
+[2026-08-08 14:42:54] [INFO] Removing RBAC role: User Administrator
+[2026-08-08 14:42:54] [SUCCESS] Removed RBAC role: User Administrator
+[2026-08-08 14:42:54] [SUCCESS] RBAC cleanup completed. Roles removed: 1
+[2026-08-08 14:42:54] [INFO] Processing action: DisableAccount
+[2026-08-08 14:42:54] [INFO] Disabling Entra ID account...
+[2026-08-08 14:42:55] [INFO] Processing action: RevokeSessions
+[2026-08-08 14:42:55] [INFO] Revoking user sessions...
+[2026-08-08 14:42:57] [SUCCESS] Sessions revoked successfully.
+[2026-08-08 14:42:57] [INFO] Processing action: RemoveGroups
+[2026-08-08 14:42:57] [INFO] Removing group memberships...
+[2026-08-08 14:43:04] [SUCCESS] Group memberships removed.
+[2026-08-08 14:43:04] [INFO] Processing action: ArchiveMailbox
+[2026-08-08 14:43:04] [INFO] Mailbox archival requested.
+[2026-08-08 14:43:04] [SUCCESS] Leaver report exported to C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform\automation\reports\Leavers\Leaver-20260808-144304.csv
+[2026-08-08 14:43:04] [INFO] Execution Metrics
+[2026-08-08 14:43:04] [INFO] Processed : 1
+[2026-08-08 14:43:04] [INFO] Completed : 1
+[2026-08-08 14:43:04] [INFO] Failed    : 0
+[2026-08-08 14:43:04] [INFO] Completed at : 08/08/2026 14:43:04

@@ -1,0 +1,2 @@
+"RunId","EmployeeId","DisplayName","Department","JobTitle","Country","Status","Duration","Timestamp","PlannedActions","ActionsExecuted"
+"ec1ff69e-2732-4261-a50f-0a31d6256031","MI-0015","Amelia Hall","Engineering","DevOps Engineer","Nigeria","Completed","00:00:00.6788629","8/7/2026 10:06:41 PM","RevokeSessions; ArchiveMailbox","Sessions Revoked; Mailbox Archive Skipped"

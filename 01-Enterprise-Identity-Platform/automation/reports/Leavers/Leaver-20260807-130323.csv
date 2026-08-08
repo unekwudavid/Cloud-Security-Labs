@@ -1,0 +1,4 @@
+"RunId","EmployeeId","DisplayName","Department","JobTitle","Country","Status","Duration","Timestamp","ActionsExecuted"
+"1c2f2502-983a-4432-bb46-51e3cfd8e223","MI-0017","James White","Security Operations","SOC Manager","Nigeria","Completed","00:00:00.0026809","8/7/2026 1:03:20 PM","System.Object[]"
+"28d523c4-8c03-4d1d-a8de-c3b89a9117cb","MI-0023","Olivia James",,,,"Completed","00:00:00.0043854","8/7/2026 1:03:21 PM","System.Object[]"
+"373d2088-2b59-475e-a911-4f34b29f38f7","MI-0021","Michael Brown",,,,"Completed","00:00:00.0038768","8/7/2026 1:03:23 PM","System.Object[]"
