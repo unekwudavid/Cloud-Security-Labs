@@ -28,6 +28,10 @@ It supports the full **Joiner – Mover – Leaver (JML)** lifecycle and reflect
 - 📊 Operational reporting and lifecycle evidence
 - ⚙️ Modular PowerShell orchestration for enterprise IAM
 
+### Why this matters
+
+This project addresses a common enterprise problem: identity operations are repetitive, high-risk, and often inconsistent when managed manually. By automating the Joiner, Mover, and Leaver lifecycle through Microsoft Graph and PowerShell, the platform reduces administrative overhead, strengthens access hygiene, and creates auditable execution evidence.
+
 ### Architecture Snapshot
 
 ```text
@@ -39,6 +43,40 @@ HR Feed / CSV --> Validation --> Identity State Discovery --> Desired State Mode
           v                                              v
 Microsoft Graph API --> Entra ID Users / Groups / Roles / Licenses / Units --> Logs & Reports
 ```
+
+### Architecture & Design Views
+
+<p align="center">
+  <img src="./diagrams/exports/01-enterprise-architecture.png" alt="Enterprise architecture overview" width="90%" />
+</p>
+
+<p align="center">
+  <img src="./diagrams/exports/07-joiner-mover-leaver-lifecycle.png" alt="Joiner Mover Leaver lifecycle" width="90%" />
+</p>
+
+<p align="center">
+  <img src="./diagrams/exports/03-powershell-automation-architecture.png" alt="PowerShell automation architecture" width="90%" />
+</p>
+
+<p align="center">
+  <img src="./diagrams/exports/04-entra-id-identity-access-architecture.png" alt="Microsoft Entra ID identity access architecture" width="90%" />
+</p>
+
+<p align="center">
+  <img src="./diagrams/exports/05-rbac-architecture.png" alt="RBAC architecture" width="90%" />
+</p>
+
+<p align="center">
+  <img src="./diagrams/exports/06-conditional-access-architecture.png" alt="Conditional access architecture" width="90%" />
+</p>
+
+<p align="center">
+  <img src="./diagrams/exports/09-executive-solution-architecture.png" alt="Executive solution architecture" width="90%" />
+</p>
+
+<p align="center">
+  <img src="./diagrams/exports/10-technical-automation-architecture.png" alt="Technical automation architecture" width="90%" />
+</p>
 
 ### Project Highlights
 
@@ -63,8 +101,6 @@ The project simulates a fictional enterprise organization, **Mustard Innovations
 - Access reconciliation
 - Security controls and RBAC governance
 - Reporting and operational logging
-
----
 
 ---
 
@@ -215,6 +251,10 @@ The platform covers the design and implementation of an automated employee ident
 
 ### In Scope
 
+<p align="center">
+  <img src="./diagrams/exports/11-module-dependency-diagram.png" alt="Module dependency diagram" width="90%" />
+</p>
+
 #### Identity Lifecycle Management
 
 - Joiner orchestration
@@ -275,6 +315,10 @@ The platform covers the design and implementation of an automated employee ident
 - Portfolio documentation
 
 ### Out of Scope
+
+<p align="center">
+  <img src="./diagrams/exports/12-joiner-sequence-diagram.png" alt="Joiner sequence diagram" width="90%" />
+</p>
 
 The current implementation does not attempt to provide a complete enterprise IAM product.
 
@@ -503,6 +547,10 @@ Typical actions include:
 - RBAC updates
 - Reporting and validation
 
+<p align="center">
+  <img src="./diagrams/exports/14-mover-sequence-diagram.png" alt="Mover sequence diagram" width="90%" />
+</p>
+
 #### Mover execution gallery (12 images)
 
 ![Mover 1](./screenshots/mover%20orchestration/Screenshot%20(99).png)
@@ -548,6 +596,10 @@ Typical actions include:
 - Administrative Unit reconciliation
 - Mailbox archival handling
 - Reporting and audit trail
+
+<p align="center">
+  <img src="./diagrams/exports/15-leaver-sequence-diagram.png" alt="Leaver sequence diagram" width="90%" />
+</p>
 
 #### Leaver execution gallery (15 images)
 
@@ -617,6 +669,10 @@ The platform includes security-first controls designed to reflect enterprise IAM
 - Access reconciliation
 
 ### Security Engineering
+
+<p align="center">
+  <img src="./diagrams/exports/08-enterprise-cloud-security-portfolio.png" alt="Enterprise cloud security portfolio" width="90%" />
+</p>
 
 - Microsoft Entra RBAC lifecycle management
 - Privileged identity handling
