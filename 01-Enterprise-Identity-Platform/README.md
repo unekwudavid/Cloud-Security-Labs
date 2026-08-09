@@ -12,6 +12,81 @@
   <img alt="Security" src="https://img.shields.io/badge/Security-Identity%20Governance-6A5ACD?style=for-the-badge" />
 </p>
 
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Why this matters](#why-this-matters)
+- [Architecture Snapshot](#architecture-snapshot)
+- [Project Highlights](#project-highlights)
+- [Business Context](#business-context)
+- [Business Impact](#business-impact)
+- [Project Scope](#project-scope)
+- [Getting Started](#getting-started)
+- [Workflow Documentation](#workflow-documentation)
+- [Validation & Testing](#validation--testing)
+- [Completion Summary](#completion-summary)
+- [Recruiter Snapshot](#recruiter-snapshot)
+- [Objectives](#objectives)
+- [Technology Stack](#technology-stack)
+- [Repository Structure](#repository-structure)
+- [Current Project Status](#current-project-status)
+- [Identity Lifecycle Workflows](#identity-lifecycle-workflows)
+
+## Getting Started
+
+### Prerequisites
+
+- PowerShell 7
+- Microsoft Graph PowerShell SDK
+- Access to a Microsoft Entra ID tenant
+- HR CSV data in `HR\source`
+- JSON configuration files in `automation\configuration`
+
+### Run the workflows
+
+From the `01-Enterprise-Identity-Platform` folder:
+
+```powershell
+cd "C:\Users\Dave\Documents\Cloud-Security-Projects\01-Enterprise-Identity-Platform"
+cd automation\powershell
+.\10-Invoke-MIJoiner.ps1 -Limit 5
+.\11-Move-MIEmployees.ps1 -Live -Limit 5
+.\13-Leaver-MIEmployees.ps1 -Live -Limit 5
+```
+
+Use `-Live` to apply changes and omit `-Live` to run in preview mode.
+
+## Workflow Documentation
+
+The project includes workflow-specific documentation for each orchestration type:
+
+- [Joiner orchestration](./automation/powershell/README-Joiner.md)
+- [Mover orchestration](./automation/powershell/README-Mover.md)
+- [Leaver orchestration](./automation/powershell/README-Leaver.md)
+
+## Validation & Testing
+
+The automation has been tested in both preview and live modes. Key validation checkpoints include:
+
+- HR data validation
+- Desired-state model generation
+- Execution plan creation
+- Preview execution without side effects
+- Live execution with Microsoft Graph changes
+- Report generation and structured logging
+
+## Completion Summary
+
+This project is complete as a portfolio-grade reference implementation for enterprise identity lifecycle automation. It demonstrates:
+
+- Joiner, Mover, and Leaver orchestration
+- Microsoft Graph-based identity operations
+- Modular PowerShell automation
+- Privileged access and RBAC controls
+- Audit-ready logging and reporting
+
+---
+
 ## Project Overview
 
 > 🔐 Identity Security Automation for the full Joiner–Mover–Leaver lifecycle
@@ -47,7 +122,7 @@ Microsoft Graph API --> Entra ID Users / Groups / Roles / Licenses / Units --> L
 ### Architecture & Design Views
 
 <p align="center">
-  <img src="./diagrams/exports/01-enterprise-architecture.png" alt="Enterprise architecture overview" width="90%" />
+  <img src="./diagrams/exports/01-MI-Enterprise-Architecture.png" alt="Microsoft enterprise architecture" width="90%" />
 </p>
 
 <p align="center">
@@ -762,14 +837,37 @@ The solution is designed to show not only the technical implementation, but also
 
 ---
 
-## Final Status
+## Final Project Status
 
-The platform is operational and demonstrates a complete end-to-end identity lifecycle automation approach for:
+**Status: ✅ Complete**
+
+The Enterprise Identity Platform has been implemented and validated as an
+end-to-end Microsoft Entra identity lifecycle automation platform.
+
+The completed implementation demonstrates:
 
 - Joiner orchestration
 - Mover orchestration
 - Leaver orchestration
-- RBAC and administrative unit reconciliation
-- Reporting and execution evidence
+- Identity state discovery
+- Desired-state modelling
+- State reconciliation
+- RBAC lifecycle management
+- Group lifecycle management
+- Administrative Unit reconciliation
+- License lifecycle management
+- Manager reconciliation
+- Preview and live execution
+- Fail-closed security controls
+- Dependency-aware execution ordering
+- Structured logging
+- Execution reporting
+- Post-execution validation
 
-This project is positioned as a concrete portfolio artifact showing hands-on identity engineering capability in a Microsoft Entra ecosystem.
+A privileged identity authorization edge case discovered during live testing
+was used to improve the Leaver orchestration design and introduce
+fail-closed behavior for privileged-access uncertainty.
+
+SCIM provisioning, SaaS federation, application lifecycle management,
+and broader multi-cloud identity capabilities are intentionally outside
+the scope of this project and are addressed in subsequent portfolio work.
