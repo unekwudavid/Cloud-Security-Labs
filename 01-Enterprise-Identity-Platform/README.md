@@ -269,7 +269,14 @@ During live testing, a privileged identity with an assigned Microsoft Entra dire
 
 Rather than treating the RBAC discovery failure as "no roles found," the workflow was designed to prevent unsafe account disablement until privileged access could be evaluated.
 
-This demonstrates how IAM automation can reduce both operational risk and potential security incident exposure.
+This demonstrates how IAM automation can reduce both operational risk and potential 
+security incident exposure.
+
+
+<p align="center">
+  <img src="./diagrams/exports/leaver security edge case.png" alt="Mover sequence diagram" width="90%" />
+</p>
+
 
 ### Compliance and Auditability
 
