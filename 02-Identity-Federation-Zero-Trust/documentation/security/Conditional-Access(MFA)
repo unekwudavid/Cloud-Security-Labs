@@ -1,0 +1,124 @@
+# Conditional Access — Multi-Factor Authentication (MFA)
+
+## Project Module
+
+Identity Federation & Zero Trust Platform — Project 2
+
+## Objective
+
+Implement Microsoft Entra Conditional Access policies to require Multi-Factor Authentication (MFA) before users can access enterprise resources.
+
+This implementation demonstrates adaptive access controls that align with Microsoft's Zero Trust architecture and enterprise IAM best practices.
+
+---
+
+## Business Scenario
+
+Mustard Innovations requires all workforce identities accessing corporate cloud resources to authenticate using MFA.
+
+The MI Expense Portal is protected by Microsoft Entra ID, and Conditional Access evaluates authentication before access is granted.
+
+This ensures password-only authentication is no longer sufficient for accessing protected applications.
+
+---
+
+## Security Principle
+
+> Authentication verifies identity. Conditional Access evaluates whether access should be granted under the organization's security policies.
+
+This implementation introduces identity-centric security controls before application authorization occurs.
+
+---
+
+## Conditional Access Policy
+
+| Setting          | Configuration                        |
+| ---------------- | ------------------------------------ |
+| Policy Name      | `CA-MFA-001-Require-MFA-Pilot-Users` |
+| Users            | `SG-CA-Pilot-Users`                  |
+| Excluded Users   | Emergency / Break-Glass Accounts     |
+| Target Resources | All Cloud Resources                  |
+| Grant Control    | Require Multi-Factor Authentication  |
+| Deployment State | Report-only (initial validation)     |
+
+---
+
+## Policy Architecture
+
+User Authentication
+↓
+Microsoft Entra ID
+↓
+Conditional Access Policy Evaluation
+↓
+MFA Required
+↓
+Authentication Complete
+↓
+Application Authorization (RBAC)
+
+---
+
+## Validation Process
+
+A pilot deployment strategy was used.
+
+1. Create a dedicated pilot security group.
+2. Assign test identities to the pilot group.
+3. Deploy Conditional Access in **Report-only** mode.
+4. Perform authentication through the MI Expense Portal.
+5. Review Conditional Access evaluation in Microsoft Entra Sign-in Logs.
+6. Validate expected behavior before future enforcement.
+
+---
+
+## Security Value
+
+The policy mitigates:
+
+* Password spraying
+* Credential stuffing
+* Password reuse attacks
+* Single-factor authentication abuse
+
+MFA introduces an additional verification factor before access is granted.
+
+---
+
+## Zero Trust Alignment
+
+This implementation supports:
+
+* Verify explicitly.
+* Least privilege.
+* Continuous evaluation before access.
+
+Authentication success alone does not automatically satisfy organizational access requirements.
+
+---
+
+## Evidence Captured
+
+Screenshots collected:
+
+* Conditional Access policy overview.
+* Grant controls showing MFA requirement.
+* Report-only deployment state.
+* Sign-in log showing Conditional Access evaluation.
+
+Sensitive authentication artifacts (tokens, authorization codes, secrets, cookies) were excluded from documentation.
+
+---
+
+
+### Why deploy in Report-only first?
+
+Report-only allows administrators to evaluate policy impact using sign-in logs before enforcing the policy in production, reducing the risk of unintended user lockouts.
+
+### Why use a pilot group?
+
+Enterprise Conditional Access policies should be deployed gradually using pilot populations before organization-wide rollout.
+
+### How does this support Zero Trust?
+
+Every authentication attempt is evaluated against organizational security policies before access is granted.

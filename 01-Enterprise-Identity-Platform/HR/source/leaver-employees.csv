@@ -1,4 +1,5 @@
 "EmployeeID","FirstName","LastName","Department","JobTitle","Country","Manager","LeavingDate","Reason","LastWorkingDay","TerminationType","ForwardingManager","ArchiveMailbox","RetentionDays"
+"MI-0008","John","Davis","Engineering","DevOps Engineer","Canada","MI-0006","2026-08-05","Resignation","2026-08-05","Voluntary","MI-0006","Yes","30"
 "MI-0011","Isabella","Martinez","Engineering","Software Engineer","Nigeria","MI-0006","2026-08-05","Resignation","2026-08-05","Voluntary","MI-0006","Yes","30"
 "MI-0018","Emma","Wilson","Engineering","Software Engineer","Nigeria","MI-0006","2026-08-05","Resignation","2026-08-05","Voluntary","MI-0006","Yes","30"
 "MI-0015","Amelia","Hall","Engineering","Software Engineer","Nigeria","MI-0006","2026-08-05","Resignation","2026-08-05","Voluntary","MI-0006","Yes","30"
